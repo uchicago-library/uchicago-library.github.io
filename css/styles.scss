@@ -44,7 +44,7 @@ header {
   margin-left: -1em;
   margin-right: -1em;
   .logo {
-    max-height: 30px;
+    max-height: 35px;
     margin: 0 20px;
   }
 }
@@ -80,7 +80,7 @@ ul {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/cover.jpg') center #333 no-repeat;
   background-size: cover;
   @include respond-to(small) {
-    height: 50px;
+    height: 75px;
     display: flex;
     align-items: center;
   }

@@ -43,7 +43,7 @@ header {
   margin-left: -1em;
   margin-right: -1em; }
   header .logo {
-    max-height: 30px;
+    max-height: 35px;
     margin: 0 20px; }
 
 section:not(.leading) {
@@ -74,6 +74,6 @@ ul {
   background-size: cover; }
   @media (min-width: 48em) {
     .leading {
-      height: 50px;
+      height: 75px;
       display: flex;
       align-items: center; } }
