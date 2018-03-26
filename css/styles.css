@@ -1,0 +1,79 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global
+ * --------------------------------------------------
+ */
+body {
+  font-family: 'ProximaNova-Regular', sans-serif;
+  margin: 0 1em; }
+
+a {
+  color: #337ab7; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 1.2em;
+  color: #616530;
+  margin-top: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em; }
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.25em; }
+
+header {
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'ProximaNova-Light';
+  color: white;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  margin-left: -1em;
+  margin-right: -1em; }
+  header .logo {
+    max-height: 30px;
+    margin: 0 20px; }
+
+section:not(.leading) {
+  max-width: 960px;
+  margin: 0 auto 30px; }
+
+ul {
+  list-style: unset;
+  margin-left: 1em;
+  padding-left: 1em; }
+  ul li {
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: 0.5em; }
+
+/*
+ * Hero
+ * --------------------------------------------------
+ */
+.leading {
+  height: 20px;
+  margin-bottom: 30px;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: 30px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cover.jpg") center #333 no-repeat;
+  background-size: cover; }
+  @media (min-width: 48em) {
+    .leading {
+      height: 50px;
+      display: flex;
+      align-items: center; } }
