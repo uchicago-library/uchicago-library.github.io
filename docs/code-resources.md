@@ -92,11 +92,13 @@ _When there is no col header or col header is hidden in mobile_
 ```
 
 ### Media Queries
-_KZ's research breakpoints_
+_KZ's breakpoints based on web stats of common devices used by patrons_
 
 **Sass**
 
 Use as: `@include respond-to(small) { ... }` instead of `@media (min-width: 768px) { ... }`
+
+_Found em to be more reliable/consistent over px_
 ```
 @mixin respond-to($breakpoint) {
   // Extra small devices (phones, 544px and up)
