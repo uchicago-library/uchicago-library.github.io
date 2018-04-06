@@ -36,10 +36,10 @@
 
 **HTML**
 ```
- <div id="skip">
+<div id="skip">
   <a href="#content">Skip to Main Content</a>
   <a href="#sidebar">Skip to Side Bar</a> <!-- Good for when there is both a primary and secondary navigation -->
-    </div>
+</div>
 ```
 
 ### Hiding elements
@@ -80,14 +80,16 @@ _When there is no col header or col header is hidden in mobile_
 ```
 <thead> ... </thead>
 <tbody>
-<tr class="visually-hidden">
-	<th scope="col">Collection Thumbnail</th>
-	<th scope="col">Title</th>
-	<th scope="col">Formats</th>
-	<th scope="col">Subjects</th>
-</tr>
-<tr></tr>
-...
+   <tr class="visually-hidden">
+      <th scope="col">Collection Thumbnail</th>
+      <th scope="col">Title</th>
+      <th scope="col">Formats</th>
+      <th scope="col">Subjects</th>
+   </tr>
+   <tr> ... </tr>
+   <tr> ... </tr>
+   <tr> ... </tr>
+   <tr> ... </tr>
 </tbody>
 ```
 
@@ -98,7 +100,7 @@ _KZ's breakpoints based on web stats of common devices used by patrons_
 
 Use as: `@include respond-to(small) { ... }` instead of `@media (min-width: 768px) { ... }`
 
-_Found em to be more reliable/consistent over px_
+_Note: Found em to be more reliable/consistent over px_
 ```
 @mixin respond-to($breakpoint) {
   // Extra small devices (phones, 544px and up)
