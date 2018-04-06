@@ -44,6 +44,7 @@
 
 ### Hiding elements
 _Hides from visual users, but "viewable" to screen readers_
+
 **CSS / Sass**
 ```
 .visually-hidden {
@@ -55,7 +56,7 @@ _Hides from visual users, but "viewable" to screen readers_
 }
 ```
 
-### Responsive / Mobile Friend Table
+### Responsive / Mobile Friendly Table
 **Sass**
 ```
 table, tbody {
@@ -74,6 +75,7 @@ table, tbody {
 
 ### Column Scope to Tables
 _When there is no col header or col header is hidden in mobile_
+
 **HTML**
 ```
 <thead> ... </thead>
@@ -91,7 +93,9 @@ _When there is no col header or col header is hidden in mobile_
 
 ### Media Queries
 _KZ's research breakpoints_
+
 **Sass**
+
 Use as: `@include respond-to(small) { ... }` instead of `@media (min-width: 768px) { ... }`
 ```
 @mixin respond-to($breakpoint) {
