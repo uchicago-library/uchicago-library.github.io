@@ -1,0 +1,532 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Colors
+Media Queries
+Elements
+Mixins
+Fonts and Headers
+Global Elements
+Top Right Navbar (time/account/ask)
+Main Navbar
+Navigation Drop Downs
+Fancy Splash Image (Jumbotron)
+Off Canvas (Sidebar Mobile Toggle)
+Left Sidebar
+Footer
+-------------------------------------------------------------------*/
+
+
+$darkgray: #767676;
+$lightgray: #D6D6CE;
+$darkred: #642822;
+$maroon: #800000;
+$crerarblue: #0F425C;
+$eckhartpurple: #350E20;
+$mansuetogreen: #3E3E23;
+$reggreen:  #616530;
+$ssaorange: #9A5324;
+
+
+// Palette Variations
+
+$mid-dark: #525252;
+$darkneutral: #7B4943;
+$midneutral: #D2CDCC;
+$neutral: #e2ddd7;
+$lightneutral: #f0eeef;
+$brightpurple: #6d2f6a;
+$hoveraccent: #D49464;
+$hovercalm: #eeefe5; //#e0e5e2
+$hovercalmlight: #f6f7f2;
+$active: #8A9045;
+$active-hover: #725663;
+
+
+// Opacity Fun Times
+
+$transparent: rgba(67, 67, 67, 0.95);
+$trans-red: rgba(109, 50, 39,0.8);
+$trans-blue: rgba(21, 95, 131, 0.8);
+$trans-purple: rgba(53, 14, 32, 0.8);
+$trans-darkgreen: rgba(70, 71, 51, 0.8);
+$trans-lightgreen: rgba(101, 105, 51, 0.8);
+$trans-orange: rgba(154, 83, 46, 0.8);
+
+
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+
+@mixin respond-to($breakpoint) {
+  // Extra small devices (phones, 544px and up)
+  @if $breakpoint == "xsmall" {
+    @media (min-width: 34em) {
+      @content;
+    }
+  }
+
+  // Small devices (landscape phones, 768px and up)
+  @else if $breakpoint == "small" {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+  // Medium devices (crappy laptops, tablets, 992px and up)
+  @else if $breakpoint == "medium" {
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+  // Large devices (desktops, 1200px and up)
+  @else if $breakpoint == "large" {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  //Extra large devices (large desktops, 1900px and up)
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 118em) {
+      @content;
+    }
+  }
+  
+  // Short-cut to target extra small devices *only* (phones, 544px and up)
+  @else if $breakpoint == "smallonly" {
+    @media (max-width: 34em) {
+      @content;
+    }
+  }
+}
+
+
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+
+$divider: 1px solid $darkgray;
+
+
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+
+@mixin desaturate { // for images
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@mixin center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Sticky Footer, a part 1: Wrapper for page content to push down footer */
+#body-wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10px;
+  @include respond-to(medium) {
+    margin: 0 auto -200px;
+  }
+}
+
+
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+    .font-secondary {
+      font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif;
+  }
+}
+
+html, body {
+  overflow-x: hidden; /* Off Canvas: Prevent scroll on narrow devices */
+}
+
+.valid {
+  color: #089e00; }
+
+.error {
+  color: red; }
+
+.warning {
+  color: #fff664; }
+
+.information {
+  color: #000db5; }
+
+/* Links */
+a {
+  color:#2a6496;
+  text-decoration: none;
+  outline: 0;
+    &:hover {
+      color: #8A8B79;
+    }
+    &:focus {
+      color: #5B8FA8;
+    }
+  &.social {
+    color: #767676;
+  }
+}
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(https://motacilla.lib.uchicago.edu/static/base/css/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased; // Support for all WebKit browsers.
+  text-rendering: optimizeLegibility; // Support for Safari and Chrome.
+  -moz-osx-font-smoothing: grayscale; // Support for Firefox.
+  font-feature-settings: 'liga'; // Support for IE.
+}
+
+h1, h2 {
+  font-family: 'ProximaNova-Regular';
+}
+
+h3 {
+  font-family: 'ProximaNova-Regular';
+  font-size: 1.3em;
+  margin-bottom: 3px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-family: 'ProximaNova-Semibold';
+}
+
+h5 {
+  font-family: 'ProximaNova-Bold';
+}
+
+
+/*
+ * Top Right Navbar (time/account/ask)
+ * --------------------------------------------------
+ */
+
+.mobile-topnav {
+  text-align: center;
+  border-bottom: 1px solid $darkgray;
+  background-color: rgba(67, 67, 67, 0.7);
+  padding: 5px 0;
+      a {
+      color: #fff;
+      padding: 0 1em;
+  }
+}
+
+#navbar-right {
+  font-size: 1em;
+  padding-right: 1.5em;
+  &>li>a {
+      color: #f9f9f9;
+      &:hover {
+      	color:#E4E4E4;
+        background-color: $transparent;
+      }
+      &:focus {
+        background-color: $transparent;
+      }
+    }
+  &>li>.dropdown-menu {
+      color: #fff;
+      text-align: right;
+      background-color: $transparent;
+  }
+  @include respond-to(xlarge) {
+      padding-right: 15em;
+      margin-right: 30px;
+  }
+}
+
+ul#navbar-right li:hover > ul.dropdown-menu.menuhover {
+    display: block;
+}
+
+i.ask-icon {
+  color:$darkgray;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  &.active {
+    color: #eee;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0;
+  }
+}
+
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+
+.fluid-top {
+  @include respond-to(small) {
+    padding: 0px;
+  }
+}
+
+.navbar-brand {
+  max-width: 125px;
+  padding: 5px 15px 15px 15px;
+  @include respond-to(small) {
+    max-width: 175px;
+    padding-left: 35px;
+    padding-top: 5px;
+  }
+  @include respond-to(medium) {
+    padding-top: 10px;
+  }
+}
+
+.lglive.navbar-default {
+  border: 0px;
+  margin-bottom:0px;
+  background-image: url("nav-background.jpg");
+  background-repeat: repeat;
+  z-index: 10;
+  border-radius: 0;
+  .navbar-nav {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    &>li>a {
+      color: #eee;
+      &:hover {
+        color: #fff;
+        background-color: $transparent;
+      }
+      &:focus {
+        color: #fff;
+      }
+    }
+    & .open .dropdown-menu {
+      background-color: $transparent;
+    }
+    &>.open>a:focus {
+      background-color: $maroon;
+      color: #fff;
+    }
+    &>.open>a, &>.open>a:hover {
+      color: #E4E4E4;
+      background-color: $transparent;
+    }
+  }
+  .divider {
+      background-color: $darkgray;
+  }
+}
+
+#global-navbar {
+  background-color: rgba(67, 67, 67, 0.4);
+  font-size: 1.1em;
+  padding-left:0.5em;
+  &.navbar-nav>li>a:focus {
+    color: #fff;
+  }
+  &.navbar-nav>.open>a:focus {
+    background-color: $maroon;
+  }
+  @include respond-to(small)  {
+    box-shadow: 0 1px 7px #462b28;
+    margin-top: 70px;
+    .navbar-nav>li>a {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+/*
+ * Navigation Drop Downs
+ * --------------------------------------------------
+ */
+
+#navbar-right .dropdown-menu {
+  border: none;
+  &>li>a {
+      color: #fff;
+      font-size: 1.05em;
+      margin-bottom: 5px;
+    &:hover { //For top right nav
+        color: $hoveraccent;
+        text-decoration: none;
+        background-color: transparent;
+    }
+  }
+}
+
+.dropdown-menu-right {
+  @include respond-to(large) {
+    right: auto;
+    left: 0;
+  }
+}
+
+.twocol-head { // Headers for mega drop downs
+  color: #e7d5d3;
+  font-size: .8em;
+  line-height: 2.4em;
+  text-transform: uppercase;
+}
+
+.twocol-drop {
+  background-color: $transparent;
+  @include respond-to(small) {
+      min-width: 500px;
+      padding: 10px 0 10px 0;
+  }
+  >li>ul>li {
+    margin-bottom: 10px;
+    a {
+      color: #fff;
+      font-size: 1.1em;
+      text-decoration: none;
+      &:hover {
+        color: $hoveraccent;
+      }
+    }
+  }
+}
+
+.ul-left {
+  padding-bottom: 1.5em;
+  @include respond-to(medium) {
+    padding-bottom: 0px;
+    border-right: 1px solid $darkgray;
+  }
+}
+
+
+/* >> Start Global Custom Header */
+
+#topwrapper {
+  background: #efefef url(http://www.lib.uchicago.edu/e/index_images/index_bookbgonly.png) no-repeat scroll 60% 45px;
+  border-top: 3px solid maroon;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+#banner {
+  width: 250px;
+  padding: 15px 0 10px 10px;
+}
+
+.navbar-nav {
+
+}
+
+
+/* Mobile Toggle Nav */
+
+#bs-example-navbar-collapse-1 a{
+  color:maroon;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#bs-example-navbar-collapse-1 a:hover {
+  text-decoration:underline;
+  }
+
+.dropmenudiv a:hover {
+  background-color:#ddd;
+}
+
+/* Top Nav Styling */
+.globallinks {
+  background: #efefef;
+  border-top: 1px solid #BBBBBB;
+}
+
+.toplinks ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+.toplinks ul li {
+  display:inline;
+  margin-left:25px;
+}
+
+.toplinks ul li a {
+  font-size:12px;
+  color:maroon;
+}
+
+/* << End Global Custom Header */
+
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+
+/* Sticky Footer, a part 2 */
+#footer {
+  @include respond-to(small-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+      

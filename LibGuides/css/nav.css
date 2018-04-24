@@ -1,0 +1,333 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Colors
+Media Queries
+Elements
+Mixins
+Fonts and Headers
+Global Elements
+Top Right Navbar (time/account/ask)
+Main Navbar
+Navigation Drop Downs
+Fancy Splash Image (Jumbotron)
+Off Canvas (Sidebar Mobile Toggle)
+Left Sidebar
+Footer
+-------------------------------------------------------------------*/
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */ }
+
+/* Sticky Footer, a part 1: Wrapper for page content to push down footer */
+#body-wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10px; }
+  @media (min-width: 62em) {
+    #body-wrap {
+      margin: 0 auto -200px; } }
+
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif; }
+  body .font-secondary {
+    font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif; }
+
+html, body {
+  overflow-x: hidden;
+  /* Off Canvas: Prevent scroll on narrow devices */ }
+
+.valid {
+  color: #089e00; }
+
+.error {
+  color: red; }
+
+.warning {
+  color: #fff664; }
+
+.information {
+  color: #000db5; }
+
+/* Links */
+a {
+  color: #2a6496;
+  text-decoration: none;
+  outline: 0; }
+  a:hover {
+    color: #8A8B79; }
+  a:focus {
+    color: #5B8FA8; }
+  a.social {
+    color: #767676; }
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://motacilla.lib.uchicago.edu/static/base/css/iconfont/MaterialIcons-Regular.ttf) format("truetype"); }
+
+.material-icons {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga'; }
+
+h1, h2 {
+  font-family: 'ProximaNova-Regular'; }
+
+h3 {
+  font-family: 'ProximaNova-Regular';
+  font-size: 1.3em;
+  margin-bottom: 3px;
+  margin-top: 10px; }
+
+h4 {
+  font-family: 'ProximaNova-Semibold'; }
+
+h5 {
+  font-family: 'ProximaNova-Bold'; }
+
+/*
+ * Top Right Navbar (time/account/ask)
+ * --------------------------------------------------
+ */
+.mobile-topnav {
+  text-align: center;
+  border-bottom: 1px solid #767676;
+  background-color: rgba(67, 67, 67, 0.7);
+  padding: 5px 0; }
+  .mobile-topnav a {
+    color: #fff;
+    padding: 0 1em; }
+
+#navbar-right {
+  font-size: 1em;
+  padding-right: 1.5em; }
+  #navbar-right > li > a {
+    color: #f9f9f9; }
+    #navbar-right > li > a:hover {
+      color: #E4E4E4;
+      background-color: rgba(67, 67, 67, 0.95); }
+    #navbar-right > li > a:focus {
+      background-color: rgba(67, 67, 67, 0.95); }
+  #navbar-right > li > .dropdown-menu {
+    color: #fff;
+    text-align: right;
+    background-color: rgba(67, 67, 67, 0.95); }
+  @media (min-width: 118em) {
+    #navbar-right {
+      padding-right: 15em;
+      margin-right: 30px; } }
+
+ul#navbar-right li:hover > ul.dropdown-menu.menuhover {
+  display: block; }
+
+i.ask-icon {
+  color: #767676;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+  i.ask-icon.active {
+    color: #eee;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0; }
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+@media (min-width: 48em) {
+  .fluid-top {
+    padding: 0px; } }
+
+.navbar-brand {
+  max-width: 125px;
+  padding: 5px 15px 15px 15px; }
+  @media (min-width: 48em) {
+    .navbar-brand {
+      max-width: 175px;
+      padding-left: 35px;
+      padding-top: 5px; } }
+  @media (min-width: 62em) {
+    .navbar-brand {
+      padding-top: 10px; } }
+
+.lglive.navbar-default {
+  border: 0px;
+  margin-bottom: 0px;
+  background-image: url("nav-background.jpg");
+  background-repeat: repeat;
+  z-index: 10;
+  border-radius: 0; }
+  .lglive.navbar-default .navbar-nav {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; }
+    .lglive.navbar-default .navbar-nav > li > a {
+      color: #eee; }
+      .lglive.navbar-default .navbar-nav > li > a:hover {
+        color: #fff;
+        background-color: rgba(67, 67, 67, 0.95); }
+      .lglive.navbar-default .navbar-nav > li > a:focus {
+        color: #fff; }
+    .lglive.navbar-default .navbar-nav .open .dropdown-menu {
+      background-color: rgba(67, 67, 67, 0.95); }
+    .lglive.navbar-default .navbar-nav > .open > a:focus {
+      background-color: #800000;
+      color: #fff; }
+    .lglive.navbar-default .navbar-nav > .open > a, .lglive.navbar-default .navbar-nav > .open > a:hover {
+      color: #E4E4E4;
+      background-color: rgba(67, 67, 67, 0.95); }
+  .lglive.navbar-default .divider {
+    background-color: #767676; }
+
+#global-navbar {
+  background-color: rgba(67, 67, 67, 0.4);
+  font-size: 1.1em;
+  padding-left: 0.5em; }
+  #global-navbar.navbar-nav > li > a:focus {
+    color: #fff; }
+  #global-navbar.navbar-nav > .open > a:focus {
+    background-color: #800000; }
+  @media (min-width: 48em) {
+    #global-navbar {
+      box-shadow: 0 1px 7px #462b28;
+      margin-top: 70px; }
+      #global-navbar .navbar-nav > li > a {
+        padding-top: 7px;
+        padding-bottom: 7px; } }
+
+/*
+ * Navigation Drop Downs
+ * --------------------------------------------------
+ */
+#navbar-right .dropdown-menu {
+  border: none; }
+  #navbar-right .dropdown-menu > li > a {
+    color: #fff;
+    font-size: 1.05em;
+    margin-bottom: 5px; }
+    #navbar-right .dropdown-menu > li > a:hover {
+      color: #D49464;
+      text-decoration: none;
+      background-color: transparent; }
+
+@media (min-width: 75em) {
+  .dropdown-menu-right {
+    right: auto;
+    left: 0; } }
+
+.twocol-head {
+  color: #e7d5d3;
+  font-size: .8em;
+  line-height: 2.4em;
+  text-transform: uppercase; }
+
+.twocol-drop {
+  background-color: rgba(67, 67, 67, 0.95); }
+  @media (min-width: 48em) {
+    .twocol-drop {
+      min-width: 500px;
+      padding: 10px 0 10px 0; } }
+  .twocol-drop > li > ul > li {
+    margin-bottom: 10px; }
+    .twocol-drop > li > ul > li a {
+      color: #fff;
+      font-size: 1.1em;
+      text-decoration: none; }
+      .twocol-drop > li > ul > li a:hover {
+        color: #D49464; }
+
+.ul-left {
+  padding-bottom: 1.5em; }
+  @media (min-width: 62em) {
+    .ul-left {
+      padding-bottom: 0px;
+      border-right: 1px solid #767676; } }
+
+/* >> Start Global Custom Header */
+#topwrapper {
+  background: #efefef url(http://www.lib.uchicago.edu/e/index_images/index_bookbgonly.png) no-repeat scroll 60% 45px;
+  border-top: 3px solid maroon;
+  border-bottom: 1px solid #e2e2e2; }
+
+#banner {
+  width: 250px;
+  padding: 15px 0 10px 10px; }
+
+/* Mobile Toggle Nav */
+#bs-example-navbar-collapse-1 a {
+  color: maroon;
+  text-decoration: none;
+  font-weight: bold; }
+
+#bs-example-navbar-collapse-1 a:hover {
+  text-decoration: underline; }
+
+.dropmenudiv a:hover {
+  background-color: #ddd; }
+
+/* Top Nav Styling */
+.globallinks {
+  background: #efefef;
+  border-top: 1px solid #BBBBBB; }
+
+.toplinks ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.toplinks ul li {
+  display: inline;
+  margin-left: 25px; }
+
+.toplinks ul li a {
+  font-size: 12px;
+  color: maroon; }
+
+/* << End Global Custom Header */
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+/* Sticky Footer, a part 2 */

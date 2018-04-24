@@ -1,0 +1,589 @@
+@import 'nav.scss';
+
+/*
+ * Global
+ * --------------------------------------------------
+ */
+
+#s-lg-public-skiplink {
+    top: -50px;
+}
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body{
+	background-color:#ffffff;
+	padding-left: 0px;
+	padding-right: 0px;
+	line-height: 1.6em;
+}
+
+#s-lg-tabs-container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.glyphicon-home {
+  top: 20px;
+  left: 10px;
+}
+
+.largetext {
+	color: black
+}
+
+/* Add focus to main content */
+#tabindex {
+	outline: 0;
+}
+
+
+/*
+ * Global Buttons
+ * --------------------------------------------------
+ */
+
+.btn-info {
+  color: maroon;
+  background-color: #ccc;
+  border-color: #a3a3a3;
+}
+
+.btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open>.dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #767676;
+  border-color: #a3a3a3;
+
+}
+
+.pagination > .active > a {
+	color: maroon;
+  background-color: #ccc;
+  border-color: #a3a3a3;
+}
+
+.pagination > .active > a:hover, .pagination > li > a:hover {
+  color: #fff;
+  background-color: #767676;
+  border-color: #a3a3a3;
+}
+
+.pagination > li > a {
+  color: #767676;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+
+/* Drop Down Widgets */
+.form-inline .form-control {
+  width: 80%;
+	@include respond-to(small) {
+		width: 80%;
+	}
+}
+
+
+/*
+ * Breadcrumbs
+ * --------------------------------------------------
+ */
+
+.breadcrumbs, .breadcrumbsr, .s-lib-bc, .breadcrumbs a, .breadcrumbsr a, .s-lib-bc a {
+	color:#777777;
+	font-family: 'ProximaNova-Regular',Arial,sans-serif;
+	font-size:0.8em;
+	letter-spacing: 2px;
+}
+
+#s-lib-bc a {
+	color:#767676;
+}
+
+.breadcrumb>li+li:before {
+  content: ">\00a0";
+}
+
+
+/*
+ * Search Box
+ * --------------------------------------------------
+ */
+
+#s-lg-guide-search-box {
+	@include respond-to(small) {
+		width: 100%;
+		margin-left: 15px;
+		margin-bottom: 5px;
+	}
+	.btn-default {
+		color: maroon;
+		background-color: #ccc;
+		border-color: #a3a3a3;
+	}
+}
+
+.form-control {
+  border: 1px solid #a3a3a3;
+}
+
+/* From SpringShare: to display full search field */
+#bs-example-navbar-collapse-1 {
+	@include respond-to(small) {
+		margin-left: 0px;
+	}
+}
+
+#s-lg-sb-nav-1 {
+	@include respond-to(small) {
+		width: 100%;
+		display: block;
+		border: none;
+	}
+}
+
+#s-lg-az-nav-1 {
+	@include respond-to(small) {
+		display: block;
+		border: none;
+	}
+}
+
+#s-lg-srch-form {
+	@include respond-to(small) {
+		border: none;
+	}
+}
+
+
+/*
+ * Home Page Customization
+ * --------------------------------------------------
+ */
+
+// Home Page Tabbed Navigation
+
+#s-lg-tabs-container .nav-tabs {
+	a:hover {
+		outline: none;
+		color: #fff;
+		background-color: #767676;
+	}
+	& > .active > a {
+		color: #767676;
+		background-color: #fff;
+		border-bottom: 4px solid;
+		border-bottom-color: #767676;
+		&:hover {
+			border: 0px;
+			border-bottom: 4px solid;
+			border-bottom-color: #ccc;
+		}
+	}
+	& > li > a {
+		border-bottom: 4px solid maroon;
+		background-color: #fff;
+		color: #800000;
+		&:hover {
+			border: 0px;
+			border-bottom: 4px solid;
+			border-bottom-color: #ccc;
+		}
+	}
+}
+
+#s-lg-guide-tabs-title-bar {
+  border-top: 0px;
+}
+
+
+// Main Home Page
+
+#noteheader {
+	margin: 0px;
+	padding: 0px;
+	line-height: 10px;
+}
+
+.homeheader {
+	font-weight: 900;
+	font-size: 1.2em;
+	color: #000;
+	padding: 0px;
+}
+
+.homelinks {
+	margin: 0 0 12px;
+	line-height: .6em;
+	a {
+		display: block;
+		margin-left: 2em;
+		text-indent: -2em;
+		line-height: 1.25em;
+	}
+}
+
+#notecontainer ul {
+	margin-left: 7px;
+	padding: 0;
+	li{
+	  margin: 5px 0;
+	}
+}
+
+.s-lg-label-more {
+  line-height: 1em;
+  color: #5B8FA8;
+  padding-bottom: .2em;
+}
+
+/* 
+ * Profile Landing Page
+ * --------------------------------------------------
+ */
+
+#s-lg-profile-nav, #s-lg-srch-nav {
+  background: #fff;
+  }
+
+#s-lg-profile-nav .nav-pills {
+	& > .active > a {
+		color: #767676;
+		background-color: #fff;
+		border-bottom: 4px solid;
+		border-bottom-color: #767676;
+		&:hover {
+			border: 0px;
+			border-bottom: 4px solid;
+			border-bottom-color: #ccc;
+		}
+	}
+	& > li > a {
+		border-left: 0px;
+		border-bottom: 4px solid maroon;
+		background-color: #fff;
+		color: #800000;
+	    border-radius: 0px;
+	    &:hover {
+			outline: none;                  
+			color: #fff;
+			background-color: #767676;
+		}
+	}
+}
+
+.s-lib-featured-profile-container {
+  vertical-align: bottom;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    margin-right: 0;
+}
+
+
+/*
+ * A-Z List
+ * --------------------------------------------------
+ */
+
+#s-lg-az-results #s-lg-db-name-featured, .s-lg-db-name-featured {
+    background-color: #d5d7bd;
+    background-image: linear-gradient(to right, #dfe1cd, #d5d7bd);
+    padding: 15px;
+    margin-bottom: 2.5em;
+    border-bottom: none;
+    box-shadow: 10px 10px #eee;
+}
+
+.s-lib-public-side-header {
+  font: 700 1.3em Arial,Geneva,Helvetica,sans-serif;
+  border-bottom: 2px solid maroon;
+  color: maroon;
+}
+
+/*Page Header*/
+#s-lib-public-header-title {
+	font-size: 1.8em;
+	color: maroon;
+}
+
+#s-lib-public-main, #s-lib-public-header {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/*
+ * Guides Listing
+ * --------------------------------------------------
+ */
+
+#s-lg-guide-desc-container {
+    font-family: Arial, sans-serif;
+}
+
+.s-lg-rss-list {
+    list-style: none;
+}
+
+.s-lg-rss-list-item {
+    padding: 10px 0;
+    &>.s-lg-title {
+    	&>a {
+		    font-size: 1em;
+		    color: #9A5324;
+		    font-weight: 600;
+		}
+		.resdesc {
+			padding-top: 5px;
+			a > img {
+			    vertical-align: inherit;
+			    width: 100%;
+			    height: auto;
+			}
+		}
+    }
+}
+
+/* Subject number listing in Guides listed under "more" */
+#s-lg-db-label {
+    font-size: 1em;
+    top: 40px;
+    left: 10px;
+}
+
+/* Hides "X Studies Experts" for Guides listed under "more" */
+#s-lg-sb-experts-div {
+  visibility: hidden;
+}
+
+/* Hides "Viewed X Times" for Guide Listings */
+.s-lg-guide-info-views {
+	visibility: hidden;
+}
+
+
+/*
+ * Guides
+ * --------------------------------------------------
+ */
+
+#s-lg-guide-search-box {
+  width: 90%;
+}
+
+/*Guide Header*/
+#s-lg-guide-name {
+	font-size: 1.8em;
+	color: maroon;
+}
+
+#s-lg-guide-header-info h1 {
+  margin-bottom: 0px;
+  font-size: 1.5em;
+}
+
+/*Guide Subheader*/
+#s-lg-guide-desc-container {
+	padding-top: 0;
+  padding-bottom: 7px;
+  font-size: 1.05em;
+}
+
+/*Box Headers*/
+.s-lib-box .s-lib-box-title {
+	font-size: 1.3em;
+	background-color: #ffffff;
+	border-bottom: 2px solid #800000;
+	color: #800000;
+	padding-bottom: 2px;
+}
+
+.label-info[href]:focus, .label-info[href]:hover {
+  color: #447bab;
+  background-color: #fff;
+}
+
+
+/* Profile Box */
+.s-lib-profile-image img {
+	max-height: 175px;
+	width: auto;
+	background-color: #FFF;
+	border: none;
+	box-shadow: none;
+}
+
+.s-lib-profile-div {
+  margin-bottom: 7px;
+}
+
+
+/* Adds space between chat window and contact info */
+div[id^="s-lib-profile-contact"]:after {
+    content: '\A';
+    white-space: pre;
+}
+
+/* Rearranges "Ask A Librarian" and "Contact" elemnts in Profile Box */
+#s-lib-profile-container {
+	display:table;
+}
+
+.s-lib-profile-widget-other {
+	display:table-footer-group;
+} /* Will be displayed at the bottom of the pseudo-table */
+
+.s-lib-profile-contact {
+	display:table-header-group;
+}
+
+/* Profile Email Link/Button */
+.s-lib-profile-email .label:before {
+    content: "\f003";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    padding-right: 5px;
+}
+
+/* LibCal Schedule Button */
+/* Values marked !important to override any author personalization within the widget itself */
+button[id^="mySched"] {
+	background: #8A9045 !important;
+    border: 0px !important;
+    color: #fff !important;
+    padding: 0.5em !important;
+    &:before {
+	    content: "\f017";
+	    font-family: FontAwesome;
+	    font-weight: normal;
+	    font-style: normal;
+	    display: inline-block;
+	    text-decoration: inherit;
+	    padding-right: 5px;
+	}
+}
+
+.label {
+	font-weight: 500;
+	line-height: 1em;
+	color: #fff;
+    background-color: #616530;
+    padding: 0.5em;
+}
+
+
+.label-info[style] {
+  font-size: 1em !important; /*overrides inline style created by Springshare*/
+}
+
+
+/*
+ * Guides Side Navigation
+ * --------------------------------------------------
+ */
+
+
+#s-lg-tabs-container .nav-pills {
+	span {
+	  margin-left: 10px;
+	}
+	& > .active {
+		&::after { /* Triangle on Active */
+			content:'';
+			display:block;
+			position:absolute;
+			top:-1px;
+			left:0.1em;
+			width:0;
+			height:0;
+			border-color: transparent transparent transparent #ccc;
+			border-style: solid;
+			border-width: 15px;
+		}
+		> a {
+			color: #fff;
+			cursor: default;
+			background-color: #767676;
+			border: 0px;
+			border-left: 3px solid #ccc;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			border-bottom-color: transparent;
+			font-weight: bold;
+			&:hover {
+				border: 0px;
+				border-left: 3px solid #ccc;
+			}
+		}
+	}
+	& > li > a {
+		border: 0px; // reset
+		border-left: 3px solid maroon;
+		background-color: #f9f9f9;
+		color: maroon;
+		&:hover {
+			outline: none; 
+			border: 0px;                 
+			border-left: 0px solid #fff;
+			background-color: #767676;
+			color: #ffffff;
+		}
+	}
+}
+
+/* Sub Navigation */
+.list-group-item {
+  border: 0px;
+  border-left: 3px solid #ccc;
+  font-size: 1em;
+  line-height: normal;
+	a {
+		color: #525252;
+		text-decoration: none;
+		font-weight: 500;
+		&:hover {
+		  text-decoration: underline;
+		}
+	}
+	&:first-child {
+	  border-top-left-radius: 0px;
+	  border-top-right-radius: 0px;
+	}
+	&:last-child {
+	  border-bottom-right-radius: 0px;
+	  border-bottom-left-radius: 0px;
+	}
+}
+
+#s-lg-guide-tabs .s-lg-tabs-side .s-lg-boxnav .list-group-item {
+  background-color: #fff;
+}
+
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+
+#s-lib-footer-brand, #s-lib-footer-rights {
+	display: none;
+}
+
+#s-lib-footer-public {
+	background-color: #ffffff;
+	border: 0px;
+}
+
+
+
