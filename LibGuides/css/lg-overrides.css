@@ -348,7 +348,8 @@ body {
   background-color: #ffffff;
   padding-left: 0px;
   padding-right: 0px;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  font-size: 15px; }
 
 #s-lg-tabs-container {
   padding-left: 5px;
@@ -557,20 +558,38 @@ body {
  * A-Z List
  * --------------------------------------------------
  */
+/* Search box */
+#s-lg-db-label {
+  display: none; }
+
+#s-lg-az-nav-1 {
+  margin: 0; }
+  #s-lg-az-nav-1 .navbar-form .form-group {
+    display: initial; }
+  @media (min-width: 48em) {
+    #s-lg-az-nav-1 .navbar-form .form-control {
+      width: 30em; } }
+  #s-lg-az-nav-1 .btn-default {
+    color: maroon;
+    background-color: #ccc;
+    border-color: #a3a3a3; }
+
+/* Best Bets box */
 #s-lg-az-results #s-lg-db-name-featured, .s-lg-db-name-featured {
-  background-color: #d5d7bd;
-  background-image: linear-gradient(to right, #dfe1cd, #d5d7bd);
+  background-color: #eeefe4;
   padding: 15px;
   margin-bottom: 2.5em;
-  border-bottom: none;
   box-shadow: 10px 10px #eee; }
+
+.s-lg-az-result, .s-lg-az-trial {
+  border-bottom: 1px solid #D5D7BD; }
 
 .s-lib-public-side-header {
   font: 700 1.3em Arial,Geneva,Helvetica,sans-serif;
   border-bottom: 2px solid maroon;
   color: maroon; }
 
-/*Page Header*/
+/* Page Header */
 #s-lib-public-header-title {
   font-size: 1.8em;
   color: maroon; }
@@ -790,6 +809,11 @@ button[id^="mySched"] {
 #s-lib-footer-brand, #s-lib-footer-rights {
   display: none; }
 
-#s-lib-footer-public {
-  background-color: #ffffff;
-  border: 0px; }
+#s-lib-footer-public, .s-lib-footer {
+  width: 100%; }
+
+@media (min-width: 62em) {
+  #s-lg-guide-header-attributes {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }

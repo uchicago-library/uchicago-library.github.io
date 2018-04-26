@@ -21,6 +21,7 @@ body{
 	padding-left: 0px;
 	padding-right: 0px;
 	line-height: 1.6em;
+	font-size: 15px; //needed to override LGs font setting
 }
 
 #s-lg-tabs-container {
@@ -292,13 +293,40 @@ body{
  * --------------------------------------------------
  */
 
+/* Search box */
+ #s-lg-db-label { // Hides X databases badge that is next to search box
+	display: none;
+}
+
+#s-lg-az-nav-1 {
+	margin: 0;
+	.navbar-form {
+		.form-group {
+			display: initial;
+		}
+		.form-control {
+			@include respond-to(small) {
+				width: 30em
+			}
+		}
+	}
+	.btn-default {
+		color: maroon;
+		background-color: #ccc;
+		border-color: #a3a3a3;
+	}
+}
+
+/* Best Bets box */
 #s-lg-az-results #s-lg-db-name-featured, .s-lg-db-name-featured {
-    background-color: #d5d7bd;
-    background-image: linear-gradient(to right, #dfe1cd, #d5d7bd);
+    background-color: #eeefe4;
     padding: 15px;
     margin-bottom: 2.5em;
-    border-bottom: none;
     box-shadow: 10px 10px #eee;
+}
+
+.s-lg-az-result, .s-lg-az-trial {
+    border-bottom: 1px solid #D5D7BD;
 }
 
 .s-lib-public-side-header {
@@ -307,7 +335,7 @@ body{
   color: maroon;
 }
 
-/*Page Header*/
+/* Page Header */
 #s-lib-public-header-title {
 	font-size: 1.8em;
 	color: maroon;
@@ -487,11 +515,11 @@ button[id^="mySched"] {
 }
 
 
+
 /*
  * Guides Side Navigation
  * --------------------------------------------------
  */
-
 
 #s-lg-tabs-container .nav-pills {
 	span {
@@ -580,9 +608,16 @@ button[id^="mySched"] {
 	display: none;
 }
 
-#s-lib-footer-public {
-	background-color: #ffffff;
-	border: 0px;
+#s-lib-footer-public, .s-lib-footer {
+	width: 100%;
+}
+
+#s-lg-guide-header-attributes {
+	@include respond-to(medium) {
+		width: 80%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
 
 
