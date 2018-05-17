@@ -332,6 +332,63 @@ i.ask-icon {
  */
 /* Sticky Footer, a part 2 */
 /*
+ * Alerts
+ * --------------------------------------------------
+ */
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9; }
+  .alert p {
+    margin-bottom: 0;
+    display: inline; }
+  .alert .rich-text {
+    display: inline; }
+
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe; }
+
+.alert-high {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-bottom: 0em;
+  border-radius: 0;
+  color: #fff;
+  background-color: #9A5324; }
+  .alert-high a {
+    color: #f9f9f9;
+    text-decoration: underline; }
+
+.alert-low, .alert-info {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-bottom: 2px solid #31708f; }
+  .alert-low a, .alert-info a {
+    color: #31708f;
+    text-decoration: underline; }
+
+.alert-info {
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-bottom: none;
+  border-radius: 0; }
+  .alert-info .close {
+    opacity: .4; }
+  @media (min-width: 48em) {
+    .alert-info {
+      padding: 0.5em 3em; } }
+
+/*
  * Global
  * --------------------------------------------------
  */
@@ -370,6 +427,10 @@ body {
  * Global Buttons
  * --------------------------------------------------
  */
+#s-lg-az-reset {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  font-size: 0.85em; }
+
 .btn-info {
   color: maroon;
   background-color: #ccc;

@@ -1,6 +1,76 @@
 @import 'nav.scss';
 
 /*
+ * Alerts
+ * --------------------------------------------------
+ */
+
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9;
+  & p {
+    margin-bottom: 0;
+    display: inline;
+  }
+  .rich-text {
+    display: inline;
+  }
+}
+
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe;
+}
+
+.alert-high {
+    text-align: center;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-bottom: 0em;
+    border-radius: 0;
+    color: #fff;
+    background-color: #9A5324;
+    a {
+      color: #f9f9f9;
+      text-decoration: underline;
+    }
+}
+
+.alert-low {
+    text-align: center;
+    font-size: 1.1em;
+    padding: 1em;
+    margin-bottom: 0em;
+    border: 0;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-bottom: 2px solid #31708f;
+    a {
+      color: #31708f;
+      text-decoration: underline;
+    }
+}
+
+.alert-info {
+  @extend .alert-low;
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-bottom: none;
+  border-radius: 0;
+  & .close {
+    opacity: .4;
+  }
+  @include respond-to(small) {
+    padding: 0.5em 3em;
+  }
+}
+
+
+/*
  * Global
  * --------------------------------------------------
  */
@@ -48,6 +118,11 @@ body{
  * Global Buttons
  * --------------------------------------------------
  */
+
+#s-lg-az-reset {
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+}
 
 .btn-info {
   color: maroon;

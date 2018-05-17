@@ -1,0 +1,27 @@
+/*
+ * Fix Pagination Issue
+ * --------------------------------------------------
+ */
+@media (min-width: 959px) {  /*  Maintaining SFX's media query standard  */
+   span.hide {
+      display: flex!important; /*  Important needs to be added to override Boostrap's important.  */
+   }
+}
+
+
+/*
+ * Fix Notes line break
+ * --------------------------------------------------
+ */
+
+
+i.mdl-icon-toggle__label.material-icons {  /*  Needed to keep drop downs working  */
+    display: inline-block;
+}
+
+.mdl-layout__container label {
+    display: unset;
+    max-width: none;
+    margin-bottom: 0;
+    font-weight: normal;
+}
