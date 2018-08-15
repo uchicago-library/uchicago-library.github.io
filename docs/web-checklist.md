@@ -51,3 +51,15 @@ View [Code Resources](code-resrouces.md) for code examples and documentation
 - [ ] `scope="col"` or `scope="row"` are used as data related to headers
 - [ ] structure with `<thead>`, `<tfoot>`, and `<tbody>`
 - [ ] Full table is responsive when in mobile or zoomed-in
+
+### Analytics
+- [ ] Google Analytics or other web statistics code is inserted into page templates
+- [ ] Google Search Console is enabled, if appropriate
+
+### Search
+- [ ] Test search interface with non-Roman characters, if appropriate to content
+
+## [Prior to Launch](#back)
+### Documentation
+- [ ] Documentation for site or application is published on Loop
+- [ ] If replacing or significant revising an existing site, take screenshots of old design
