@@ -58,6 +58,10 @@ View [Code Resources](code-resrouces.md) for code examples and documentation
 
 ### Search
 - [ ] Test search interface with non-Roman characters, if appropriate to content
+- [ ] Contents are indexed in appropriate tools (Wagtail, VuFind), if appropriate
+
+### Citations
+- [ ] Citations can be saved into Zotero, if site contains bibliographic data
 
 ## [Prior to Launch](#back)
 ### Documentation
