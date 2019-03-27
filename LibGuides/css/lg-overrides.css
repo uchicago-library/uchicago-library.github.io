@@ -278,6 +278,27 @@ i.ask-icon {
       .twocol-drop > li > ul > li a:hover {
         color: #D49464; }
 
+.onecol-drop {
+  background-color: rgba(67, 67, 67, 0.95);
+  padding: 0 15px 10px 15px; }
+  @media (min-width: 48em) {
+    .onecol-drop {
+      min-width: 15em;
+      padding: 10px 15px 10px 15px; } }
+  .onecol-drop > li {
+    margin-bottom: 5px; }
+    .onecol-drop > li a {
+      color: #fff !important;
+      padding: 0 !important;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-bottom: 12px; }
+      .onecol-drop > li a:hover {
+        color: #D49464 !important;
+        background-color: transparent !important; }
+  .onecol-drop .twocol-head {
+    padding-left: 0px; }
+
 .ul-left {
   padding-bottom: 1.5em; }
   @media (min-width: 62em) {
@@ -643,7 +664,8 @@ body {
   box-shadow: 10px 10px #eee; }
 
 .s-lg-az-result, .s-lg-az-trial {
-  border-bottom: 1px solid #D5D7BD; }
+  border-bottom: 1px solid #D5D7BD;
+  padding: 5px 0; }
 
 .s-lib-public-side-header {
   font: 700 1.3em Arial,Geneva,Helvetica,sans-serif;
@@ -658,6 +680,21 @@ body {
 #s-lib-public-main, #s-lib-public-header {
   padding-right: 15px;
   padding-left: 15px; }
+
+.s-lg-db-panel {
+  margin-bottom: 15px; }
+
+h3.s-lg-db-panel-title {
+  padding-left: 0.5em; }
+
+/* Expert Profile box */
+#s-lg-az-experts-div #s-lg-box-profile {
+  border: none;
+  box-shadow: none; }
+
+#s-lg-az-experts-div .s-lib-box-title {
+  background: none;
+  border-bottom: none; }
 
 /*
  * Guides Listing
