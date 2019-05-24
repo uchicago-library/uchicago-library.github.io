@@ -1,52 +1,122 @@
 <!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/3821/edit/ -->
 
-<p>The D'Angelo Law Library retrieves and delivers uncharged Library books located in the stacks of other libraries on campus. This service is currently available to Law School students, student run law journals, Law faculty research assistants, and law school staff. Materials will generally be collected within <strong>two working days</strong> and placed on hold at Circulation or delivered to the appropriate carrel. You will receive an email when the item goes on hold for you. Items not retrieved within seven days will be sent back to their original library.</p>
-<ul>
-<li><strong>This paging service is only for uncharged materials in other libraries.</strong></li>
-<li><strong>We do not page from the D'Angelo stacks.</strong> If uncharged copies of an item are available at both D'Angelo and another campus library, please check the D'Angelo stacks before submitting a paging request for a copy at another library.&nbsp; If you can't find an uncharged item you're looking for that should be in the D'Angelo stacks, please fill out a search request by following the "Can't Find It?" link next to the item's circulation status in the online catalog.</li>
-<li>If the material you need is in one of D'Angelo's storage collections, please use the "Request from Storage" link next to the item's circulation status in the online catalog.</li>
-<li>If the material you need is in the Mansueto Library, please use the "Request from Mansueto Library" link next to the item's circulation status in the online catalog.</li>
-<li>If all copies of the material you are requesting are checked out, you will need to recall the item using the link provided in the online catalog.</li>
-<li>Items that are <strong>Building Use Only</strong> or held on <strong>Reserve</strong> or <strong>Reference</strong> collections at other libraries can not be paged using this service.</li>
-</ul>
-<p>To check for online availability, look up titles in the&nbsp;<a href="https://catalog.lib.uchicago.edu/vufind/">Library Catalog</a>.</p>
-<p>Asterisk (*) denotes required field.</p>
-<form id="knowledgetracker" action="https://live.desktracker.com/kbase/public_form_handler.php" method="post" name="entryform1"><!--LIBRARY ID REQD-->
-<p><input id="library" type="hidden" name="library" value="326369"></p>
-<!--SUBMITTED FROM--><input type="hidden" name="submitted_from" value="DLL_pagingservice.html"> <!--REDIRECT AFTER SUBMITTING --> <input type="hidden" name="form_custom_webform_redirect" value="//www.lib.uchicago.edu/law/ask-librarian-law/paging-received/"> <!--REQUEST TYPE--> <input type="hidden" name="question" value="PAGE REQUEST"> <!--CUSTOM EMAIL SUBJECT--> <input type="hidden" name="form_custom_email_subject" value="Paging Request Confirmation"> <!--CUSTOM EMAIL MESSAGE-->
-<p><input type="hidden" name="form_custom_message" value="Thank you, we've received your paging request. It is currently being processed and your item should be available by the end of the next business day."></p>
-<h2>Item information</h2>
-<em>(Please note if there is a specific year, volume, edition or copy that you need.)</em>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-<p>*Call number:<br/>
-<input class="validaterequired" type="text" name="02_call_no" size="50" maxlength="100"></p>
-<p>Copy/vol./ed.:<br/>
-<input type="text" name="03_copy_no" size="50" maxlength="100"></p>
-<p>*Title:<br/>
-<input class="validaterequired" type="text" name="04_title" size="50" maxlength="100"></p>
-<p>Author:<br/>
-<input type="text" name="05_author" size="50" maxlength="100"></p>
-<h2><!-- PATRON INFORMATION-->Patron information</h2>
-<p>*Your name:<br/>
-<input class="validaterequired" type="text" name="07_patron_name" size="30" maxlength="255"></p>
-<p>*Your email address:<br/>
-<input class="validateemail" type="text" name="email" size="30" maxlength="255"></p>
-<p>*Confirm your email address:<br/>
-<input class="validateconfirm" type="text" name="email confirmed" size="30" maxlength="255"></p>
-<p>*Affiliation<br/>
-<input type="radio" name="09_affiliation" value="stu">Law School Student<br> <input class="validaterequired" type="radio" name="09_affiliation" value="law_journal">Law Journal Staff<br> <input type="radio" name="09_affiliation" value="RA">Law Faculty Research Assistant<br> <input type="radio" name="09_affiliation" value="lib_staff">Law Library Staff<br> <input type="radio" name="09_affiliation" value="law_staff">Law School Staff</p>
-<p>Library barcode (<a href="//www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this</em></a>?):<br/>
-<input type="text" name="08_patron_barcode" size="10" maxlength="10"><br/>
-<em>If you would like the material held for your personal account, supply the barcode on your Chicago Card. If you would like the material held for your proxy borrower account, please provide the barcode on the proxy borrower card. Providing a barcode is not necessary for Law Journals</em></p>
-<p>Carrel Number: (if applicable)<br/>
-<input type="text" name="08_carrel_number" size="4" maxlength="4"> <br/>
-<em>If you do not have a <a href="//www.lib.uchicago.edu/law/ask-librarian-law/carrelrequest/">carrel</a>, we will place the item on hold for you at Law Circulation for seven days.</em></p>
-<p>Law Journal (if requesting for use by journal)<br/>
-<input type="radio" name="09_journal" value="cjil">Chicago International Journal of Law<br> <input type="radio" name="09_journal" value="law_review">Law Review<br> <input type="radio" name="09_journal" value="legal_forum">Legal Forum</p>
-<p>Comments or questions:<br/>
-<textarea name="patron_comments" rows="5" cols="70"></textarea></p>
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/CACHE/css/0147941d7d76.css">
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/base/css/bootstrap.min.css">
 
-<p><input id="submit" type="submit" name="submit" value="Submit"> <input type="reset" name="reset" value="Clear form"></p>
-<p>&nbsp;</p>
-</form>
-<p><em>This form is powered by KnowledgeTracker and complies with its<a href="http://www.knowledgetrackerlib.com/patron_terms_uc.pdf" target="_blank"> privacy policy.</a></em></p>
+</head>
+
+	<body>
+
+		<p>The D'Angelo Law Library retrieves and delivers uncharged Library books located in the stacks of other libraries on campus. This service is currently available to Law School students, student run law journals, Law faculty research assistants, and law school staff. Materials will generally be collected within <strong>two working days</strong> and placed on hold at Circulation or delivered to the appropriate carrel. You will receive an email when the item goes on hold for you. Items not retrieved within seven days will be sent back to their original library.</p>
+		<ul>
+			<li><strong>This paging service is only for uncharged materials in other libraries.</strong></li>
+			<li><strong>We do not page from the D'Angelo stacks.</strong> If uncharged copies of an item are available at both D'Angelo and another campus library, please check the D'Angelo stacks before submitting a paging request for a copy at another library. If you can't find an uncharged item you're looking for that should be in the D'Angelo stacks, please fill out a search request by following the "Can't Find It?" link next to the item's circulation status in the online catalog.</li>
+			<li>If the material you need is in one of D'Angelo's storage collections, please use the "Request from Storage" link next to the item's circulation status in the online catalog.</li>
+			<li>If the material you need is in the Mansueto Library, please use the "Request from Mansueto Library" link next to the item's circulation status in the online catalog.</li>
+			<li>If all copies of the material you are requesting are checked out, you will need to recall the item using the link provided in the online catalog.</li>
+			<li>Items that are <strong>Building Use Only</strong> or held on <strong>Reserve</strong> or <strong>Reference</strong> collections at other libraries can not be paged using this service.</li>
+		</ul>
+		<p>To check for online availability, look up titles in the&nbsp;<a href="https://catalog.lib.uchicago.edu/vufind/">Library Catalog</a>.</p>
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+		<input type="hidden" name="FormQuestion" value="Paging Service Request" />
+		<input type="hidden" name="subject" value="Library Paging Service for Law School Students & Staff" />
+		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+
+
+			<section>
+			<h2>Item information</h2>
+
+			 <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="CallNumber">Call Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="CallNumber" name="CallNumber" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="CopyVol">Copy/vol./ed.</label>
+						<input type="text" class="form-control" id="CopyVol" name="CopyVol" aria-describedby="CopyVolHelp">
+						<small id="CopyVolHelp" class="form-text text-muted">Please note if there is a specific year, volume, edition or copy that you need.</small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="Title">Title <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Title" name="Title" required>
+				</div>
+
+				<div class="form-group">
+					<label for="Author">Author</label>
+					<input type="text" class="form-control" id="Author" name="Author">
+				</div>
+			</section>
+
+			<section>
+				<h2>Patron information</h2>
+
+		        <div class="form-group">
+					<label for="Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Name" name="Name" required>
+				</div>
+
+				<div class="form-group">
+				 	<label for="from">Your email address <abbr title="required">*</abbr></label>
+					<input type="email" class="form-control" id="from" name="from" required>
+				</div>
+
+				<div class="form-group">
+					<label for="Affiliation">Affiliation <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="Affiliation" name="Affiliation" required>
+				    	<option disabled selected value> -- select an affiliation -- </option>
+				    	<option>Law School Student</option>
+				    	<option>Law Journal Staff</option>
+				    	<option>Law Faculty Research Assistant</option>
+				    	<option>Law Library Staff</option>
+				    	<option>Law School Staff</option>
+				    </select>
+				</div>
+
+				<div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="barcode">Library barcode (<a href="//www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this</em></a>?)</label>
+						<input type="email" class="form-control" id="barcode" name="barcode" aria-describedby="barcodeHelp">
+						<small id="barcodeHelp" class="form-text text-muted">If you would like the material held for your personal account, supply the barcode on your Chicago Card. If you would like the material held for your proxy borrower account, please provide the barcode on the proxy borrower card. Providing a barcode is not necessary for Law Journals.</small>
+					</div>
+					<div class="col-sm-6">
+						<label for="CarrelNumber">Carrel Number (if applicable)</label>
+						<input type="text" class="form-control" id="CarrelNumber" name="CarrelNumber" aria-describedby="CarrelNumberHelp">
+						<small id="CarrelNumberHelp" class="form-text text-muted">If you do not have a <a href="https://www.lib.uchicago.edu/law/ask-librarian-law/carrelrequest/">carrel</a>, we will place the item on hold for you at Law Circulation for seven days.</em></small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="LawJournal">Law Journal (if requesting for use by journal)</label>
+				    <select class="form-control" id="LawJournal" name="LawJournal">
+				    	<option disabled selected value> -- select a journal -- </option>
+				    	<option>Chicago International Journal of Law</option>
+				    	<option>Law Review</option>
+				    	<option>Legal Forum</option>
+				    </select>
+				</div>
+
+				<div class="form-group">
+				    <label for="Comments">Comments or Questions</label>
+			    	<textarea class="form-control" id="Comments" name="Comments" rows="4"></textarea>
+			    </div>
+
+			    </section>
+
+			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+		</form>
+
+		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
+
+
+	</body>
+</html>

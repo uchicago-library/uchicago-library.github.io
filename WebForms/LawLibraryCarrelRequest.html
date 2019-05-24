@@ -1,37 +1,100 @@
 <!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/3820/edit/ -->
 
-<p>The Library has a limited number of&nbsp;assigned carrels on the fourth, fifth&nbsp;and sixth floors for use by research&nbsp;assistants, law students in seminar&nbsp;courses, students working on law&nbsp;journals, and others with special&nbsp;research needs. Carrels are assigned&nbsp;quarterly. Most library&nbsp;materials, including non-circulating&nbsp;items, may be checked out to carrels.</p>
-<p>Complete this form to request the use of a carrel in the D'Angelo Law Library.</p>
-<p>Asterisk (*) denotes required field.</p>
-<form id="knowledgetracker" action="https://live.desktracker.com/kbase/public_form_handler.php" method="post" name="entryform1"><!--LIBRARY ID REQD-->
-<p><input id="library" type="hidden" name="library" value="326369"></p>
-<!--SUBMITTED FROM--> <input type="hidden" name="submitted_from" value="DLL_carrelrequest.html"> <!--REDIRECT AFTER SUBMITTING --> <input type="hidden" name="form_custom_webform_redirect" value="//www.lib.uchicago.edu/law/ask-librarian-law/request-received/"> <!--REQUEST TYPE--> <input type="hidden" name="question" value="CARREL REQUEST"> <!--CUSTOM EMAIL SUBJECT--> <input type="hidden" name="form_custom_email_subject" value="DAngelo Law Library Carrel Request Confirmation"> <!--CUSTOM EMAIL MESSAGE--> <input type="hidden" name="form_custom_message" value="Thank you, we've received your DAngelo Law Library carrel request. We will respond to your request within two working days.">
-<h2> <!-- PATRON INFORMATION--> <strong>Patron information</strong></h2>
-<p>*Your name:<br/>
-<input class="validaterequired" type="text" name="07-patron_name" size="30" maxlength="255"></p>
-<p>*Your email address:<br/>
-<input class="validateemail" type="text" name="email" size="30" maxlength="255"></p>
-<p>*Confirm your email address:<br/>
-<input class="validateconfirm" type="text" name="email confirmed" size="30" maxlength="255"></p>
-<p>Phone number:<br/>
-<input type="text" name="09-phone_number" size="20" maxlength="20"></p>
-<p>*Library barcode (<a href="https://www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this?</em></a>):<br/>
-<input class="validaterequired" type="text" name="08-patron_barcode" size="10" maxlength="10"></p>
-<p>*Affiliation:<br/>
-<select name="affiliation" size="0">
-<option selected="selected"></option>
-<option>1L Law Student</option>
-<option>2L Law Student</option>
-<option>3L Law Student</option>
-<option>LLM</option>
-<option>Other (please describe in comments section)</option>
-</select></p>
-<p>What reason do you need the carrel for?<br/>
-<input type="radio" name="10-reason" value="research_assistant">Working as Research Assistant<br/> <input type="radio" name="10-reason" value="substantial_paper">Working on a substantial paper<br> <input type="radio" name="10-reason" value="other">Other (Please describe in comments section)</p>
-<p>If you need this carrel in your capacity as an RA, which faculty member are you working for?<br/>
-<input type="text" name="11-RA_for" size="30" maxlength="50"></p>
-<p>Comments or questions:<br/>
-<textarea name="patron_comments" rows="5" cols="70"></textarea></p>
-<p><input id="submit" type="submit" name="submit" value="Submit"> <input type="reset" name="reset" value="Clear form"></p>
-</form>
-<p><em>This form is powered by KnowledgeTracker and complies with its <a href="http://www.knowledgetrackerlib.com/patron_terms_uc.pdf" target="_blank"> privacy policy</a>.</em></p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/CACHE/css/0147941d7d76.css">
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/base/css/bootstrap.min.css">
+
+</head>
+
+	<body>
+
+		<p>The Library has a limited number of assigned carrels on the fourth, fifth and sixth floors for use by research assistants, law students in seminar courses, students working on law journals, and others with special research needs. Carrels are assigned quarterly. Most library materials, including non-circulating items, may be checked out to carrels.</p>
+		<p>Complete this form to request the use of a carrel in the D'Angelo Law Library.</p>
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+		<input type="hidden" name="FormQuestion" value="Carrel Request Form" />
+		<input type="hidden" name="subject" value="D'Angelo Law Library Carrel Request" />
+		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="asklaw" /><!--  // DOUBLE CHECK -->
+
+
+			<section>
+				<h2>Patron information</h2>
+		        <div class="form-group">
+					<label for="Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Name" name="Name" required>
+				</div>
+
+				 <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="from">Your email address <abbr title="required">*</abbr></label>
+						<input type="email" class="form-control" id="from" name="from" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="PhoneNumber">Your Phone Number</label>
+						<input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+					</div>
+				</div>
+
+		        <div class="form-group">
+					<label for="Barcode">Library barcode (<a href="https://www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this?</em></a>) <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Barcode" name="Barcode" required>
+				</div>
+
+				<div class="form-group">
+					<label for="Affiliation">Affiliation <abbr title="required">*</abbr></label>
+					    <select class="form-control" id="Affiliation" name="Affiliation" required>
+					    	<option disabled selected value> -- select an affiliation -- </option>
+							<option>1L Law Student</option>
+							<option>2L Law Student</option>
+							<option>3L Law Student</option>
+							<option>LLM</option>
+							<option>Other (please describe in comments section)</option>
+						</select>
+					</div>
+				</section>
+
+				<section>
+					<h2>Carrel Use</h2>
+					<div class="form-group">
+					<label for="Reason">What reason do you need the carrel for?</label>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="ResearchAssistant" id="ResearchAssistant">
+						  <label class="form-check-label" for="ResearchAssistant">Working as Research Assistant</label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="SubstantialPaper" id="SubstantialPaper">
+						  <label class="form-check-label" for="SubstantialPaper">Working on a substantial paper</label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="Other" id="Other">
+						  <label class="form-check-label" for="Other">Other (Please describe in comments section)</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="RAInfo">If you need this carrel in your capacity as an RA, which faculty member are you working for?</label>
+						<input type="text" class="form-control" id="RAInfo" name="RAInfo">
+					</div>
+
+					<div class="form-group">
+					    <label for="Comments">Comments or Questions</label>
+				    	<textarea class="form-control" id="Comments" name="Comments" rows="4"></textarea>
+				    </div>
+
+
+				</section>
+
+			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+		</form>
+
+		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
+
+
+	</body>
+</html>

@@ -1,30 +1,103 @@
+<!doctype html>
+
 <!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/4629/edit/ -->
 
-<p><span style="color: #010101; font-family: Calibri;"><span>Enter information below to order publication quality digital scans from circulating collections in the University of Chicago Library.&nbsp; Please submit a separate order form for each item.</span></span></p>
-<p>Asterisk (*) denotes required field.</p>
-<form id="knowledgetracker" action="https://live.desktracker.com/kbase/public_form_handler.php" method="post" name="entryform1">
-<p><!--LIBRARY ID REQD--></p>
-<p><input id="library" type="hidden" name="library" value="326369" /></p>
-<p><!--SUBMITTED FROM--></p>
-<input type="hidden" name="submitted_from" value="digital-photography.html" />
-<input type="hidden" name="question" value="DIGITAL PHOTOGRAPHY SERVICE ORDER" />
-<p><!--CUSTOM EMAIL SUBJECT--></p>
-<input type="hidden" name="form_custom_email_subject" value="Response from the University of Chicago Library regarding your library classroom request" />
-<p><!--CUSTOM EMAIL MESSAGE--><input type="hidden" name="form_custom_message" value="Thank you for contacting the University of Chicago Library. We will reply to your digital photography service order as soon as possible." /></p>
-<p><!--NAME-->*Your name: <br /><input class="required" type="text" name="name" size="30" maxlength="255" /> <!--EMAIL--><br /><br />*Your email address:<br /><input class="validateemail" type="text" name="email" size="30" maxlength="255" /><br /><br />*Confirm your email address:<br /><input class="validateconfirm" type="text" name="email confirmed" size="30" maxlength="255" /><br /><br />Phone number: <br /><input type="text" name="phone" size="30" /></p>
-<p><strong>Source &amp; Description:</strong></p>
-<p>*Call Number<br /><input class="required" type="text" name="call-number" size="30" />&nbsp;</p>
-<br />*Title: <br /><input class="required" type="text" name="Title" size="50" /> <br /> <br />Volume/Year/Issue: <br /><input type="text" name="enumeration" size="30" /> <br /> <br />*Description (page number, caption, etc.): <br /><input class="required" type="text" name="description" size="30" /> <br /> <br />Link from the Library Catalog (optional): <br /><input type="text" name="catalogURL" size="30" /> <br /> <br />Notes (any further information to help locate the item, or pertinent capture information): <br /><input type="text" name="notes" size="50" /> <br />
-<p>&nbsp;</p>
-<p><strong>Pricing</strong>
-<br/>Scans are $10 U.S. per image</p>
-<p><strong>Invoicing &amp; Prepayment</strong><br/>An invoice with amount due will be sent via email upon placement of order.&nbsp; Order will be fulfilled upon receipt of payment (2-3 weeks).
-<br/>Prepayment options (Customer will be contacted to complete prepayment transactions, credit card or check drawn in U.S. dollars from a U.S. bank)</p>
-<div class="extract"><h3>Important Copyright Information</h3>
-<p><strong>Notice warning concerning copyright restrictions</strong><br/>
-<p>The copyright law of the United States (title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</p>
-<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction.&nbsp; One of these specific conditions is that the photocopy or reproduction is not to be &#8220;used for any purpose other than private study, scholarship, or research.&#8221;&nbsp; If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of &#8220;fair use,&#8221; that user may be liable for copyright infringement.&nbsp;</p>
-<p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p></div>
-<p><em>This form is powered by KnowledgeTracker and complies with its <a href="http://www.knowledgetrackerlib.com/patron_terms_uc.pdf">privacy policy</a>.</em><br /><br /><input id="submit" type="submit" name="submit" value="Submit" /> <input type="reset" name="reset" value="Clear form" /></p>
-<p>&nbsp;</p>
-</form>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/CACHE/css/0147941d7d76.css">
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/base/css/bootstrap.min.css">
+
+</head>
+	<body>
+
+		<p>Enter information below to order publication quality digital scans from circulating collections in the University of Chicago Library. Please submit a separate order form for each item</p>
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+		<input type="hidden" name="FormQuestion" value="Digital Photo Order" />
+		<input type="hidden" name="subject" value="Digital Photography Service Order Form" />
+		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+
+
+			<section>
+				<h2>Contact Information</h2>
+		        <div class="form-group">
+					<label for="Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Name" name="Name" required>
+				</div>
+
+				 <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="from">Your email address <abbr title="required">*</abbr></label>
+						<input type="email" class="form-control" id="from" name="from" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="PhoneNumber">Your Phone Number</label>
+						<input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+					</div>
+				</div>
+			</section>
+
+			<section>
+
+				<h2>Source &amp; Description</h2>
+
+				 <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="CallNumber">Call Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="CallNumber" name="CallNumber" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="CatalogLink">Link from the Library Catalog</label>
+						<input type="text" class="form-control" id="CatalogLink" name="CatalogLink">
+					</div>
+				</div>
+
+				<div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="Title">Title <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="Title" name="Title" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="VolumeIssue">Volume / Year / Issue</label>
+						<input type="text" class="form-control" id="VolumeIssue" name="VolumeIssue">
+					</div>
+				</div>
+
+				<div class="form-group">
+				    <label for="Description">Description (page number, caption, etc.) <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="Description" name="Description" rows="4" required></textarea>
+				</div>
+
+				<div class="form-group">
+				    <label for="ProgramContent">Notes (any further information to help locate the item, or pertinent capture information)</label>
+				    <textarea class="form-control" id="ProgramContent" name="ProgramContent" rows="4"></textarea>
+				</div>
+			</section>
+
+				<p><strong>Pricing</strong>
+				<br/>Scans are $10 U.S. per image</p>
+				<p><strong>Invoicing &amp; Prepayment</strong><br/>An invoice with amount due will be sent via email upon placement of order.&nbsp; Order will be fulfilled upon receipt of payment (2-3 weeks).
+				<br/>Prepayment options (Customer will be contacted to complete prepayment transactions, credit card or check drawn in U.S. dollars from a U.S. bank)</p>
+
+			<div class="extract">
+				<h3>Important Copyright Information</h3>
+				<p><strong>Notice warning concerning copyright restrictions</strong><br/>
+				<p>The copyright law of the United States (title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</p>
+				<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction.&nbsp; One of these specific conditions is that the photocopy or reproduction is not to be &#8220;used for any purpose other than private study, scholarship, or research.&#8221;&nbsp; If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of &#8220;fair use,&#8221; that user may be liable for copyright infringement.&nbsp;</p>
+				<p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
+			</div>
+
+
+
+			<button class="default" type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+		</form>
+
+		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
+
+
+	</body>
+</html>
