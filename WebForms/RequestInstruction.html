@@ -1,0 +1,161 @@
+<!doctype html>
+
+<!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/3826/edit/ -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+
+	<body>
+
+		<p>University of Chicago librarians are happy to provide customized instruction programs for your course, highlighting relevant library resources. <a href="//www.lib.uchicago.edu/research/teaching/examples-library-instruction-sessions/"> View examples of Library instruction programs</a>.</p>
+		<p>To schedule a program, please complete the form below.&nbsp; A librarian will respond to your request by e-mail and schedule the session.&nbsp; Requests made during business hours will receive a confirmation within 24 hours. We recommend requesting your session at least one week in advance to ensure that teaching spaces are available at your preferred day/time. In some cases, we may be able to provide instruction in your classroom.</p>
+		<p>The Library also offers the option of <a href="//www.lib.uchicago.edu/research/teaching/courseguide/">customized course guides</a> in addition to or in lieu of scheduled sessions.</p>
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+
+		<form action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded" class="needs-validation" novalidate>
+
+		<input type="hidden" name="FormQuestion" value="Request Instruction" />
+		<input type="hidden" name="subject" value="Instruction Program Request" />
+
+		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+
+
+			<section>
+		        <h2>About Your Course</h2>
+		        <div class="form-group">
+					<label for="Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="Name" name="Name" required>
+					<div class="invalid-feedback">Please include your name</div>
+				</div>
+
+				<div class="form-group">
+					<label for="from">Your email address <abbr title="required">*</abbr></label>
+					<input type="email" class="form-control" id="from" name="from" placeholder="Enter email" required>
+					<div class="invalid-feedback">Please provide an email</div>
+				</div>
+
+				<div class="form-group">
+				    <label for="Division">Your Division <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="Division" name="Division" required>
+				      <option value="BSD">Biological Sciences Division</option>
+				      <option value="Booth">Chicago Booth School of Business</option>
+				      <option value="College">The College</option>
+				      <option value="Div">Divinity School</option>
+				      <option value="Graham">Graham School of General Studies</option>
+				      <option value="Harris">Harris School of Public Policy Studies</option>
+				      <option value="Humanities">Humanities Division</option>
+				      <option value="Law">Law School</option>
+				      <option value="PSD">Physical Sciences Division</option>
+				      <option value="Pritzker">Pritzker School of Medicine</option>
+				      <option value="SSA">School of Social Service Administration</option>
+				      <option value="SSD">Social Sciences Division</option>
+				      <option value="Other">Other</option>
+				      <option Value="NA">Not Applicable</option>
+				    </select>
+				</div>
+
+	            <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="CourseName">Course Name and Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="CourseName" name="CourseName" required>
+						<div class="invalid-feedback">Please provide a course number</div>
+			        </div>
+			        <div class="col-sm-6">
+						<label for="StudentCount">Number of Students <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="StudentCount" name="StudentCount" required>
+						<div class="invalid-feedback">Please include how many students you expect</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="ProgramDate">Desired Date of Program <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="ProgramDate" name="ProgramDate" required>
+						<div class="invalid-feedback">Please include a desired date</div>
+			        </div>
+			        <div class="col-sm-6">
+						<label for="ProgramTime">Desired Time of Program <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="ProgramTime" name="ProgramTime" required>
+						<div class="invalid-feedback">Please include a desired start time</div>
+					</div>
+				</div>
+
+			</section>
+		
+
+			<section>   
+			    <h2>Additional Information</h2>
+				<div class="form-group">
+				    <label for="ProgramContent">What you would like covered and what are your expectations of what your students will learn?</label>
+				    <textarea class="form-control" id="ProgramContent" name="ProgramContent" rows="4"></textarea>
+				</div>
+
+				<div class="form-group">
+				    <label for="ProgramAssignment">Is this session tied to an assignment? If so, please describe the assignment</label>
+				    <textarea class="form-control" id="ProgramAssignment" name="ProgramAssignment" rows="4"></textarea>
+				</div>
+
+				<div class="form-group">
+				    <label for="ProgramSources">Are there any specific sources that you would like for us to demonstrate or discuss?</label>
+				    <textarea class="form-control" id="ProgramSources" name="ProgramSources" rows="4"></textarea>
+				</div>
+
+				<div class="form-group">
+				    <label for="CourseGuide">Would you like an accompanying <a href="http://guides.lib.uchicago.edu/courseguides" target="_blank">library course guide</a>?</label>
+				    <select class="form-control" id="CourseGuide" name="CourseGuide">
+				    	<option>Yes</option>
+				    	<option>No</option>
+				    	<option>I would like more information</option>
+				    </select>
+				</div>
+
+				<div class="form-group">
+				    <label for="AdditionalComments">Additional comments or questions</label>
+			    	<textarea class="form-control" id="AdditionalComments" name="AdditionalComments" rows="4"></textarea>
+			    </div>
+
+			    <div class="form-group">
+				    <label for="ADAaccommodations">If you have a student with a disability, please indicate any accommodations that your student would need to participate in the session</label>
+			    	<textarea class="form-control" id="ADAaccommodations" name="ADAaccommodations" rows="2"></textarea>
+			    </div>
+			</section>
+
+			<button type="submit" name="submit" class="btn btn-primary"/>Submit Request</button>
+		</form>
+
+		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+	    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	    var forms = document.getElementsByClassName('needs-validation');
+	    // Loop over them and prevent submission
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	      form.addEventListener('submit', function(event) {
+	        if (form.checkValidity() === false) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	        }
+	        form.classList.add('was-validated');
+	      }, false);
+	    });
+	  }, false);
+	})();
+	</script>
+
+	</body>
+</html>
+
