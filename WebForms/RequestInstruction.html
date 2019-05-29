@@ -23,26 +23,24 @@
 
 		<input type="hidden" name="FormQuestion" value="Request Instruction" />
 		<input type="hidden" name="subject" value="Instruction Program Request" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="rcpt" value="askus" />
 
 
 			<section>
 		        <h2>About Your Course</h2>
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
-					<!-- <div class="invalid-feedback">Please include your name</div> -->
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 
 				<div class="form-group">
 					<label for="from">Your email address <abbr title="required">*</abbr></label>
 					<input type="email" class="form-control" id="from" name="from" required>
-					<!-- <div class="invalid-feedback">Please provide an email</div> -->
 				</div>
 
 				<div class="form-group">
-				    <label for="Division">Your Division <abbr title="required">*</abbr></label>
-				    <select class="form-control" id="Division" name="Division" required>
+				    <label for="02_Division">Your Division <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="02_Division" name="02_Division" required>
 				    	<option disabled selected value> -- select a division -- </option>
 					    <option value="BSD">Biological Sciences Division</option>
 					    <option value="Booth">Chicago Booth School of Business</option>
@@ -63,27 +61,23 @@
 
 	            <div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="CourseName">Course Name and Number <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="CourseName" name="CourseName" required>
-						<!-- <div class="invalid-feedback">Please provide a course number</div> -->
+						<label for="03_CourseName">Course Name and Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="03_CourseName" name="03_CourseName" required>
 			        </div>
 			        <div class="col-sm-6">
-						<label for="StudentCount">Number of Students <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="StudentCount" name="StudentCount" required>
-						<!-- <div class="invalid-feedback">Please include how many students you expect</div> -->
+						<label for="04_StudentCount">Number of Students <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="04_StudentCount" name="04_StudentCount" required>
 					</div>
 				</div>
 
 				<div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="ProgramDate">Desired Date of Program <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="ProgramDate" name="ProgramDate" required>
-						<!-- <div class="invalid-feedback">Please include a desired date</div> -->
+						<label for="05_ProgramDate">Desired Date of Program <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="05_ProgramDate" name="05_ProgramDate" required>
 			        </div>
 			        <div class="col-sm-6">
-						<label for="ProgramTime">Desired Time of Program <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="ProgramTime" name="ProgramTime" required>
-						<!-- <div class="invalid-feedback">Please include a desired start time</div> -->
+						<label for="06_ProgramTime">Desired Time of Program <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="06_ProgramTime" name="06_ProgramTime" required>
 					</div>
 				</div>
 
@@ -93,23 +87,23 @@
 			<section>   
 			    <h2>Additional Information</h2>
 				<div class="form-group">
-				    <label for="ProgramContent">What you would like covered and what are your expectations of what your students will learn?</label>
-				    <textarea class="form-control" id="ProgramContent" name="ProgramContent" rows="4"></textarea>
+				    <label for="07_ProgramContent">What you would like covered and what are your expectations of what your students will learn?</label>
+				    <textarea class="form-control" id="07_ProgramContent" name="07_ProgramContent" rows="4"></textarea>
 				</div>
 
 				<div class="form-group">
-				    <label for="ProgramAssignment">Is this session tied to an assignment? If so, please describe the assignment</label>
-				    <textarea class="form-control" id="ProgramAssignment" name="ProgramAssignment" rows="4"></textarea>
+				    <label for="08_ProgramAssignment">Is this session tied to an assignment? If so, please describe the assignment</label>
+				    <textarea class="form-control" id="08_ProgramAssignment" name="08_ProgramAssignment" rows="4"></textarea>
 				</div>
 
 				<div class="form-group">
-				    <label for="ProgramSources">Are there any specific sources that you would like for us to demonstrate or discuss?</label>
-				    <textarea class="form-control" id="ProgramSources" name="ProgramSources" rows="4"></textarea>
+				    <label for="09_ProgramSources">Are there any specific sources that you would like for us to demonstrate or discuss?</label>
+				    <textarea class="form-control" id="09_ProgramSources" name="09_ProgramSources" rows="4"></textarea>
 				</div>
 
 				<div class="form-group">
-				    <label for="CourseGuide">Would you like an accompanying <a href="http://guides.lib.uchicago.edu/courseguides" target="_blank">library course guide</a>?</label>
-				    <select class="form-control" id="CourseGuide" name="CourseGuide">
+				    <label for="10_CourseGuide">Would you like an accompanying <a href="http://guides.lib.uchicago.edu/courseguides" target="_blank">library course guide</a>?</label>
+				    <select class="form-control" id="10_CourseGuide" name="10_CourseGuide">
 				    	<option disabled selected value> -- select an option -- </option>
 				    	<option>Yes</option>
 				    	<option>No</option>
@@ -118,17 +112,17 @@
 				</div>
 
 				<div class="form-group">
-				    <label for="AdditionalComments">Additional comments or questions</label>
-			    	<textarea class="form-control" id="AdditionalComments" name="AdditionalComments" rows="4"></textarea>
+				    <label for="11_AdditionalComments">Additional comments or questions</label>
+			    	<textarea class="form-control" id="11_AdditionalComments" name="11_AdditionalComments" rows="4"></textarea>
 			    </div>
 
 			    <div class="form-group">
-				    <label for="ADAaccommodations">If you have a student with a disability, please indicate any accommodations that your student would need to participate in the session</label>
-			    	<textarea class="form-control" id="ADAaccommodations" name="ADAaccommodations" rows="2"></textarea>
+				    <label for="12_ADAaccommodations">If you have a student with a disability, please indicate any accommodations that your student would need to participate in the session</label>
+			    	<textarea class="form-control" id="12_ADAaccommodations" name="12_ADAaccommodations" rows="2"></textarea>
 			    </div>
 			</section>
 
-			<button class="default" type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>
 
 		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>

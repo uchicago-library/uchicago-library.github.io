@@ -20,49 +20,50 @@
 			<li>If all copies of the material you are requesting are checked out, you will need to recall the item using the link provided in the online catalog.</li>
 			<li>Items that are <strong>Building Use Only</strong> or held on <strong>Reserve</strong> or <strong>Reference</strong> collections at other libraries can not be paged using this service.</li>
 		</ul>
-		<p>To check for online availability, look up titles in the&nbsp;<a href="https://catalog.lib.uchicago.edu/vufind/">Library Catalog</a>.</p>
+		<p>To check for online availability, look up titles in the <a href="https://catalog.lib.uchicago.edu/vufind/">Library Catalog</a>.</p>
 		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
 
 
 		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
 
 		<input type="hidden" name="FormQuestion" value="Paging Service Request" />
-		<input type="hidden" name="subject" value="Library Paging Service for Law School Students & Staff" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="subject" value="Library Paging Service for Law School Students and Staff" />
+		<input type="hidden" name="rcpt" value="asklawcirc" />
 
 
 			<section>
-			<h2>Item information</h2>
+				<h2>Item Information</h2>
 
-			 <div class="form-group row">
+				<div class="form-group">
+					<label for="03_Title">Title <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="03_Title" name="03_Title" required>
+				</div>
+
+				<div class="form-group">
+					<label for="04_Author">Author</label>
+					<input type="text" class="form-control" id="04_Author" name="04_Author">
+				</div>
+
+				<div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="CallNumber">Call Number <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="CallNumber" name="CallNumber" required>
+						<label for="01_CallNumber">Call Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="01_CallNumber" name="01_CallNumber" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="CopyVol">Copy/vol./ed.</label>
-						<input type="text" class="form-control" id="CopyVol" name="CopyVol" aria-describedby="CopyVolHelp">
-						<small id="CopyVolHelp" class="form-text text-muted">Please note if there is a specific year, volume, edition or copy that you need.</small>
+						<label for="02_CopyVol">Copy/vol./ed.</label>
+						<input type="text" class="form-control" id="02_CopyVol" name="02_CopyVol" aria-describedby="02_CopyVolHelp">
+						<small id="02_CopyVolHelp" class="form-text">Please note if there is a specific year, volume, edition or copy that you need.</small>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="Title">Title <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Title" name="Title" required>
-				</div>
-
-				<div class="form-group">
-					<label for="Author">Author</label>
-					<input type="text" class="form-control" id="Author" name="Author">
-				</div>
 			</section>
 
 			<section>
-				<h2>Patron information</h2>
+				<h2>Patron Information</h2>
 
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="05_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="05_Name" name="05_Name" required>
 				</div>
 
 				<div class="form-group">
@@ -71,8 +72,8 @@
 				</div>
 
 				<div class="form-group">
-					<label for="Affiliation">Affiliation <abbr title="required">*</abbr></label>
-				    <select class="form-control" id="Affiliation" name="Affiliation" required>
+					<label for="06_Affiliation">Affiliation <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="06_Affiliation" name="06_Affiliation" required>
 				    	<option disabled selected value> -- select an affiliation -- </option>
 				    	<option>Law School Student</option>
 				    	<option>Law Journal Staff</option>
@@ -84,20 +85,24 @@
 
 				<div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="barcode">Library barcode (<a href="//www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this</em></a>?)</label>
-						<input type="email" class="form-control" id="barcode" name="barcode" aria-describedby="barcodeHelp">
-						<small id="barcodeHelp" class="form-text text-muted">If you would like the material held for your personal account, supply the barcode on your Chicago Card. If you would like the material held for your proxy borrower account, please provide the barcode on the proxy borrower card. Providing a barcode is not necessary for Law Journals.</small>
+						<label for="07_barcode">Library barcode (<a href="//www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this</em></a>?)</label>
+						<input type="text" class="form-control" id="07_barcode" name="07_barcode" aria-describedby="07_barcodeHelp">
+						<small id="07_barcodeHelp" class="form-text">If you would like the material held for your personal account, supply the barcode on your Chicago Card. If you would like the material held for your proxy borrower account, please provide the barcode on the proxy borrower card. Providing a barcode is not necessary for Law Journals.</small>
 					</div>
 					<div class="col-sm-6">
-						<label for="CarrelNumber">Carrel Number (if applicable)</label>
-						<input type="text" class="form-control" id="CarrelNumber" name="CarrelNumber" aria-describedby="CarrelNumberHelp">
-						<small id="CarrelNumberHelp" class="form-text text-muted">If you do not have a <a href="https://www.lib.uchicago.edu/law/ask-librarian-law/carrelrequest/">carrel</a>, we will place the item on hold for you at Law Circulation for seven days.</em></small>
+						<label for="08_CarrelNumber">Carrel Number (if applicable)</label>
+						<input type="text" class="form-control" id="08_CarrelNumber" name="08_CarrelNumber" aria-describedby="08_CarrelNumberHelp">
+						<small id="08_CarrelNumberHelp" class="form-text">If you do not have a <a href="https://www.lib.uchicago.edu/law/ask-librarian-law/carrelrequest/">carrel</a>, we will place the item on hold for you at Law Circulation for seven days.</em></small>
 					</div>
 				</div>
+			</section>
+
+			<section>
+				<h2>Additional Information</h2>
 
 				<div class="form-group">
-					<label for="LawJournal">Law Journal (if requesting for use by journal)</label>
-				    <select class="form-control" id="LawJournal" name="LawJournal">
+					<label for="09_LawJournal">Law Journal (if requesting for use by journal)</label>
+				    <select class="form-control" id="09_LawJournal" name="09_LawJournal">
 				    	<option disabled selected value> -- select a journal -- </option>
 				    	<option>Chicago International Journal of Law</option>
 				    	<option>Law Review</option>
@@ -106,11 +111,11 @@
 				</div>
 
 				<div class="form-group">
-				    <label for="Comments">Comments or Questions</label>
-			    	<textarea class="form-control" id="Comments" name="Comments" rows="4"></textarea>
+				    <label for="10_Comments">Comments or Questions</label>
+			    	<textarea class="form-control" id="10_Comments" name="10_Comments" rows="4"></textarea>
 			    </div>
 
-			    </section>
+		    </section>
 
 			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>

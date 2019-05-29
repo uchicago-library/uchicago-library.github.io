@@ -20,14 +20,14 @@
 
 		<input type="hidden" name="FormQuestion" value="Carrel Request Form" />
 		<input type="hidden" name="subject" value="D'Angelo Law Library Carrel Request" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="asklaw" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="rcpt" value="asklawcirc" />
 
 
 			<section>
 				<h2>Patron information</h2>
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 
 				 <div class="form-group row">
@@ -36,59 +36,56 @@
 						<input type="email" class="form-control" id="from" name="from" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="PhoneNumber">Your Phone Number</label>
-						<input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+						<label for="02_PhoneNumber">Your Phone Number</label>
+						<input type="text" class="form-control" id="02_PhoneNumber" name="02_PhoneNumber">
 					</div>
 				</div>
 
 		        <div class="form-group">
-					<label for="Barcode">Library barcode (<a href="https://www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this?</em></a>) <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Barcode" name="Barcode" required>
+					<label for="03_Barcode">Library barcode (<a href="https://www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this?</em></a>) <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="03_Barcode" name="03_Barcode" required>
 				</div>
 
 				<div class="form-group">
-					<label for="Affiliation">Affiliation <abbr title="required">*</abbr></label>
-					    <select class="form-control" id="Affiliation" name="Affiliation" required>
-					    	<option disabled selected value> -- select an affiliation -- </option>
-							<option>1L Law Student</option>
-							<option>2L Law Student</option>
-							<option>3L Law Student</option>
-							<option>LLM</option>
-							<option>Other (please describe in comments section)</option>
+					<label for="04_Affiliation">Affiliation <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="04_Affiliation" name="04_Affiliation" required>
+				    	<option disabled selected value> -- select an affiliation -- </option>
+						<option>1L Law Student</option>
+						<option>2L Law Student</option>
+						<option>3L Law Student</option>
+						<option>LLM</option>
+						<option>Other (please describe in comments section)</option>
+					</select>
+				</div>
+			</section>
+
+			<section>
+				<h2>Carrel Use</h2>
+
+				<div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="05_Reason">What reason do you need the carrel for?</label>
+						<select class="form-control" id="05_Reason" name="05_Reason">
+					    	<option disabled selected value> -- select a reason -- </option>
+					    	<option>Working as Research Assistant</option>
+					    	<option>Working on a substantial paper</option>
+					    	<option>Other (Please describe in comments section)</option>
 						</select>
 					</div>
-				</section>
 
-				<section>
-					<h2>Carrel Use</h2>
-					<div class="form-group">
-					<label for="Reason">What reason do you need the carrel for?</label>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="ResearchAssistant" id="ResearchAssistant">
-						  <label class="form-check-label" for="ResearchAssistant">Working as Research Assistant</label>
-						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="SubstantialPaper" id="SubstantialPaper">
-						  <label class="form-check-label" for="SubstantialPaper">Working on a substantial paper</label>
-						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="Other" id="Other">
-						  <label class="form-check-label" for="Other">Other (Please describe in comments section)</label>
-						</div>
+			        <div class="col-sm-6">
+						<label for="06_RAInfo">If an RA, which faculty member are you working for?</label>
+						<input type="text" class="form-control" id="06_RAInfo" name="06_RAInfo">
 					</div>
+				</div>
 
-					<div class="form-group">
-						<label for="RAInfo">If you need this carrel in your capacity as an RA, which faculty member are you working for?</label>
-						<input type="text" class="form-control" id="RAInfo" name="RAInfo">
-					</div>
-
-					<div class="form-group">
-					    <label for="Comments">Comments or Questions</label>
-				    	<textarea class="form-control" id="Comments" name="Comments" rows="4"></textarea>
-				    </div>
+				<div class="form-group">
+				    <label for="07_Comments">Comments or Questions</label>
+			    	<textarea class="form-control" id="07_Comments" name="07_Comments" rows="4"></textarea>
+			    </div>
 
 
-				</section>
+			</section>
 
 			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>

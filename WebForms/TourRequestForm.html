@@ -13,8 +13,12 @@
 
 	<body>
 
-		<p>The University of Chicago Library is able to provide tours for groups of our campus libraries on a limited basis. Policies for tours vary by campus library and depend on staff availability. <strong>Tours are normally available Monday-Friday from 10 a.m. to 3 p.m. Requests must be made at least 72 hours in advance of the desired visit</strong>.</p>
-		<p>Priority is given to groups affiliated with the University of Chicago. For individuals interested in arranging for a tour for K-12 students, please view our <a href="https://www.lib.uchicago.edu/research/teaching/tours/school-groups/policies/">School Group Policy</a>.</p>
+		<p>The University of Chicago Library is able to provide tours for groups of our campus libraries on a limited basis. Priority is given to groups affiliated with the University of Chicago. Policies for tours vary by campus library and depend on staff availability.</p>
+		<ul>
+			<li>Requests must be made at least 72 hours in advance of the desired visit</li>
+			<li>Tours are normally available Monday-Friday from 10 a.m. to 3 p.m.</li>
+			<li>For individuals interested in arranging for a tour for K-12 students, please view our <a href="https://www.lib.uchicago.edu/research/teaching/tours/school-groups/policies/">School Group Policy</a></li>
+		</ul>
 		<p>To request a tour, please complete the form below, and a Library staff member will contact you within one business day.</p>
 		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
 
@@ -23,13 +27,13 @@
 
 		<input type="hidden" name="FormQuestion" value="Tour Request" />
 		<input type="hidden" name="subject" value="Library Tour Request" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="rcpt" value="askus" />
 
 			<section>
 		        <h2>About Your Group</h2>
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 
 				 <div class="form-group row">
@@ -38,15 +42,15 @@
 						<input type="email" class="form-control" id="from" name="from" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="PhoneNumber">Your Phone Number</label>
-						<input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+						<label for="02_PhoneNumber">Your Phone Number</label>
+						<input type="text" class="form-control" id="02_PhoneNumber" name="02_PhoneNumber">
 					</div>
 				</div>
 
 				<div class="form-group row">
 		            <div class="col-sm-6">
-					    <label for="Affiliation">Affiliation <abbr title="required">*</abbr></label>
-					    <select class="form-control" id="Affiliation" name="Affiliation" required>
+					    <label for="03_Affiliation">Affiliation <abbr title="required">*</abbr></label>
+					    <select class="form-control" id="03_Affiliation" name="03_Affiliation" required>
 					    	<option disabled selected value> -- select an affiliation -- </option>
 							<option>Not affiliated with the University of Chicago</option>
 							<option>University of Chicago Faculty</option>
@@ -58,8 +62,8 @@
 					</div>
 
 					<div class="col-sm-6">
-					    <label for="Division">Department or Division</label>
-					    <select class="form-control" id="Division" name="Division">
+					    <label for="04_Division">Department or Division</label>
+					    <select class="form-control" id="04_Division" name="04_Division">
 					    	<option disabled selected value> -- select a division -- </option>
 							<option>Argonne</option>
 							<option>Biological Sciences Division</option>
@@ -87,8 +91,8 @@
 
 
 				<div class="form-group">
-					<label for="OtherDivision">If Other Division or Affiliation, please specify</label>
-					<input type="text" class="form-control" id="OtherDivision" name="OtherDivision">
+					<label for="05_OtherDivision">If Other Division or Affiliation, please specify</label>
+					<input type="text" class="form-control" id="05_OtherDivision" name="05_OtherDivision">
 				</div>
 			</section>
 
@@ -96,8 +100,8 @@
 				<h2>Tour Request Details</h2>
 
 				<div class="form-group">
-				    <label for="TourType">Desired Tour <abbr title="required">*</abbr></label>
-				    <select class="form-control" id="TourType" name="TourType" required>
+				    <label for="06_TourType">Desired Tour <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="06_TourType" name="06_TourType" required>
 				    	<option disabled selected value> -- select a tour -- </option>
 						<option>The John Crerar Library</option>
 						<option>The D'Angelo Law Library</option>
@@ -110,28 +114,29 @@
 
 	            <div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="GroupCount">Number of individuals in group <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="GroupCount" name="GroupCount" required>
+						<label for="07_GroupCount">Number of individuals in group <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="07_GroupCount" name="07_GroupCount" required>
 			        </div>
 			        <div class="col-sm-6">
-						<label for="GroupName">Name of group</label>
-						<input type="text" class="form-control" id="GroupName" name="GroupName">
+						<label for="08_GroupName">Name of group</label>
+						<input type="text" class="form-control" id="08_GroupName" name="08_GroupName">
 					</div>
 				</div>
 
 				<div class="form-group">
-				    <label for="DateTime">Preferred Dates and Times <em>(Tours are available Monday-Friday from 10 a.m. to 3 p.m.)</em> <abbr title="required">*</abbr></label>
-				    <textarea class="form-control" id="DateTime" name="DateTime" rows="4" required></textarea>
+				    <label for="09_DateTime">Preferred Dates and Times <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="09_DateTime" name="09_DateTime" rows="4"  aria-describedby="09_DateTimeHelp" required></textarea>
+				    <small id="09_DateTimeHelp" class="form-text">Tours are available Monday-Friday from 10 a.m. to 3 p.m.</small>
 				</div>
 
 				<div class="form-group">
-				    <label for="Reason">Reason for tour <abbr title="required">*</abbr></label>
-				    <textarea class="form-control" id="Reason" name="Reason" rows="4" required></textarea>
+				    <label for="10_Reason">Reason for tour <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="10_Reason" name="10_Reason" rows="4" required></textarea>
 				</div>
 
 				<div class="form-group">
-				    <label for="AdditionalInfo">Additional information</label>
-			    	<textarea class="form-control" id="AdditionalInfo" name="AdditionalInfo" rows="4"></textarea>
+				    <label for="11_AdditionalInfo">Additional information</label>
+			    	<textarea class="form-control" id="11_AdditionalInfo" name="11_AdditionalInfo" rows="4"></textarea>
 			    </div>
 
 		    </section>

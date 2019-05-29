@@ -1,114 +1,161 @@
 <!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/5429/edit/ -->
 
-<p>Faculty studies are available for quarterly rental by eligible faculty and academics. See <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/regenstein-faculty-studies">Regenstein Faculties Studies</a> for detailed information on faculty study policies.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-<h2>Fees</h2>
-<ul>
-	<li>If tenured, the rental fee is $150/quarter.</li>
-	<li>If untenured or emeritus, the rental fee is $75/quarter.</li>
-	<li>There is a $50 refundable key deposit required for all new rentals.</li>
-	<li>We accept cash, check, VISA/Mastercard, or interdepartmental transfer as payment for faculty studies.</li>
-	<li>Payment is due upon rental/renewal.</li>
-</ul>
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/CACHE/css/0147941d7d76.css">
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/base/css/bootstrap.min.css">
 
-<h2>Faculty Study Request Process</h2>
-<ul>
-<li>Once this form has been submitted, the ID &amp; Privileges Office will verify eligibility and respond with available study options within two business days.</li>
-<li>The study key will be available at the <a href="http://ipo.uchicago.edu/">ID &amp; Privileges Office</a> in the first floor lobby of Regenstein once payment has been received.</li>
-<li>Questions? Call the ID &amp; Privileges Office at 773-702-3344 or email <a href="mailto:studies@lib.uchicago.edu">studies@lib.uchicago.edu</a>.</li>
-</ul>
+</head>
 
-<hr>
+	<body>
+		<h2>Faculty Study Information</h2>
+		<p>Faculty studies are available for quarterly rental by eligible faculty and academics. See <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/regenstein-faculty-studies">Regenstein Faculties Studies</a> for detailed information on faculty study policies.</p>
 
-<h2>Request Form</h2>
-<small>Asterisk (*) denotes required field.</small>
+		<h3>Fees</h3>
+		<ul>
+			<li>If tenured, the rental fee is $150/quarter.</li>
+			<li>If untenured or emeritus, the rental fee is $75/quarter.</li>
+			<li>There is a $50 refundable key deposit required for all new rentals.</li>
+			<li>We accept cash, check, VISA/Mastercard, or interdepartmental transfer as payment for faculty studies.</li>
+			<li>Payment is due upon rental/renewal.</li>
+		</ul>
 
-<h3>Faculty Information</h3>
-<form id="knowledgetracker" action="https://live.desktracker.com/kbase/public_form_handler.php" method="post" name="entryform1">
-<!--LIBRARY ID REQD-->
-<input id="library" type="hidden" name="library" value="326369" />
+		<h3>Faculty Study Request Process</h3>
+		<ul>
+			<li>Once this form has been submitted, the ID &amp; Privileges Office will verify eligibility and respond with available study options within two business days.</li>
+			<li>The study key will be available at the <a href="http://ipo.uchicago.edu/">ID &amp; Privileges Office</a> in the first floor lobby of Regenstein once payment has been received.</li>
+			<li>Questions? Call the ID &amp; Privileges Office at 773-702-3344 or email <a href="mailto:studies@lib.uchicago.edu">studies@lib.uchicago.edu</a>.</li>
+		</ul>
 
-<!--SUBMITTED FROM-->
-<input type="hidden" name="submitted_from" value="IPOfacultystudy.html" />
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
 
-<!--CUSTOM EMAIL SUBJECT-->
-<input type="hidden" name="form_custom_email_subject" value="Response from the University of Chicago Identification and Privileges Office" />
+		<input type="hidden" name="FormQuestion" value="Request Faculty Study" />
+		<input type="hidden" name="subject" value="Regenstein Faculty Study Request" />
+		<input type="hidden" name="rcpt" value="ipo" />
+		
+		<h2>Request Form</h2>
+		<section>
+			<h3>Faculty Information</h3>
 
-<!--CUSTOM EMAIL MESSAGE--><input type="hidden" name="form_custom_message" value="Thank you for contacting the University of Chicago Identification and Privileges Office. This service is monitored during business hours Monday - Friday. We will respond to your question as soon as possible." />
+	        <div class="form-group">
+				<label for="01_FacultyName">Name <abbr title="required">*</abbr></label>
+				<input type="text" class="form-control" id="01_FacultyName" name="01_FacultyName" required>
+			</div>
+
+			<div class="form-group">
+				<label for="from">Email address <abbr title="required">*</abbr></label>
+				<input type="email" class="form-control" id="from" name="from" required>
+			</div>
+
+			<div class="form-group row">
+	            <div class="col-sm-6">
+					<label for="03_Tenure">Tenured? <abbr title="required">*</abbr></label>
+					<select class="form-control" id="03_Tenure" name="03_Tenure" required>
+				    	<option disabled selected value> -- select an option -- </option>
+				    	<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+
+				<div class="col-sm-6">
+					<label for="02_Barcode">Library barcode (<a href="//www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/"><em>what's this</em></a>?)</label>
+					<input type="text" class="form-control" id="02_Barcode" name="02_Barcode">
+				</div>
+			</div>
+
+		</section>
+
+		<section>
+			<h3>Request Details</h3>
+			
+			<div class="form-group row">
+	            <div class="col-sm-6">
+					<label for="04_RentalType">Is this a new rental or a renewal of an existing rental? <abbr title="required">*</abbr></label>
+					<select class="form-control" id="04_RentalType" name="04_RentalType" required>
+				    	<option disabled selected value> -- select an option -- </option>
+						<option>New rental</option>
+						<option>Renewal of an existing rental</option>
+					</select>
+				</div>
+
+	            <div class="col-sm-6">
+					<label for="05_StudyNumber">Current study number (if renewing)</label>
+					<input type="text" class="form-control" id="05_StudyNumber" name="05_StudyNumber">
+				</div>
+			</div>
+
+			<div class="form-group row">
+	            <div class="col-sm-4">
+					<label for="06_Quarter">Quarter rental begins <abbr title="required">*</abbr></label>
+					<select class="form-control" id="06_Quarter" name="06_Quarter" required>
+				    	<option disabled selected value> -- select a quarter -- </option>
+						<option>Fall</option>
+						<option>Winter</option>
+						<option>Spring</option>
+						<option>Summer</option>
+					</select>
+				</div>
+
+				<div class="col-sm-4">
+					<label for="07_QuarterNumber">Number of quarters study is needed <abbr title="required">*</abbr></label>
+					<select class="form-control" id="07_QuarterNumber" name="07_QuarterNumber" required>
+				    	<option disabled selected value> -- select an option -- </option>
+						<option>1 quarter</option>
+						<option>2 quarters</option>
+						<option>3 quarters</option>
+						<option>4 quarters</option>
+					</select>
+				</div>
+
+				<div class="col-sm-4">
+					<label for="08_Floor">Desired floor <abbr title="required">*</abbr></label>
+					<select class="form-control" id="08_Floor" name="08_Floor" required>
+				    	<option disabled selected value> -- select a floor -- </option>
+						<option>2nd Floor</option>
+						<option>3rd Floor</option>
+						<option>4th Floor</option>
+						<option>5th Floor</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+			    <label for="09_MoreInfo">Additional Information</label>
+			    <textarea class="form-control" id="09_MoreInfo" name="09_MoreInfo" rows="4"></textarea>
+			</div>
+
+		</section>
+
+		<section>
+			<h2>Departmental Administrators</h2>
+			<p>If you are a departmental administrator requesting a study on behalf of faculty, please also fill out the following fields.</p>
+	        <div class="form-group">
+				<label for="10_AdminName">Your name</label>
+				<input type="text" class="form-control" id="10_AdminName" name="10_AdminName">
+			</div>
+
+			<div class="form-group row">
+	            <div class="col-sm-6">
+					<label for="11_AdminEmail">Email address</label>
+					<input type="email" class="form-control" id="11_AdminEmail" name="11_AdminEmail">
+				</div>
+
+				<div class="col-sm-6">
+					<label for="12_AdminPhone">Phone number</label>
+					<input type="text" class="form-control" id="12_AdminPhone" name="12_AdminPhone">
+				</div>
+			</div>
+
+		</section>
+
+			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+		</form>
+
+		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
 
 
-<!--REDIRECT AFTER SUBMITTING -->
-<input type="hidden" name="question" value="FACULTY STUDY REQUEST">
-<input type="hidden" name="form_custom_webform_redirect" value="//www.lib.uchicago.edu/research/help/ask-librarian/thank-you/" />
-<!--NAME-->
-*First name:<br /><input class="validaterequired" type="text" name="name_first" size="70" maxlength="255" /> <br />
-*Last name:<br /><input class="validaterequired" type="text" name="name_last" size="70" maxlength="255" /> <br />
-<!--EMAIL-->
-<br />*Your University email address:<br /><input class="validateemail" type="text" name="email" size="30" maxlength="255" /><br />
-<br />*Confirm your University email address:<br /><input class="validateconfirm" type="text" name="email confirmed" size="30" maxlength="255" /><br /><br />
-<!--BARCODE-->
-Library barcode (<em><a href="https://www.lib.uchicago.edu/borrow/access-privileges/library-cards-and-account-information/">what's this?</a></em>): <input type="text" name="barcode" size="10" maxlength="10" /><br/><br/>
-
-<!--TENURED-->
-*Tenured? <select class="validaterequired" name="tenure" size="0">
-<option selected="selected"></option>
-<option>Yes</option>
-<option>No</option>
-</select><br/>
-
-
-<h3>Request Details</h3>
-<!--RENT-->
-*Is this a new rental or a renewal of an existing rental? <select class="validaterequired" name="rent" size="0">
-<option selected="selected"></option>
-<option>New rental</option>
-<option>Renewal of an existing rental</option>
-</select><br/><br/>
-
-<!--STUDYNUMBER-->
-Current study number (if renewing): <input type="text" name="study_number" size="10" maxlength="10"/>
-<br/><br/>
-
-<!--QUARTER-->
-*Quarter rental begins: <select class="validaterequired" name="quarter" size="0">
-<option selected="selected"></option>
-<option>Fall</option>
-<option>Winter</option>
-<option>Spring</option>
-<option>Summer</option>
-<select><br/><br/>
-
-<!--QUARTERNUMBER-->
-*Number of quarters study is needed: <select class="validaterequired" name="quarternumber" size="0">
-<option selected="selected"></option>
-<option>1 quarter</option>
-<option>2 quarters</option>
-<option>3 quarters</option>
-<option>4 quarters</option>
-<select><br/><br/>
-
-<!--FLOOR-->
-*Desired floor: <select class="validaterequired" name="floor" size="0">
-<option selected="selected"></option>
-<option>2nd Floor</option>
-<option>3rd Floor</option>
-<option>4th Floor</option>
-<option>5th Floor</option>
-<select><br/><br/>
-
-<!--ADDITIONAL INFO-->
-Additional Information:<br /><textarea name="add_info" rows="5" cols="70"> </textarea><br/><br/>
-
-<p><strong>If you are a departmental administrator requesting a study on behalf of faculty, please also provide the following:</strong></p>
-<!--ADMINNAME-->
-Your name:<br /><input type="text" name="admin_name" size="50" maxlength="255" /> <br /><br/>
-
-<!--ADMINPHONE-->
-Phone number:<br /><input type="text" name="admin_phone" size="50" maxlength="255" /> <br /><br/>
-
-<!--ADMINEMAIL-->
-Email:<br /><input type="text" name="admin_email" size="50" maxlength="255" /> <br />
-<br /><input id="submit" type="submit" name="submit" value="Submit" /> <input type="reset" name="reset" value="Clear form" />
-</form>
-
-<small><br/><br/>This service is powered by KnowledgeTracker and complies with its <a href="http://www.knowledgetrackerlib.com/patron_terms_uc.pdf" target="_blank">privacy policy</a>.</small>
+	</body>
+</html>

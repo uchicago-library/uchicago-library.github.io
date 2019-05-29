@@ -1,15 +1,60 @@
 <!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/3813/edit/ -->
 
-<form action="https://live.desktracker.com/kbase/public_form_handler.php" id="knowledgetracker" method="post" name="entryform1">
-<!--LIBRARY ID REQD-->
-<p><input id="library" name="library" type="hidden" value="326369"></p>
-<!--SUBMITTED FROM-->
-<input name="submitted_from" type="hidden" value="PhDask.html">
-<!--CUSTOM EMAIL SUBJECT-->
-<input name="form_custom_email_subject" type="hidden" value="Response from the University of Chicago Dissertation Office">
-<p><!--CUSTOM EMAIL MESSAGE--> <input name="form_custom_message" type="hidden" value="Thank you for contacting the University of Chicago Dissertation Office. This service is monitored during business hours Monday - Friday. We will respond to your question via email as soon as possible."></p>
-<!--REDIRECT AFTER SUBMITTING -->
-<p>Dissertation Office staff will typically respond to your question within 24 hours, Monday-Friday, when school is in session.</p>
-<input name="form_custom_webform_redirect" type="hidden" value="//www.lib.uchicago.edu/research/help/ask-librarian/thank-you/"> <!--NAME--> Your name: <br><input maxlength="255" name="name" size="30" type="text"> <!--EMAIL--> <br><br>*Your email address:<br> <input class="validateemail" maxlength="255" name="email" size="30" type="text"><br> <br> *Confirm your email address:<br> <input class="validateconfirm" maxlength="255" name="email confirmed" size="30" type="text"><br><br> <!--AFFILIATION--> *Affiliation:<br> <select name="affiliation" size="0"> <option selected="selected"></option> <option>Not affiliated with the University of Chicago</option> <option>University of Chicago Faculty</option> <option>University of Chicago Graduate Student</option> <option>University of Chicago College Student</option> <option>University of Chicago Staff</option> <option>University of Chicago Alumnus/a</option></select><br><br>
-<!--QUESTION--> <br><br>*Question:<br> <textarea class="validaterequired" cols="70" rows="10" name="question"></textarea> <!--RESPONSE DATE--> <br><br> <input id="submit" name="submit" type="submit" value="Submit"> <input name="reset" type="reset" value="Clear form"> </form>
-<p><em>This form is powered by KnowledgeTracker and complies with its<a href="http://www.knowledgetrackerlib.com/patron_terms_uc.pdf"> privacy policy</a>.</em></p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/CACHE/css/0147941d7d76.css">
+<link rel="stylesheet" href="https://www.lib.uchicago.edu/static/base/css/bootstrap.min.css">
+
+</head>
+
+	<body>
+		<p>Dissertation Office staff will typically respond to your question within 24 hours, Monday-Friday, when school is in session.</p>
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+			<input type="hidden" name="FormQuestion" value="Dissertation Office Contact Form" />
+			<input type="hidden" name="subject" value="Ask the Dissertation Office" />
+			<input type="hidden" name="rcpt" value="askus" />
+
+			<section>
+				<div class="form-group">
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="from">Your email address <abbr title="required">*</abbr></label>
+					<input type="email" class="form-control" id="from" name="from" required>
+				</div>
+
+				<div class="form-group">
+				    <label for="02_Affiliation">Affiliation <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="02_Affiliation" name="02_Affiliation" required>
+				    	<option disabled selected value> -- select an affiliation -- </option>
+						<option>Not affiliated with the University of Chicago</option>
+						<option>University of Chicago Faculty</option>
+						<option>University of Chicago Graduate Student</option>
+						<option>University of Chicago College Student</option>
+						<option>University of Chicago Staff</option>
+						<option>University of Chicago Alumnus/a</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+				    <label for="03_Question">Additional information <abbr title="required">*</abbr></label>
+			    	<textarea class="form-control" id="03_Question" name="03_Question" rows="6" required></textarea>
+			    </div>
+
+		    </section>
+
+				<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+		</form>
+
+			<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
+
+
+	</body>
+</html>

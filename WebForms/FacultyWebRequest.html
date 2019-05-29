@@ -13,18 +13,18 @@
                                     
                                     
         
-        <form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+    <form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
 
         <input type="hidden" name="FormQuestion" value="FacultyWeb Request" />
         <input type="hidden" name="subject" value="FacultyWeb Request" />
-        <!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="asklaw" /><!--  // DOUBLE CHECK -->
+        <input type="hidden" name="rcpt" value="asklaw" />
 
 
-            <section>                            
+            <section>                   
                 <h2>Request Information</h2>
                 <div class="form-group">
-                    <label for="Name">Name</label>
-                    <input type="text" class="form-control" id="Name" name="Name">
+                    <label for="01_Name">Name</label>
+                    <input type="text" class="form-control" id="01_Name" name="01_Name">
                 </div>
 
                 <div class="form-group">
@@ -33,8 +33,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="Priority">Priority</label>
-                    <select class="form-control" id="Priority" name="Priority">
+                    <label for="02_Priority">Priority</label>
+                    <select class="form-control" id="02_Priority" name="02_Priority">
                         <option value="lower">Lower</option>
                         <option value="normal" selected>Normal</option>
                         <option value="higher">Higher (ASAP)</option>
@@ -42,11 +42,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="AdditionalInfo">Additional Information</label>
-                    <textarea class="form-control" id="AdditionalInfo" name="AdditionalInfo" rows="4"></textarea>
+                    <label for="03_AdditionalInfo">Additional Information</label>
+                    <textarea class="form-control" id="03_AdditionalInfo" name="03_AdditionalInfo" rows="4"></textarea>
                 </div>
             </section>
-                    <button class="default" type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+            
+                    <button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
         </form>
 
             <p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>

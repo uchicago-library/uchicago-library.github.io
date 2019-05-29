@@ -10,19 +10,21 @@
 </head>
 	<body>
 
-	<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
-		<input type="hidden" name="rcpt" value="askus" />
-		<input type="hidden" name="subject" value="Staff Digitization Request" />
-		<input type="hidden" name="format" value="refer" />
-
 		<p>This form can be used whenever Library staff need digitization of a few collection items. If you need to digitize a collection, please contact Special Collections. Requests will be reviewed and accepted by the Head of Digitization and scheduled for work as appropriate within the fiscal year. Notification of completion will be made when the catalog record for the digitized item is online. When possible, please send item(s) with a copy of the request form to the Head of Digitization.</p>
 
+		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
 
-		<section>
+		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+			<input type="hidden" name="FormQuestion" value="Staff Digitization Request" />
+			<input type="hidden" name="subject" value="Staff Digitization Request" />
+			<input type="hidden" name="rcpt" value="askus" />
+
+			<section>
 				<h2>Contact Information</h2>
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 
 				<div class="form-group">
@@ -32,70 +34,70 @@
 
 				 <div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="Date">Date <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="Date" name="Date" required>
+						<label for="02_Date">Date <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="02_Date" name="02_Date" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="Timeframe">Timeframe</label>
-						<input type="text" class="form-control" id="Timeframe" name="Timeframe">
+						<label for="03_Timeframe">Timeframe</label>
+						<input type="text" class="form-control" id="03_Timeframe" name="03_Timeframe">
 					</div>
 				</div>
 
 				<div class="form-group">
-				    <label for="Purpose">Purpose of Request</label>
-				    <textarea class="form-control" id="Purpose" name="Purpose" rows="4"></textarea>
+				    <label for="04_Purpose">Purpose of Request</label>
+				    <textarea class="form-control" id="04_Purpose" name="04_Purpose" rows="4"></textarea>
 				</div>
 			</section>
 
 			<section>
 				<h2>Item for Digitization</h2>
 
-				<div class="form-group row">
-		            <div class="col-sm-6">
-						<label for="Title">Brief Title</label>
-						<input type="text" class="form-control" id="Title" name="Title">
-					</div>
-					<div class="col-sm-6">
-						<label for="CallNumber">Call Number</label>
-						<input type="text" class="form-control" id="CallNumber" name="CallNumber" aria-describedby="CallNumberHelp">
-						<small id="CallNumberHelp" class="form-text text-muted">Include information for multi-volume works</small>
-					</div>
+				<div class="form-group">
+					<label for="05_Title">Brief Title</label>
+					<input type="text" class="form-control" id="05_Title" name="05_Title">
 				</div>
 
 				<div class="form-group row">
-		            <div class="col-sm-6">
-						<label for="BibNumber">Bib Number</label>
-						<input type="text" class="form-control" id="BibNumber" name="BibNumber">
+					<div class="col-sm-4">
+						<label for="06_CallNumber">Call Number</label>
+						<input type="text" class="form-control" id="06_CallNumber" name="06_CallNumber" aria-describedby="06_CallNumberHelp">
+						<small id="06_CallNumberHelp" class="form-text">Include information for multi-volume works</small>
 					</div>
-					<div class="col-sm-6">
-						<label for="Barcode">Barcode Number(s)</label>
-						<input type="text" class="form-control" id="Barcode" name="Barcode">
+
+		            <div class="col-sm-4">
+						<label for="07_BibNumber">Bib Number</label>
+						<input type="text" class="form-control" id="07_BibNumber" name="07_BibNumber">
+					</div>
+					<div class="col-sm-4">
+						<label for="08_Barcode">Barcode Number(s)</label>
+						<input type="text" class="form-control" id="08_Barcode" name="08_Barcode">
 					</div>
 				</div>
 
 		        <div class="form-group">
-					<label for="ItemSize">Size of Item</label>
-					<input type="text" class="form-control" id="ItemSize" name="ItemSize" aria-describedby="ItemSizeHelp">
-					<small id="ItemSizeHelp" class="form-text text-muted">Dimensions if oversize, number of pages, media type, etc.</small>
+					<label for="09_ItemSize">Size of Item</label>
+					<input type="text" class="form-control" id="09_ItemSize" name="09_ItemSize" aria-describedby="09_ItemSizeHelp">
+					<small id="09_ItemSizeHelp" class="form-text">Dimensions if oversize, number of pages, media type, etc.</small>
 				</div>
 
 		        <div class="form-group">
-					<label for="Copyright">Copyright Concerns</label>
-					<textarea class="form-control" id="Copyright" name="Copyright" rows="4"></textarea>
+					<label for="10_Copyright">Copyright Concerns</label>
+					<textarea class="form-control" id="10_Copyright" name="10_Copyright" rows="4"></textarea>
 				</div>
 
 		        <div class="form-group">
-					<label for="OtherSources">Other Sources to Check for Digital Copies</label>
-					<textarea class="form-control" id="OtherSources" name="OtherSources" rows="4" aria-describedby="OtherSourcesHelp"></textarea>
-					<small id="OtherSourcesHelp" class="form-text text-muted">e.g., Google Book Search, Hathi Trust, Internet Archive, other specialized sources</small>
+					<label for="11_OtherSources">Other Sources to Check for Digital Copies</label>
+					<textarea class="form-control" id="11_OtherSources" name="11_OtherSources" rows="4" aria-describedby="11_OtherSourcesHelp"></textarea>
+					<small id="11_OtherSourcesHelp" class="form-text">e.g., Google Book Search, Hathi Trust, Internet Archive, other specialized sources</small>
 				</div>
 
 		        <div class="form-group">
-					<label for="Comments">Comments</label>
-					<textarea class="form-control" id="Comments" name="Comments" rows="4"></textarea>
+					<label for="12_Comments">Comments</label>
+					<textarea class="form-control" id="12_Comments" name="12_Comments" rows="4"></textarea>
 				</div>
+			</section>
 
-				<button class="default" type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+				<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>
 
 		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>

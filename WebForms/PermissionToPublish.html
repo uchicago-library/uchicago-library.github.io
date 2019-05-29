@@ -24,14 +24,14 @@
 
 		<input type="hidden" name="FormQuestion" value="Permission to Publish Request" />
 		<input type="hidden" name="subject" value="Permission to reproduce or publish UChicago material" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="rcpt" value="askscrc" />
 
 
 			<section>
 				<h3>Contact Information</h3>
 				<div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 				<div class="form-group">
 					<label for="from">Your email address <abbr title="required">*</abbr></label>
@@ -39,19 +39,19 @@
 				</div>
 
 				<div class="form-group row">
-		            <div class="col-sm-6">
-						<label for="PatronTitle">Your Title</label>
-						<input type="email" class="form-control" id="PatronTitle" name="PatronTitle">
-					</div>
 					<div class="col-sm-6">
-						<label for="Affiliation">Institutional Affiliation</label>
-						<input type="text" class="form-control" id="Affiliation" name="Affiliation">
+						<label for="02_Affiliation">Institutional Affiliation</label>
+						<input type="text" class="form-control" id="02_Affiliation" name="02_Affiliation">
+					</div>
+		            <div class="col-sm-6">
+						<label for="03_PatronTitle">Your Title</label>
+						<input type="text" class="form-control" id="03_PatronTitle" name="03_PatronTitle">
 					</div>
 				</div>
 
 				<div class="form-group">
-				    <label for="MailingAddress">Your mailing address <abbr title="required">*</abbr></label>
-				    <textarea class="form-control" id="MailingAddress" name="MailingAddress" rows="4" required></textarea>
+				    <label for="04_MailingAddress">Your mailing address <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="04_MailingAddress" name="04_MailingAddress" rows="4" required></textarea>
 				</div>
 
 			</section>
@@ -60,25 +60,25 @@
 				<h3>Item to Be Reproduced</h3>
 
 				<div class="form-group">
-				    <label for="reproduced_from">Source and description of material to be reproduced <abbr title="required">*</abbr></label>
-			    	<textarea class="form-control" id="reproduced_from" name="reproduced_from" rows="4" aria-describedby="reproduced_fromHelp" required></textarea>
-					<small id="reproduced_fromHelp" class="form-text text-muted">For Archives and Manuscripts: collection, box, folder, photo ID number, image caption<br/>For Printed Materials: author, title, page number(s) or other identifier, call number, collection</small>
+				    <label for="05_reproduced_from">Source and description of material to be reproduced <abbr title="required">*</abbr></label>
+			    	<textarea class="form-control" id="05_reproduced_from" name="05_reproduced_from" rows="4" aria-describedby="05_reproduced_fromHelp" required></textarea>
+					<small id="05_reproduced_fromHelp" class="form-text">For Archives and Manuscripts: collection, box, folder, photo ID number, image caption<br/>For Printed Materials: author, title, page number(s) or other identifier, call number, collection</small>
 			    </div>
 
 				<div class="form-group">
-				    <label for="reproduced_in_book">Information about print form in which the material will be published <abbr title="required">*</abbr></label>
-			    	<textarea class="form-control" id="reproduced_in_book" name="reproduced_in_book" rows="4" aria-describedby="reproduced_in_bookHelp" required></textarea>
-					<small id="reproduced_in_bookHelp" class="form-text text-muted">Author, title, publisher, where material will appear - jacket or internal, projected date, print run, projected price (if known)</small>
+				    <label for="06_reproduced_in_book">Information about print form in which the material will be published <abbr title="required">*</abbr></label>
+			    	<textarea class="form-control" id="06_reproduced_in_book" name="06_reproduced_in_book" rows="4" aria-describedby="06_reproduced_in_bookHelp" required></textarea>
+					<small id="06_reproduced_in_bookHelp" class="form-text">Author, title, publisher, where material will appear - jacket or internal, projected date, print run, projected price (if known)</small>
 			    </div>
 
 				<div class="form-group">
-				    <label for="media_in">Information about media or exhibit form in which material will appear <abbr title="required">*</abbr></label>
-			    	<textarea class="form-control" id="media_in" name="media_in" rows="4" aria-describedby="media_inHelp" required></textarea>
-					<small id="media_inHelp" class="form-text text-muted">Institution, producer, title, broadcast or distribution media, projected date</small>
+				    <label for="07_media_in">Information about media or exhibit form in which material will appear <abbr title="required">*</abbr></label>
+			    	<textarea class="form-control" id="07_media_in" name="07_media_in" rows="4" aria-describedby="07_media_inHelp" required></textarea>
+					<small id="07_media_inHelp" class="form-text">Institution, producer, title, broadcast or distribution media, projected date</small>
 			    </div>
 
 
-				</section>
+			</section>
 
 			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>

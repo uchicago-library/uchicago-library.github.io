@@ -13,20 +13,28 @@
 	<body>
 
 		<p>Enter information below to order publication quality digital scans from circulating collections in the University of Chicago Library. Please submit a separate order form for each item</p>
+		<p><strong>Pricing, Invoicing, and Prepayment</strong>
+		<ul>
+			<li>Scans are $10 U.S. per image</li>
+			<li>An invoice with amount due will be sent via email upon placement of order.</li>
+			<li>Order will be fulfilled upon receipt of payment (2-3 weeks).</li>
+			<li>Prepayment options: Customer will be contacted to complete prepayment transactions, credit card or check drawn in U.S. dollars from a U.S. bank)</li>
+		</ul>
+		</p>
 		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
 
 		<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
 
 		<input type="hidden" name="FormQuestion" value="Digital Photo Order" />
 		<input type="hidden" name="subject" value="Digital Photography Service Order Form" />
-		<!--  DOUBLE CHECK --><input type="hidden" name="rcpt" value="askus" /><!--  // DOUBLE CHECK -->
+		<input type="hidden" name="rcpt" value="askus" />
 
 
 			<section>
 				<h2>Contact Information</h2>
 		        <div class="form-group">
-					<label for="Name">Your name <abbr title="required">*</abbr></label>
-					<input type="text" class="form-control" id="Name" name="Name" required>
+					<label for="01_Name">Your name <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="01_Name" name="01_Name" required>
 				</div>
 
 				 <div class="form-group row">
@@ -35,8 +43,8 @@
 						<input type="email" class="form-control" id="from" name="from" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="PhoneNumber">Your Phone Number</label>
-						<input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+						<label for="02_PhoneNumber">Your Phone Number</label>
+						<input type="text" class="form-control" id="02_PhoneNumber" name="02_PhoneNumber">
 					</div>
 				</div>
 			</section>
@@ -45,55 +53,53 @@
 
 				<h2>Source &amp; Description</h2>
 
-				 <div class="form-group row">
-		            <div class="col-sm-6">
-						<label for="CallNumber">Call Number <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="CallNumber" name="CallNumber" required>
-					</div>
-					<div class="col-sm-6">
-						<label for="CatalogLink">Link from the Library Catalog</label>
-						<input type="text" class="form-control" id="CatalogLink" name="CatalogLink">
-					</div>
-				</div>
-
 				<div class="form-group row">
 		            <div class="col-sm-6">
-						<label for="Title">Title <abbr title="required">*</abbr></label>
-						<input type="text" class="form-control" id="Title" name="Title" required>
+						<label for="05_Title">Title <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="05_Title" name="05_Title" required>
 					</div>
 					<div class="col-sm-6">
-						<label for="VolumeIssue">Volume / Year / Issue</label>
-						<input type="text" class="form-control" id="VolumeIssue" name="VolumeIssue">
+						<label for="06_VolumeIssue">Volume / Year / Issue</label>
+						<input type="text" class="form-control" id="06_VolumeIssue" name="06_VolumeIssue">
+					</div>
+				</div>
+
+				 <div class="form-group row">
+		            <div class="col-sm-6">
+						<label for="03_CallNumber">Call Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="03_CallNumber" name="03_CallNumber" required>
+					</div>
+					<div class="col-sm-6">
+						<label for="04_CatalogLink">Link from the Library Catalog</label>
+						<input type="text" class="form-control" id="04_CatalogLink" name="04_CatalogLink">
 					</div>
 				</div>
 
 				<div class="form-group">
-				    <label for="Description">Description (page number, caption, etc.) <abbr title="required">*</abbr></label>
-				    <textarea class="form-control" id="Description" name="Description" rows="4" required></textarea>
+				    <label for="07_Description">Description <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="07_Description" name="07_Description" rows="4" aria-describedby="07_DescriptionHelp" required></textarea>
+				    <small id="07_DescriptionHelp" class="form-text">Page number, caption, etc.</small>
 				</div>
 
 				<div class="form-group">
-				    <label for="ProgramContent">Notes (any further information to help locate the item, or pertinent capture information)</label>
-				    <textarea class="form-control" id="ProgramContent" name="ProgramContent" rows="4"></textarea>
+				    <label for="08_Notes">Notes</label>
+				    <textarea class="form-control" id="08_Notes" name="08_Notes" rows="4" aria-describedby="08_NotesHelp"></textarea>
+				    <small id="08_NotesHelp" class="form-text">Any further information to help locate the item, or pertinent capture information</small>
 				</div>
 			</section>
 
-				<p><strong>Pricing</strong>
-				<br/>Scans are $10 U.S. per image</p>
-				<p><strong>Invoicing &amp; Prepayment</strong><br/>An invoice with amount due will be sent via email upon placement of order.&nbsp; Order will be fulfilled upon receipt of payment (2-3 weeks).
-				<br/>Prepayment options (Customer will be contacted to complete prepayment transactions, credit card or check drawn in U.S. dollars from a U.S. bank)</p>
 
 			<div class="extract">
 				<h3>Important Copyright Information</h3>
 				<p><strong>Notice warning concerning copyright restrictions</strong><br/>
 				<p>The copyright law of the United States (title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</p>
-				<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction.&nbsp; One of these specific conditions is that the photocopy or reproduction is not to be &#8220;used for any purpose other than private study, scholarship, or research.&#8221;&nbsp; If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of &#8220;fair use,&#8221; that user may be liable for copyright infringement.&nbsp;</p>
+				<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specific conditions is that the photocopy or reproduction is not to be &#8220;used for any purpose other than private study, scholarship, or research.&#8221; If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of &#8220;fair use,&#8221; that user may be liable for copyright infringement.</p>
 				<p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
 			</div>
 
 
 
-			<button class="default" type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+			<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
 		</form>
 
 		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>
