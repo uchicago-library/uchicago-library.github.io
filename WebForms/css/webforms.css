@@ -1,15 +1,16 @@
+abbr[title=required] {
+  color: #FF3399;
+  cursor: unset;
+  font-size: 1.3em;
+  margin-left: 0.25em;
+  border-bottom: none;
+  text-decoration: none; }
+
 form.webforms {
   background: #f3f4ed;
   border-radius: 8px; }
   form.webforms h2, form.webforms h3 {
     color: #4c3b3a; }
-  form.webforms abbr[title=required] {
-    color: #FF3399;
-    cursor: unset;
-    font-size: 1.3em;
-    margin-left: 0.25em;
-    border-bottom: none;
-    text-decoration: none; }
   form.webforms section {
     padding: 1em; }
     form.webforms section .form-group {
