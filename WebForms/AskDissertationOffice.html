@@ -36,18 +36,44 @@
 				    <label for="02_Affiliation">Affiliation <abbr title="required">*</abbr></label>
 				    <select class="form-control" id="02_Affiliation" name="02_Affiliation" required>
 				    	<option disabled selected value> -- select an affiliation -- </option>
-						<option>Not affiliated with the University of Chicago</option>
-						<option>University of Chicago Faculty</option>
-						<option>University of Chicago Graduate Student</option>
 						<option>University of Chicago College Student</option>
+						<option>University of Chicago Doctoral Candidate</option>
+						<option>University of Chicago Graduate Student (other than Doctoral)</option>
+						<option>University of Chicago Faculty</option>
 						<option>University of Chicago Staff</option>
 						<option>University of Chicago Alumnus/a</option>
+						<option>Not affiliated with the University of Chicago</option>
+					</select>
+				</div>
+
+				<div class="form-group row">
+			            <div class="col-sm-6">
+							<label for="03_Division">Department/Division</label>
+							<input type="text" class="form-control" id="03_Division" name="03_Division">
+						</div>
+
+						 <div class="col-sm-6">
+							<label for="04_CompletePhD">Quarter and Year you plan to complete your PhD</label>
+							<input type="text" class="form-control" id="04_CompletePhD" name="04_CompletePhD" aria-describedby="04_CompletePhDHelp" required></textarea>
+				    <small id="04_CompletePhDHelp" class="form-text">Doctoral Candidates only</small>
+						</div>
+					</div>
+
+				<div class="form-group">
+				    <label for="05_QuestionType">Type of Question <abbr title="required">*</abbr></label>
+				    <select class="form-control" id="05_QuestionType" name="05_QuestionType" required>
+				    	<option disabled selected value> -- select an option -- </option>
+						<option>Access to a UChicago dissertation</option>
+						<option>Dissertation draft review request</option>
+						<option>Dissertation submission question</option>
+						<option>Embargo request</option>
+						<option>Other</option>
 					</select>
 				</div>
 
 				<div class="form-group">
-				    <label for="03_Question">Additional information <abbr title="required">*</abbr></label>
-			    	<textarea class="form-control" id="03_Question" name="03_Question" rows="6" required></textarea>
+				    <label for="06_Question">Question <abbr title="required">*</abbr></label>
+			    	<textarea class="form-control" id="06_Question" name="06_Question" rows="6" required></textarea>
 			    </div>
 
 		    </section>

@@ -1,4 +1,4 @@
-<!-- EDIT PAGE: New Loop Page Needed -->
+<!-- EDIT PAGE: https://www.lib.uchicago.edu/admin/pages/8534/edit/ -->
 <!-- DRAFT VIEW: https://www.lib.uchicago.edu/admin/pages/8534/view_draft/
  -->
 <html lang="en">
@@ -12,7 +12,7 @@
 </head>
 	<body>
 
-		<p>This form can be used whenever Library staff need digitization of a few collection items. If you need to digitize a collection, please contact Special Collections. Requests will be reviewed and accepted by the Head of Digitization and scheduled for work as appropriate within the fiscal year. Notification of completion will be made when the catalog record for the digitized item is online. When possible, please send item(s) with a copy of the request form to the Head of Digitization.</p>
+		<p>This form should be used whenever a Bibliographer or other Library staff member requests a single title or small multi-volume title for digitization. Requests will be reviewed by Preservation and if accepted, scheduled for either in-house or vendor workflows as appropriate. Preservation staff will pull the items from the collection when the form is received. Notification of completion will be made when the catalog record for the digitized item is online. Questions should be directed to <a href="mailto:pres-questions@lib.uchicago.edu.">pres-questions@lib.uchicago.edu</a>.</p>
 
 		<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
 
@@ -20,7 +20,7 @@
 
 			<input type="hidden" name="FormQuestion" value="Staff Digitization Request" />
 			<input type="hidden" name="subject" value="Staff Digitization Request" />
-			<input type="hidden" name="rcpt" value="askus" />
+			<input type="hidden" name="rcpt" value="askeresources" />
 
 			<section>
 				<h2>Contact Information</h2>
@@ -46,8 +46,8 @@
 				</div>
 
 				<div class="form-group">
-				    <label for="04_Purpose">Purpose of Request</label>
-				    <textarea class="form-control" id="04_Purpose" name="04_Purpose" rows="4"></textarea>
+				    <label for="04_Purpose">Purpose of Request <abbr title="required">*</abbr></label>
+				    <textarea class="form-control" id="04_Purpose" name="04_Purpose" rows="4" required></textarea>
 				</div>
 			</section>
 
@@ -55,24 +55,25 @@
 				<h2>Item for Digitization</h2>
 
 				<div class="form-group">
-					<label for="05_Title">Brief Title</label>
-					<input type="text" class="form-control" id="05_Title" name="05_Title">
+					<label for="05_Title">Brief Title <abbr title="required">*</abbr></label>
+					<input type="text" class="form-control" id="05_Title" name="05_Title" required>
 				</div>
 
 				<div class="form-group row">
 					<div class="col-sm-4">
-						<label for="06_CallNumber">Call Number</label>
-						<input type="text" class="form-control" id="06_CallNumber" name="06_CallNumber" aria-describedby="06_CallNumberHelp">
+						<label for="06_CallNumber">Call Number <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="06_CallNumber" name="06_CallNumber" aria-describedby="06_CallNumberHelp" required>
 						<small id="06_CallNumberHelp" class="form-text">Include information for multi-volume works</small>
+					</div>
+					
+					<div class="col-sm-4">
+						<label for="08_Barcode">Barcode Number(s) <abbr title="required">*</abbr></label>
+						<input type="text" class="form-control" id="08_Barcode" name="08_Barcode" required>
 					</div>
 
 		            <div class="col-sm-4">
 						<label for="07_BibNumber">Bib Number</label>
 						<input type="text" class="form-control" id="07_BibNumber" name="07_BibNumber">
-					</div>
-					<div class="col-sm-4">
-						<label for="08_Barcode">Barcode Number(s)</label>
-						<input type="text" class="form-control" id="08_Barcode" name="08_Barcode">
 					</div>
 				</div>
 
@@ -83,23 +84,28 @@
 				</div>
 
 		        <div class="form-group">
-					<label for="10_Copyright">Copyright Concerns</label>
-					<textarea class="form-control" id="10_Copyright" name="10_Copyright" rows="4"></textarea>
+					<label for="10_Condition">Condition Notes</label>
+					<textarea class="form-control" id="10_Condition" name="10_Condition" rows="4"></textarea>
 				</div>
 
 		        <div class="form-group">
-					<label for="11_OtherSources">Other Sources to Check for Digital Copies</label>
-					<textarea class="form-control" id="11_OtherSources" name="11_OtherSources" rows="4" aria-describedby="11_OtherSourcesHelp"></textarea>
-					<small id="11_OtherSourcesHelp" class="form-text">e.g., Google Book Search, Hathi Trust, Internet Archive, other specialized sources</small>
+					<label for="11_Copyright">Copyright Concerns</label>
+					<textarea class="form-control" id="11_Copyright" name="11_Copyright" rows="4"></textarea>
 				</div>
 
 		        <div class="form-group">
-					<label for="12_Comments">Comments</label>
-					<textarea class="form-control" id="12_Comments" name="12_Comments" rows="4"></textarea>
+					<label for="12_OtherSources">Other Sources to Check for Digital Copies</label>
+					<textarea class="form-control" id="12_OtherSources" name="12_OtherSources" rows="4" aria-describedby="12_OtherSourcesHelp"></textarea>
+					<small id="12_OtherSourcesHelp" class="form-text">e.g., Google Book Search, Hathi Trust, Internet Archive, other specialized sources</small>
+				</div>
+
+		        <div class="form-group">
+					<label for="13_Comments">Comments</label>
+					<textarea class="form-control" id="13_Comments" name="13_Comments" rows="4"></textarea>
 				</div>
 			</section>
 
-				<button type="submit" name="submit" class="btn btn-submit"/>Submit Request</button>
+				<button type="submit" name="submit" class="btn btn-primary"/>Submit Request</button>
 		</form>
 
 		<p>This form is powered by SpringShare and complies with its <a href="https://springshare.com/privacy.html">privacy policy</a>.</p>

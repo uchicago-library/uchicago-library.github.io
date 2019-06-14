@@ -1,0 +1,62 @@
+<form class="webforms" action="https://www.lib.uchicago.edu/cgi-bin/cgimail" method="get" enctype="application/x-www-form-urlencoded">
+
+	<input name="rcpt" type="hidden" value="web-admin" />
+	<input name="whom" value="Web+Admin" type="hidden">
+	<input name="subject" type="hidden" value="Unix &amp; Samba Accounts Request" />
+	<input name="format" type="hidden" value="refer" />
+
+	<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+
+	<section>
+
+		<h3>Requestor information</h3>
+		<div class="form-group">
+			<label for="01_SupName">Requestor Name <abbr title="required">*</abbr></label>
+			<input type="text" class="form-control" id="01_SupName" name="01_SupName" required>
+		</div>
+
+		<div class="form-group">
+			<label for="from">Requestor email <abbr title="required">*</abbr></label>
+			<input type="email" class="form-control" id="from" name="from" required>
+		</div>
+
+	</section>
+
+	<section>
+		<h3>Staff information</h3>
+
+		<div class="form-group">
+			<label for="02_EmpName">Full Employee Name <abbr title="required">*</abbr></label>
+			<input type="text" class="form-control" id="02_EmpName" name="02_EmpName" required>
+		</div>
+
+		<div class="form-group">
+			<label for="03_EmpCNetID">Employee CNetID</label>
+			<input type="text" class="form-control" id="03_EmpCNetID" name="03_EmpCNetID">
+		</div>
+
+		<div class="form-group">
+			<label for="04_staff-dept">Staff Member Department/Unit</label>
+			<input type="text" class="form-control" id="04_staff-dept" name="04_staff-dept">
+		</div>
+		
+	</section>
+
+	<section>
+
+	<h3>Staff Access </h3>
+
+	<div class="form-group">
+		<label for="05_GroupsDirs">Groups to be assigned to and/or directories employee will need access to</label>
+		<textarea class="form-control" id="05_GroupsDirs" name="05_GroupsDirs" rows="5" aria-describedby="05_GroupsDirsHelp"></textarea>
+		<small id="05_GroupsDirsHelp" class="form-text">If you are unsure, list employee(s) who have the same permissions this employee should have</small>
+	</div>
+
+	 <div class="form-group">
+		<label for="06_Comments">Comments</label>
+		<textarea class="form-control" id="06_Comments" name="06_Comments" rows="5"></textarea>
+
+	</section>
+
+<button type="submit" name="submit" class="btn btn-default"/>Submit Request</button>
+</form>
