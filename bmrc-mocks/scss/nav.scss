@@ -1,0 +1,172 @@
+@import "media";
+@import "variables";
+
+/*
+ * Main navigation
+ * --------------------------------------------------
+ *
+ */
+
+
+.navigation {
+  height: $nav-height;
+  border-bottom: 2px solid $nav-background;
+  form.web-search {
+    padding-top: 1.5rem;
+  }
+}
+
+.brand {
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+    img {
+      max-width: 200px;
+    }
+}
+
+.nav-container {
+  //max-width: $content-width;
+  margin: 0 auto;
+}
+
+nav {
+  padding-left: 2em;
+  font-family: $main-font;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a, a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        color: $nav-background;
+        text-decoration: none;
+        &:hover {
+          background: $nav-background;
+          color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 190px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @include respond-to(mobileonly) {
+    width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.nav-list {
+  @include respond-to(medium) {
+    display: block;
+    background: $nav-background;
+  }
+}
+
+
+
+/*
+ * Mobile navigation
+ * --------------------------------------------------
+ * Binds to JS Toggle
+ *
+ */
+
+ .nav-dropdown { // Dropdown list binds to JS toggle event
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  @include respond-to(medium) {
+    display: none;
+  }
+}
+
+.nav-mobile { // Hamburger nav visible on mobile only
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $nav-background;
+  height: $nav-height;
+  width: $nav-height;
+  @include respond-to(medium) {
+    display: none;
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Page content 
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 10px;
+}

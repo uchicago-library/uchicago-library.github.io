@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/nav.js"></script>
+<script src="js/slide-show.js"></script>
+</head>
+
+  <body>
+
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!"><img src="images/BMRC-Logo.png"></a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li><a href="#!">Search Collections</a></li>
+            <li><a href="#!">Programs</a></li>
+            <li><a href="#!">News</a></li>
+            <li><a href="#!">About</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">About the BMRC</a></li>
+                <li><a href="#!">Staff &amp; Board Members</a></li>
+                <li><a href="#!">Membership</a></li>
+              </ul>
+            </li>
+            <li>
+               <form class="web-search">
+                  <input type="search" required="" onkeyup="buttonUp();" class="searchbox-input" name="search" aira-label="search news" placeholder="Search News Stories">
+                  <input name="view" type="hidden" value="collections">
+                  <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
+                    <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
+                  </span>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+
+    <section class="slideshow">
+
+      <div class="slide-image fade">
+        <img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2015/09/Fellows-BMRC-Staff-Sherry-Williams-06.03.2015-1600x580.jpg">
+        <div class="caption">Become a Fellow</div>
+      </div>
+
+    <!--   <div class="slide-image fade">
+        <img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2016/02/MLKJr.-Birthday-Celebration-Operation.-PUSH-EDITED-1600x580.jpg">
+        <div class="caption">Search Our Collections</div>
+      </div> -->
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+
+  </body>
+</html>
