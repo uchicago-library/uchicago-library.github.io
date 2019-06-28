@@ -1,69 +1,252 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+    <!-- Title -->
+    <title>Black Metropolis Research Consortium</title>
 
-<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/style.css">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="js/nav.js"></script>
-<script src="js/slide-show.js"></script>
 </head>
 
-  <body>
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="nikki-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="nikkiNav">
 
-    <section class="navigation">
-      <div class="nav-container">
-        <div class="brand">
-          <a href="#!"><img src="images/BMRC-Logo.png"></a>
+                        <!-- Nav brand -->
+                        <a href="index.html"><img class="nav-brand" src="images/BMRC-Logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Search Collections</a></li>
+                                    <li><a href="index.html">Programs</a></li>
+                                    <li><a href="index.html">News</a></li>
+                                    <li><a href="#">About</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">About the BMRC</a></li>
+                                            <li><a href="#">Staff &amp; Board Members</a></li>
+                                            <li><a href="#">Membership</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <!-- Search Form -->
+                                <div class="search-form">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="form-control" placeholder="Site Search">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+
+                                <!-- Social Button -->
+                                <div class="top-social-info">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-          <ul class="nav-list">
-            <li><a href="#!">Search Collections</a></li>
-            <li><a href="#!">Programs</a></li>
-            <li><a href="#!">News</a></li>
-            <li><a href="#!">About</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">About the BMRC</a></li>
-                <li><a href="#!">Staff &amp; Board Members</a></li>
-                <li><a href="#!">Membership</a></li>
-              </ul>
-            </li>
-            <li>
-               <form class="web-search">
-                  <input type="search" required="" onkeyup="buttonUp();" class="searchbox-input" name="search" aira-label="search news" placeholder="Search News Stories">
-                  <input name="view" type="hidden" value="collections">
-                  <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
-                    <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
-                  </span>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <!-- Preloader -->
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="circle-preloader">
+                <div class="a" style="--n: 5;">
+                    <div class="dot" style="--i: 0;"></div>
+                    <div class="dot" style="--i: 1;"></div>
+                    <div class="dot" style="--i: 2;"></div>
+                    <div class="dot" style="--i: 3;"></div>
+                    <div class="dot" style="--i: 4;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-post-slides owl-carousel">
+
+            <!-- Single Hero Post -->
+            <div class="single-hero-post d-flex flex-wrap">
+                <!-- Post Thumbnail -->
+                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(http://bmrc.lib.uchicago.edu/wp-content/uploads/2015/09/Fellows-BMRC-Staff-Sherry-Williams-06.03.2015-1600x580.jpg);"></div>
+                <!-- Post Content -->
+                <div class="slide-post-content">
+                        <a href="#">
+                            <h2>Fellowship Program</h2>
+                        </a>
+                        <p>The BMRC Short-Term Summer Fellowship Program is made possible by the generous support of the Andrew W. Mellon Foundation. The BMRC facilitates the exchange of ideas across the fellowship cohort and through public programs featuring the fellows' research. New, original work, develops as a result and illuminates the national and international importance of Chicago's African American community.</p>
+                        <a href="#" class="btn nikki-btn">Find Out More</a>
+                </div>
+            </div>
+
+            <!-- Single Hero Post -->
+            <div class="single-hero-post d-flex flex-wrap">
+                <!-- Post Thumbnail -->
+                <div class="slide-post-thumbnail h-100 bg-img" style="background-image: url(http://bmrc.lib.uchicago.edu/wp-content/uploads/2016/02/MLKJr.-Birthday-Celebration-Operation.-PUSH-EDITED-1600x580.jpg);"></div>
+                <!-- Post Content -->
+                <div class="slide-post-content">
+                        <a href="#">
+                            <h2>Our Collections</h2>
+                        </a>
+                        <p>Currently, the BMRC's membership is comprised of Chicago-based libraries, universities, Second Space organizations, and other archival institutions. By sharing resources and expertise and jointly developing collections, the BMRC facilitates access to African American materials in Chicago institutions and provides an enhanced service to researchers, publishers and students.</p>
+                        <a href="#" class="btn nikki-btn">Search Collections</a>
+                </div>
+            </div>
+
+        </div>
     </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Blog Content Area Start ##### -->
+    <section class="featured-news">
+
+            <div class="row justify-content-center">
+                <!-- Blog Posts Area -->
+                <div class="col-12">
+                    <div class="blog-posts-area">
+
+                                <h2>Recent News</h2>
+                        <div class="row">
+
+                            <!-- Single Blog Post -->
+                            <div class="col-12">
+                                <div class="row">
+                                    <!-- Thumbnail -->
+                                    <div class="col-sm-3">
+                                        <a href="#"><img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2016/07/MorrisonAmani_Headshot.jpg" alt=""></a>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="col-sm-9">
+                                        <a href="#" class="post-title">
+                                            <h3>Congratulations BMRC Fellow Amani Morrison</h3>
+                                        </a>
+                                        <p class="post-excerpt">Congratulations to 2015 &amp; 2017 BMRC Fellow Amani Morrison on being awarded the University of Illinois at Chicago’s Short-Term Travel Fellowship, which will support further engagement with UIC’s collections relating to Chicago housing conditions and policy in the mid-twentieth century.</p>
+                                    </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <!-- Thumbnail -->
+                                    <div class="col-sm-3">
+                                        <a href="#"><img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2018/05/sayitwithpictures.jpg" alt=""></a>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="col-sm-9">
+                                        <a href="#" class="post-title">
+                                            <h3>“Say It with Pictures” Then and New: Chicago’s African American Photographers 1890-1930</h3>
+                                        </a>
+                                        <p class="post-excerpt">The Museum of Contemporary Photography at Columbia College Chicago will host a multi-tiered academic project led by former BMRC Fellow Amy Mooney, Associate Professor of art history at Columbia College Chicago, on the under-recognized impact of African American commercial photographers working in Chicago from 1890 through the 1930s.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    <!-- Pager -->
+                    <ol class="nikki-pager">
+                        <li><a href="#">All News <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                    </ol>
+
+                        </div>
+                    </section>
+
+                    <section>
+
+                        <div class="row">
+
+                            <!-- Featured Post Area -->
+
+                            <div class="col-12">
+                                <h2>About</h2>
+                                <p>The Black Metropolis Research Consortium (BMRC) is a Chicago-based membership association of libraries, universities, and other archival institutions.The BMRC’s mission is to connect all who seek to document, share, understand and preserve Black experiences.</p>
+                                <p>It is the vision of BMRC to be essential to promoting discovery, preservation, and use of Black historical collections. Through consortial programs, the BMRC aids in expanding broad access to its members’ holdings of materials that document African American and African diasporic culture, history, and politics, with a specific focus on materials relating to Chicago.</p>
+
+                                <!-- Pager -->
+                    <ol class="nikki-pager">
+                        <li><a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                    </ol>
+                            </div>
+
+                        </div>
+                    </div>
 
 
-    <section class="slideshow">
+                </div>
 
-      <div class="slide-image fade">
-        <img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2015/09/Fellows-BMRC-Staff-Sherry-Williams-06.03.2015-1600x580.jpg">
-        <div class="caption">Become a Fellow</div>
-      </div>
-
-    <!--   <div class="slide-image fade">
-        <img src="http://bmrc.lib.uchicago.edu/wp-content/uploads/2016/02/MLKJr.-Birthday-Celebration-Operation.-PUSH-EDITED-1600x580.jpg">
-        <div class="caption">Search Our Collections</div>
-      </div> -->
-
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
     </section>
+    <!-- ##### Blog Content Area End ##### -->
 
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info d-flex align-items-center justify-content-between">
 
-  </body>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="copywrite-text">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><!-- 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
 </html>

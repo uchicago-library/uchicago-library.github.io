@@ -13,20 +13,30 @@
   padding: 0; }
 
 body {
-  font-family: 'Muli', sans-serif;
-}
+  font-family: "Roboto", sans-serif; }
 
+ul,
+ol {
+  margin: 0; }
+  ul li,
+  ol li {
+    list-style: none; }
 
-// Hero
+img {
+  height: auto;
+  max-width: 100%; }
 
 .bg-img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
 
+.bg-transparent {
+  background-color: transparent !important; }
 
 .classy-nav-container {
   position: relative;
+  z-index: 100;
   background-color: #ffffff;
   /* sticky */ }
   .classy-nav-container * {
