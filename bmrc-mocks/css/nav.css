@@ -151,7 +151,7 @@ body {
 .classynav ul li.megamenu-item > a:after,
 .classynav ul li.has-down > a:after {
   font-family: 'FontAwesome';
-  content: "\e900";
+  content: "\f107";
   font-size: 12px;
   color: #000000;
   padding-left: 5px;
@@ -367,7 +367,7 @@ body {
   align-items: center; }
 
 .breakpoint-off .classynav ul li .dropdown {
-  width: 180px;
+  width: 250px;
   position: absolute;
   background-color: #ffffff;
   top: 120%;
