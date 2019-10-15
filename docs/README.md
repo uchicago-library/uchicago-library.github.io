@@ -8,7 +8,10 @@
     * Do not add an approver yet, but add any project tags needed.
     * If using command line: After making the branch you have to push it to origin <branch-name> before making the pull request.
 3. Work on the code :sparkles:
-4. When your pull request is ready to be reviewed, add an approver / reviewer.
+
+**When Code is ready to review, the Developer:**
+1. Push changes to your branch
+2. Add a reviewer to the pull request
     * This lets the team know we're dealing with merge-ready code.
     * Reviewer will be alerted to the required task via email.
 
