@@ -6,6 +6,7 @@
     * For example, an issue titled `Flux Capacitor Bug #180` would have a branch named `180-Flux-Capacitor-Bug`.
 2. Create the pull request that corresponds with an issue.
     * Do not add an approver yet, but add any project tags needed.
+    * If using command line: After making the branch you have to push it to origin <branch-name> before making the pull request.
 3. Work on the code :sparkles:
 4. When your pull request is ready to be reviewed, add an approver / reviewer.
     * This lets the team know we're dealing with merge-ready code.
