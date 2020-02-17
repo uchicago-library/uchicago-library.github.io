@@ -3,7 +3,7 @@
 * Try not to rely on just color to show differences, but also include icons, patterns, or text to aid in your message.
 * The UChicago color palette is not all ADA compliant. Please use a contrast checker to verify if your foreground/background colors meet AA standards.
 * Use WebAIM [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) to check color contrast of text.
-* If using many adjesent colors (aka: graphs), use the [Coblis Color Blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
+* If using many adjacent colors (aka: graphs), use the [Coblis Color Blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 
 ## Print
 * Print on non-glossy; white, ivory, or cream paper
