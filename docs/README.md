@@ -25,6 +25,10 @@
 2. Tells the lead to push the code into production
 ---
 ## Designer
+### ADA
+* [General ADA Standards](ada.md)
+* [ADA for websites: Resources](code-resources.md#documentation)
+
 ### [Print](print-checklist.md)
 * [Door Signs](print-checklist.md#door-sign)
 * [Stanchion Poster](print-checklist.md#stanchion-poster)
