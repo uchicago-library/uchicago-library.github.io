@@ -4,7 +4,7 @@
 * [ADA Standards](ada.md)
 * Web Content Policies and Best Practices Handbook: [Loop pages](https://loop.lib.uchicago.edu/documentation/communications/web-content-policies-and-best-practices-handbook/)
 * University Color Palette: [Illustrator](https://uchicago.box.com/s/jlfzc04ila9ruzsbwpvewoma86ldjrg9) | [PDF](https://uchicago.box.com/s/lfo1rnwsy8pdzfmd871wvo70kozox55q)
-* If using many adjesent colors (aka: graphs or diagrams), use the [Coblis Color Blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
+* If using many adjacent colors (aka: graphs or diagrams), use the [Coblis Color Blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 * University Logo Usage: [PDF](https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/9/998/files/2018/12/UCM_UniversityIdentityGuidelines_12-2018-ut1xzu.pdf)
 * Verbiage for ADA fine print is: "Persons with disabilities who need an accommodation in order to participate in this
 event should contact _[event organizer]_ at _[event organizer's phone]_ for assistance."
