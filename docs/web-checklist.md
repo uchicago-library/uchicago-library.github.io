@@ -1,5 +1,5 @@
 # Web Checklists & Documentation
-View [Code Resources](code-resrouces.md) for code examples and documentation
+View [Code Resources](code-resources.md) for code examples and documentation
 
 ## Front-end Checklist
 - [ ] Colors: At minimum must pass level AA for text, but aim for AAA with WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
