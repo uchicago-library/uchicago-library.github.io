@@ -8,31 +8,32 @@
 * Verbiage for ADA fine print is: "Persons with disabilities who need an accommodation in order to participate in this
 event should contact _[event organizer]_ at _[event organizer's phone]_ for assistance."
 
-## [Door Signs](#door-sign)
-### Specs
+## Checklist
+- [ ] Colors: At minimum must pass level AA for text, but aim for AAA with WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [ ] Library and University logo included in footer
+- [ ] URL for event/product has been included
+- [ ] Spell Check
+
+## Specs
+### [Door Signs](#door-sign)
 Printed on regular Library printers (Various people)
 * Artboard: 8.5" x 11"
-* Bleed: NONE
+* Bleed: None
 * Text buffer: 1" (Do not place text close than 1" from artboard edge)
 * Design margin: 0.25" all around
 
-### Checklist
-- [ ] Colors used are ADA compliant for contrast
-- [ ] Address of building is included with building name
-- [ ] Library and University logo included in footer
-- [ ] URL for event/product has been included
-- [ ] Spell Check
-
-## [Stanchion Poster](#stanchion-poster)
-### Specs
+### [Stanchion Poster](#stanchion-poster)
 Printed on over-sized printer in Preservation (John Carey)
 * Artboard: 28" x 22"
-* Bleed: 0.25" all around (Frame is 0.5")
-* Text margin: 1" (Do not place text close than 1" from artboard edge)
+* Bleed: None
+* Design margin: 0.25" all around (Frame is 0.5")
+* Text buffer: 1" (Do not place text close than 1" from artboard edge)
 
-### Checklist
-- [ ] Colors used are ADA compliant for contrast
-- [ ] Address of building is included with building name
-- [ ] Library and University logo included in footer
-- [ ] URL for event/product has been included
-- [ ] Spell Check
+### Tall Banner
+Printed on over-sized printer in Preservation; Max of three banner holders available (John Carey)
+* Artboard (36" is the max width for the paper roll)
+  * **Stage + seated panel:** 36" x 109"; Bottom 54" will be covered by stage and obscured by seated humans.
+  * **Seated panel (no stage):** 36" x 100; Bottom 46" will be obscured by seated humans.
+* Bleed: None
+* Design margin: 0.5" all around
+* Text buffer: 5" (Do not place text close than 5.5" from artboard edge)
