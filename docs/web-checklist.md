@@ -1,19 +1,20 @@
 # Web Checklists & Documentation
 View [Code Resources](code-resrouces.md) for code examples and documentation
 
-## [Front-end Checklist](#front)
-- [ ] Colors used are ADA compliant for contrast
-- [ ] Sizes well when in mobile
-- [ ] Items reorganize well when in mobile
+## Front-end Checklist
+- [ ] Colors: At minimum must pass level AA for text, but aim for AAA with WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [ ] If using many adjesent colors (aka: graphs), use the [Coblis Color Blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
+- [ ] Resizes well when in mobile
+- [ ] Items reorganize in mobile in an easy to read and cognitive way
 - [ ] Functionality remains when zoomed-in
 - [ ] Keyboard navigation supported
 - [ ] Skip navigation goes to main content
 - [ ] Video(s) have captioning
-- [ ] Headers used correctly
-- [ ] All elements have a clear visual indication that they have focus
+- [ ] Header order is used correctly (Headers are in order: H2, H3, etc)
+- [ ] All elements have a clear visual indication when they have focus
 
 
-## [Back-end Checklist](#back)
+## Back-end Checklist
 ### General
 - [ ] Landmarks / page regions used (Eg: `<div id="content" role="main">`)
 - [ ] Title has value
@@ -23,8 +24,8 @@ View [Code Resources](code-resrouces.md) for code examples and documentation
 - [ ] Info/states conveyed by methods other than color alone
 - [ ] Text has contrast ratio of 4.5:1 or greater
 - [ ] `visibility: hidden;` and/or `display:none;` not used (unless item is to be hidden from ALL users)
-- [ ] Print styling has been included
-- [ ] em is used for viewport and font sizing
+- [ ] Print styling has been included and css file is linked
+- [ ] rem or em is used for viewport and font sizing
 
 ### Links and Buttons
 - [ ] All links and icons can be understood out of context
