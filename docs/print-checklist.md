@@ -1,5 +1,13 @@
 # Print Checklists & Documentation
 
+## Style Guides and Resources
+* [ADA Standards](ada.md)
+* Web Content Policies and Best Practices Handbook: [Loop pages](https://loop.lib.uchicago.edu/documentation/communications/web-content-policies-and-best-practices-handbook/)
+* University Color Palette: [Illustrator](https://uchicago.box.com/s/jlfzc04ila9ruzsbwpvewoma86ldjrg9) | [PDF](https://uchicago.box.com/s/lfo1rnwsy8pdzfmd871wvo70kozox55q)
+* University Logo Usage: [PDF](https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/9/998/files/2018/12/UCM_UniversityIdentityGuidelines_12-2018-ut1xzu.pdf)
+* Verbiage for ADA fine print is: "Persons with disabilities who need an accommodation in order to participate in this
+event should contact _[event organizer]_ at _[event organizer's phone]_ for assistance."
+
 ## [Door Signs](#door-sign)
 ### Specs
 Printed on regular Library printers (Various people)
@@ -28,15 +36,3 @@ Printed on over-sized printer in Preservation (John Carey)
 - [ ] Library and University logo included in footer
 - [ ] URL for event/product has been included
 - [ ] Spell Check
-- [ ] Crop marks included when exporting to PDF
-
-## Resources
-### ADA Compliance
-* [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-* Verbiage for ADA fine print is: "Persons with disabilities who need an accommodation in order to participate in this
-event should contact _[event organizer]_ at _[event organizer's phone]_ for assistance."
-
-### University Style Guide
-* [Web Content Policies and Best Practices Handbook](https://loop.lib.uchicago.edu/documentation/communications/web-content-policies-and-best-practices-handbook/)
-* [University Color Palette](http://communications.uchicago.edu/identity/color-palette)
-* [University Logo Usage](http://communications.uchicago.edu/identity/logo-usage)
