@@ -14,6 +14,11 @@
 event should contact _[event organizer]_ at _[event organizer's phone]_ for assistance."
 
 ## Fonts
-* 8.5" x 11": It is recommended not to go below 14pt font for main text or 10pt font for fine print information
-* Stanchion signs: It is recommended not to go below 20pt font for main text or 14pt font for fine print information
-* Banners: 104pt fonts is the most readable from across a room for headlines. It is recommended that font size does not go below 30pt.
+### Print
+* **8.5" x 11":** It is recommended not to go below 14pt font for main text or 10pt font for fine print information
+* **Stanchion signs:** It is recommended not to go below 20pt font for main text or 14pt font for fine print information
+* **Banners:** 104pt fonts is the most readable from across a room for headlines. It is recommended that font size does not go below 30pt.
+
+### Web
+* It is suggested to use `rem` or `em` units rather than `px` as both rem and em are scalable. This allows users to easily embiggen browser font sizing for readability.
+* [Rem versus em](https://j.eremy.net/confused-about-rem-and-em/) (Article)
