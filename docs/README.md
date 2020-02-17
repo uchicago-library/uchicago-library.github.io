@@ -30,10 +30,11 @@
 * [ADA for websites: Resources](code-resources.md#documentation)
 
 ### [Print](print-checklist.md)
-* [Door Signs](print-checklist.md#door-sign)
+* [Door Signs](print-checklist.md#door-signs)
 * [Stanchion Poster](print-checklist.md#stanchion-poster)
+* [Tall Banner](print-checklist.md#tall-banner)
 
 ### [Web](web-checklist.md)
-* [Front-end](web-checklist.md#front)
-* [Back-end](web-checklist.md#back)
+* [Front-end](web-checklist.md#front-end-checklist)
+* [Back-end](web-checklist.md#back-end-checklist)
 * [Frequently used code and resources](code-resources.md)
