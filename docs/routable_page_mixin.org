@@ -1,0 +1,258 @@
+#+TITLE: Wagtail Routing
+#+AUTHOR: Matt Teichman
+#+DESCRIPTION: DLDC Guide to creating routes in our Wagtail app
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
+* Introduction
+
+Suppose you're making a new template for our Wagtail app.  You may want to be
+able to preview your template in the browser while you're working on it, if only
+to make sure HTML and Django template tags are syntactically valid.  (Like, it's
+easy to forget to close them if you're just working by eye.)  It's also just
+helpful to see what the template will look like for design fine-tuning.
+
+One straightforward way to be able to view a template as you're working on it is
+to create a temporary route to it in the Wagtail app.  Say the route is
+=www.lib.uchicago.edu/app/temporary_route=.  All you have to do, in that case,
+is navigate your browser to that URL and you'll be able to preview the template.
+When you're done working on it, you can either modify the temporary route to
+behave however it's going to behave in production, or remove it and let your
+collaborators set up the routes they are going to need.
+
+* Prerequisites
+
+This guide assumes you are a UChicago DLDC developer working on our
+=library_website= app, located [[https://github.com/uchicago-library/library_website][here]].  For information about how to set up
+Wagtail routes more generally, please see [[https://learnwagtail.com/tutorials/routable-pages/][Kalob Taulien's tutorial]].  This guide
+also assumes that you know how to create a Wagtail template and that you have a
+location where you are in the habit of saving them.
+
+* Steps
+
+** Finding the app you're working on
+
+A Wagtail project, like any Django project, will consist of multiple Django
+[[https://docs.djangoproject.com/en/3.0/intro/tutorial01/][apps]].  There are lots of ways Wagtail projects can be structured, but as a rule
+of thumb, a Django app will correspond to a 'major section' of your web app.
+For example, if your Wagtail project is an online bookstore, it might contain
+one Django app for browsing the store's stock, another Django app for checking
+out, and another app for the customer to view/configure their account.
+
+Say your Wagtail project is called =sample_project=.  This also varies widely
+from case to case, but a typical directory structure for the root directory,
+called =sample_project=, might be something like this:
+
+#+BEGIN_SRC example
+.
+├── browse
+├── checkout
+├── my_account
+└── sample_project
+#+END_SRC
+
+The directory =sample_project/sample_project= contains the main configuration
+for the project, and the other three directories, =sample_project/browse=,
+=sample_project/my_account=, and =sample_project/checkout=, each correpond to
+their own Django app within the project.
+
+I wrote =sample_project/...= in the above examples to make it clear what the
+directories should look like on your computer, but for the rest of this guide,
+I'll follow the convention that every local path begins with the root path of
+the Wagtail project.  In other words, for the above examples, I would write
+=browse=, =checkout=, =my_account=, and =sample_project=, under the assumption
+that these are all under the =sample_project= directory.
+
+** Finding the class you're working on
+
+Let's switch to =library_website=, which is a more realistic example.  As of
+March 17, 2020, the root directory of our Wagtail app has the following tree
+structure:
+
+#+BEGIN_SRC example
+.
+├── alerts
+├── ask_a_librarian
+├── base
+├── bin
+├── cache
+├── conferences
+├── dirbrowse
+├── events
+├── findingaids
+├── group
+├── gulpfile.js
+├── home
+├── icon_list_boxes
+├── intranetforms
+├── intranethome
+├── intranettocs
+├── intranetunits
+├── lib_collections
+├── lib_news
+├── library_website
+├── manage.py
+├── news
+├── package.json
+├── package-lock.json
+├── projects
+├── public
+├── README.md
+├── redirects
+├── requirements-dev.txt
+├── requirements.txt
+├── results
+├── search
+├── searchable_content
+├── staff
+├── static
+├── subjects
+├── units
+├── Vagrantfile
+├── webpack.config.js
+├── webpack-stats.json
+├── workflowautomator
+└── wsgi-config
+#+END_SRC
+
+Same principle as the toy example above, except bigger.  Let's say you're
+working on a new template for the Digital Collections object display page.  In
+that case, we want to be in the =lib_collections= app, which is one of the above
+directories.  It has the following contents:
+
+#+BEGIN_SRC example
+.
+├── admin.py
+├── exceptions.py
+├── __init__.py
+├── migrations
+├── models.py
+├── __pycache__
+├── static
+├── templates
+├── templatetags
+├── tests.py
+├── utils.py
+└── views.py
+#+END_SRC
+
+Every page type in a Wagtail app is encoded as a table in Wagtail's relational
+database.  Each row of the table is a Wagtail page of that type.  All that
+happens behind the scenes, which means that ideally you are not meant to worry
+about it, as a Wagtail developer.  (You might end up temporarily having to worry
+about it if you're in a pinch, but hopefully only then.)
+
+What all that boils down to from the perspective of those of us contributing
+Python code is that every table we added to Wagtail's database corresponds to a
+Python class in the =models.py= module of one of our project's Django apps.
+That in turn means that every /page type/ you see when you go to the Wagtail
+admin interface corresponds to a Python class defined in the =models.py= in one
+of our project's Django apps.
+
+Thus, for current purposes, the file we want to be editing is
+=lib_collections/models.py=.
+
+Now, it so happens that there are many page types defined in our Wagtail
+project's =lib_collections/models.py=.  Luckily, they are pretty human-readably
+named.  Since in this example we'll be working on the Digital Collections object
+page, that means we'll be adding a route inside the =CollectionPage= Python
+class, which defines the Digital Collection page type in Wagtail.
+
+** Setting Up =RoutablePageMixin=
+
+The preferred way to add a route to our Wagtail app is using Wagtail's
+=RoutablePageMixin=.  (Going forward, we prefer doing it that way to using
+=urls.py=, for various complex reasons that we may some day write another guide
+about.)
+
+In our example of a Digital Collections object page template, the following is
+already set up, so if that's the case for you, you can skip to the next
+subsection.
+
+The following imports/configuration settings need to be in place for you to use
+the =RoutablePageMixin=.
+
+*** Include =wagtail.contrib.routable_page= in =INSTALLED_APPS=
+
+First, open =library_website/settings/base.py= and make sure
+='wagtail.contrib.routable_page'= is on the list of =INSTALLED_APPS=:
+
+#+BEGIN_SRC python
+  INSTALLED_APPS = [
+      'django.contrib.admin',
+      'django.contrib.auth',
+      # ...a bunch more includes...
+      'wagtail.contrib.routable_page',
+      # ...a bunch more includes...
+      'workflowautomator.apps.WorkflowautomatorConfig',
+      'webpack_loader',
+  ]
+#+END_SRC
+
+*** Import the module and the decorator
+
+Make sure the top of your =lib_collections/models.py= file contains the
+following import lines:
+
+#+BEGIN_SRC python
+  from django.template.response import TemplateResponse
+  from wagtail.contrib.routable_page.models import RoutablePageMixin, route
+#+END_SRC
+
+You are now ready to begin using the =RoutablePageMixin=.
+
+** Setting up a temporary route
+
+Let's say you now have an initial sketch of a template for the Digital
+Collections object page, and you would now like to preview it in the browser.
+And let's say the path to that template is =path/to/object_template.html=.
+
+The first thing you need to do is make sure the =CollectionPage= class inherits
+from the =RoutablePageMixin= class.  Python's [[https://www.geeksforgeeks.org/method-resolution-order-in-python-inheritance/][method resolution order]] dictates
+that whenever the inheritance search reaches a diamond-shaped branch in the
+inheritance graph, it proceeds in left-to-right order based on how the
+superclasses appeared in your class definition.  For our purposes, what that
+means is that =RoutablePageMixin= should /precede/ the =Page= or
+=PublicBasePage= classes when you're specifying the 'inheritance' part of the
+class definition.  In other words, it should look like this:
+
+#+BEGIN_SRC python
+  class CollectionPage(RoutablePageMixin, PublicBasePage):
+      # ...the rest of your class definition...
+#+END_SRC
+
+The second thing you need to do is create a route.  There are lots of ways to
+create a route, but one simple way is to add the following function definition
+to the =CollectionPage= template in =lib_collections/models.py=.  In the context
+of our example, it would look like this:
+
+#+BEGIN_SRC python
+  @route(r'^temporary_route/$')
+  def temporary(self, request, *args, **kwargs):
+      """
+      Temporary route for previewing Digital Collection object template.
+      """
+      template = "path/to/object_template.html"
+      context = super().get_context(request)
+      return TemplateResponse(request, template, context)
+#+END_SRC
+
+Assuming your root URL is =wwwdev:8000= and your template is located in
+=path/to/object_template.html=, you should then be able to launch the Wagtail
+app on your machine and navigate your browser to
+=wwwdev:8000/collex/collections/name-of-collection/temporary_route/= to preview
+your template.
+
+** Finishing Up
+
+Personally, I think it would be great to be handed the project exactly in the
+above state for further development.  I would then start modifying the temporary
+route into the route we would actually be using for production.  But I suppose
+everyone's taste varies, so it's worth double-checking to see whether your
+collaborators would prefer to set up their own routes from scratch.
