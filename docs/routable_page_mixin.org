@@ -181,7 +181,7 @@ the =RoutablePageMixin=.
 *** Include =wagtail.contrib.routable_page= in =INSTALLED_APPS=
 
 First, open =library_website/settings/base.py= and make sure
-='wagtail.contrib.routable_page'= is on the list of =INSTALLED_APPS=:
+=wagtail.contrib.routable_page= is on the list of =INSTALLED_APPS=:
 
 #+BEGIN_SRC python
   INSTALLED_APPS = [
@@ -251,7 +251,7 @@ your template.
 
 ** Finishing Up
 
-Personally, I think it would be great to be handed the project exactly in the
+Personally, I think it would be great tot be handed the project exactly in the
 above state for further development.  I would then start modifying the temporary
 route into the route we would actually be using for production.  But I suppose
 everyone's taste varies, so it's worth double-checking to see whether your
