@@ -250,9 +250,10 @@ app on your machine and navigate your browser to
 your template.
 
 The way this breaks down is as follows.  Above, the =route= decorator takes a
-regular expression string that says =^temporary_route/$=.  What that means is:
-whatever the root URL for this page is, add =temporary_route/= to the end of
-that and the app will direct to the template you provided the path to.
+regular expression string that says =^temporary_route/$=.  Translated into
+English, that means: whatever the root URL for any page of this type ends up
+being, add =temporary_route/= to the end of that and the app will direct to the
+template you provided the path to.
 
 ** Finishing Up
 
