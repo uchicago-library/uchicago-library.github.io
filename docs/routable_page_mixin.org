@@ -229,8 +229,8 @@ class definition.  In other words, it should look like this:
 
 The second thing you need to do is create a route.  There are lots of ways to
 create a route, but one simple way is to add the following function definition
-to the =CollectionPage= template in =lib_collections/models.py=.  In the context
-of our example, it would look like this:
+to the =CollectionPage= class in =lib_collections/models.py=.  In the context of
+our example, it would look like this:
 
 #+BEGIN_SRC python
   @route(r'^temporary_route/$')
