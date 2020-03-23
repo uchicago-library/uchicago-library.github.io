@@ -243,11 +243,16 @@ of our example, it would look like this:
       return TemplateResponse(request, template, context)
 #+END_SRC
 
-Assuming your root URL is =wwwdev:8000= and your template is located in
+Assuming your root address is =wwwdev:8000= and your template is located in
 =path/to/object_template.html=, you should then be able to launch the Wagtail
 app on your machine and navigate your browser to
 =wwwdev:8000/collex/collections/name-of-collection/temporary_route/= to preview
 your template.
+
+The way this breaks down is as follows.  Above, the =route= decorator takes a
+regular expression string that says =^temporary_route/$=.  What that means is:
+whatever the root URL for this page is, add =temporary_route/= to the end of
+that and the app will direct to the template you provided the path to.
 
 ** Finishing Up
 
