@@ -257,7 +257,7 @@ template you provided the path to.
 
 ** Finishing Up
 
-Personally, I think it would be great tot be handed the project exactly in the
+Personally, I think it would be great to be handed the project exactly in the
 above state for further development.  I would then start modifying the temporary
 route into the route we would actually be using for production.  But I suppose
 everyone's taste varies, so it's worth double-checking to see whether your
