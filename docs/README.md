@@ -9,6 +9,18 @@
     * If using command line: After making the branch you have to push it to origin <branch-name> before making the pull request.
 3. Work on the code :sparkles:
 
+**Remember to do the following, if your changes call for it**
+- Make migrations
+   - `./manage.py makemigrations`
+   - `./manage.py migrate`
+- Generate fixtures
+   - **Warning:** Must be done from the Vagrant version of the site, should never be done from a site running a full production database dump
+   - `./manage.py dumpdata --natural-foreign --natural-primary --exclude wagtailcore.GroupCollectionPermission > base/fixtures/test.json`
+- Collect Static
+   - `./manage.py collectstatic`
+- Compress
+   - `./manage.py compress`
+
 #### When Code is ready to review, the Developer:
 1. Push changes to your branch
 2. Add a reviewer to the pull request
