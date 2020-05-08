@@ -93,6 +93,78 @@ _When there is no col header or col header is hidden in mobile_
 </tbody>
 ```
 
+### Forms
+**Layout**
+- Break fields up into like sections. For example, a section for patron info and a section for book info.
+- Put sections within `<section>` and give header labels, most likely will be `<h2>`
+- Example:
+```
+<h1>ILL Request Form</h1>
+<form action="illiad.dll" method="post" name="ArticleRequest" class="ill-request f-wrap-request">
+   <section>
+      <h2>Describe the item you want</h2>
+      [ code for form fields in this section ]
+   </section>
+   
+   <section>
+      <h2>Additional Information</h2>
+      [ code for form fields in this section ]
+   </section>
+   [...]
+</form>
+```
+
+**Form Fields**
+- Place field `label` and `input` into a `form-group`
+- include `for=" "` in `label` that matches `name=" "` in `input`
+- If using help text, include `aria-describedby=" "` in `input` that matches `id=" "` in the tag the help text is in (normally `<small>` or `<span>`
+- Example:
+```
+<div class="form-group">
+   <label for="JournalTitle">Title (Journal, Conference Proceedings, Anthology)</label>
+   <input type="text" id="PhotoJournalTitle" name="PhotoJournalTitle" aria-describedby="JournalTitleHelp" class="form-control">
+   <small id="JournalTitleHelp" class="form-text text-muted">Please do not abbreviate unless your citation is abbreviated.</small>
+</div>
+```
+
+**Form Field Rows**
+- Group optional and like things together in a row.
+- Field rows are useful for ISBN, pages, and other similar small field items.
+- If mixing required and non-required items in a row, place the required field toward the left where a user can easily see while scanning.
+- Example:
+```
+<div class="form-group row">
+   <div class="col-sm-4"> 
+      <label for="InclusivePages">Inclusive Pages</span></label>
+      <input type="text" id="InclusivePages" name="InclusivePages"class="form-control">
+   </div>
+   <div class="col-sm-4">
+      <label for="JournalVolume">Volume</label>
+      <input type="text" id="JournalVolume" name="JournalVolume" class="form-control">
+   </div>
+   <div class="col-sm-4">
+      <label for="JournalIssue">Issue Number or Designation</label>
+      <input type="text" id="JournalIssue" name="JournalIssue" class="form-control">
+   </div>				
+</div>
+```
+
+**Required Fields**
+- Include at top of form, after header or intro paragraph: `<p class="required">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>`
+- then in required fields include:`<abbr title="required">*</abbr>` within the label
+- Example of full field code:
+```
+<div class="form-group">
+   <label for="PhotoArticleTitle">Article, Chapter, or Paper Title<abbr title="required">*</abbr></label>
+   <input type="text" id="PhotoArticleTitle" name="PhotoArticleTitle" class="form-control">
+</div>
+ ```
+ 
+ **Submit Buttons**
+ - Users are accostommed to seeing the submit button to the right hand side of the bottom of the form
+ - If a "clear" button needs to be included, make it look like a text link rather than a button. Space it away from the submit button so that a phone user doesn't accidentally click it with their finger.
+ - Check the color contrast on the submit button to assure all visual users can read the text
+
 ### Media Queries
 _KZ's breakpoints based on web stats of common devices used by patrons_
 
