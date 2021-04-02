@@ -1,0 +1,297 @@
+#+TITLE: Digital Collections Page
+#+AUTHOR: Matt Teichman
+#+DESCRIPTION: DLDC Guide to creating and updating a new digital collections page
+
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* Introduction
+
+  This document is intended to help walk DLDC staff through the process of
+  creating a new digital collections page.  Currently, the majority of the
+  Library's digital collections are on standalone websites created in different
+  ways using different frameworks by different people.  The purpose of the
+  framework outlined here is to provide a way to fold all those digital
+  collections websites into a single, centralized web app---our Wagtail site,
+  which is the main library website you see when you go to
+  =www.lib.uchicago.edu=.
+
+  The 'guide' section is intended as a quick walkthrough to get you going
+  bringing a new digital collection on board.  The 'reference' section provides
+  a more comprehensive explanation of the various parts of our digital
+  collections framework, and is intended to be read on an as-needed basis rather
+  than linearly, i.e. if you are wondering how a specific feature works, you can
+  look up the section describing that feature.
+
+* Prerequisites
+
+  These instructions assume that you are a UChicago DLDC developer working on
+  our =library_website= app, the source for which is located [[https://github.com/uchicago-library/library_website][here]].
+
+* Guide
+
+  Suppose that, as a DLDC staff member, you are in possession of a digital
+  colleciton that you would like to create a collection page for.  The purpose
+  of this guide is to outline the steps necessary to 'onboard' a new digital
+  collection.
+
+  So that we have an example to work with, imagine that you have just been asked
+  to add a collection of back issues of the classic web comic, /Doctor Fun/, to
+  the collection.  You will need to go through the following steps:
+
+  + load all the collection data (i.e. each comic) onto our Mark Logic server
+  + load the relevant collection data onto our IIIF and Loris servers (i.e. a
+    hi-res image of each comic, along with basic metadata)
+  + populate the 'collection' panel in the Wagtail admin interface for that
+    collection page
+  + give the models and templates for the collection page in Wagtail a once-over
+    to see whether any features need to be added
+
+** Mark Logic Preparation
+
+   The first thing to do is populate our Mark Logic database with the collection
+   objects (back issues of /Doctor Fun/, in this case), along with all the
+   metadata we have for each object.  Metadata for each object would include
+   information such as: who created it, when was it created, who is the
+   publisher, what geographic regions does it cover (if applicable), etc.
+
+   [[https://www.marklogic.com/][Mark Logic]] is a NoSQL database with key-value lookup and RDF graph
+   capabilities.  We are using our Mark Logic database as a 'source of truth'
+   for most of our digital collections, with one or two exceptions where that is
+   not feasible.  The Mark Logic record for any given object should contain all
+   the information that we have about it (and are planning to use).
+
+   If you would like to add a new digital collection to our Mark Logic database,
+   please contact [[https://www.lib.uchicago.edu/about/directory/staff/charles-blair/][Charles Blair]] and [[https://www.lib.uchicago.edu/about/directory/staff/john-jung/][John Jung]] for assistance.
+
+** IIIF Preparation
+
+   The second step for onboarding a new collection is to set our IIIF server up.
+   The purpose of the IIIF server is to:
+
+   + provide the information the page uses to create its browse listings
+   + provide a URL the Universal Viewer app can use to live-display a collection
+     object in the collection page
+
+   The IIIF server provides this information in the form of JSON objects,
+   following the [[https://iiif.io/api/][IIIF specification]].  The IIIF browses provide groupings of
+   collections objects under categories, and provide a link to the IIIF manifest
+   for each object.
+
+   If you are tasked with onboarding a new digital collection, please contact
+   [[https://www.lib.uchicago.edu/about/directory/staff/john-jung/][John Jung]] for assistance.  The remaining parts of this section will outline
+   how the IIIF server should behave, once you are done with that part of the
+   process.
+
+*** ARK Identifiers
+
+    Every object in our digital collections is assigned an [[https://n2t.net/e/ark_ids.html][ARK identifier]].  This
+    can be thought of as a universal 'primary key' for looking the object up in
+    any database that lists it.  ARK identifiers are similar to [[https://www.doi.org/][DOI]]-s, which you
+    may have come across while doing scholarly research.  However, one
+    disadvantage to using a DOI as the primary identifier for our object is that
+    DOI resolution is proprietary, which means that every time you want to look
+    an object up by DOI, you need to use the CrossRef website.  We would prefer
+    to be able to look objects in our collection up without being beholden to a
+    third-party lookup service and whatever baggage comes along with it, in
+    terms of performance, service outage, and compatibility-breaking upgrades
+
+    Simplifying somewhat, our ARK identifiers have two parts.  The prefix is
+    always =ark:/61001/=.  =61001= is the Name Assigning Authority Number for
+    the University of Chicago.  The second part is called the [[https://n2t.net/e/noid.html][NOID]], and it
+    consists of an alphanumeric hash that uniquely identifies the object.  (I
+    know what you're thinking; please keep your early 80s arcade game puns to
+    yourself.)
+
+    For exmaple, the ARK identifier for our [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/][Lawndale Community]] map is:
+
+    #+begin_example
+      ark:/61001/b2s05v615c5v
+    #+end_example
+
+    To look an object up by ARK, you should use the University of Chicago
+    Library's ARK resolver API, located at:
+
+    #+begin_example
+      https://www.lib.uchicago.edu/ark:/61001/
+    #+end_example
+
+    To look the [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/][Lawndale Community]] map up in our ARK resolver using its ARK,
+    simply append the NOID to the above URL:
+
+    #+begin_example
+      https://www.lib.uchicago.edu/ark:/61001/b2s05v615c5v
+    #+end_example
+
+    This permanent URL will take you to the webpage for that collection object,
+    in perpetuity.  For more information on how our ARK resolver works, please
+    see the offical documentation here:
+
+    #+begin_example
+      https://dldc.lib.uchicago.edu/local/ldr/ark.html
+    #+end_example
+
+*** Routing Scheme
+
+    We use the hostname =iiif-collection.lib.uchicago.edu= in production and the
+    hostname =iiif-collection-dev.lib.uchicago.edu= for development.  The
+    workflow is to test upgrades/changes to the way the IIIF data are formatted
+    on the development server, then move them over to the production server once
+    we're convinced they work.  In the examples that follow, we will presume the
+    production hostname.
+
+    We use a 'slugified' version of the collection name as the root path for a
+    collection's browses in IIIF.  'Slugified' means that all capital letters
+    are lowercased and all space characters are changed to hyphens.  For
+    instance, if the name of your collection is 'Digital Media Archive', then
+    the slugified name should be =digital-media-archive=.
+
+*** IIIF: Browse Type Route
+
+    The routing scheme for a cluster browse type in IIIF is as follows:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE].json
+    #+end_example
+
+    An actual example of such a URL route would be:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade.json
+    #+end_example
+
+    All the browse type routes you set up in IIIF should look like that.
+
+*** IIIF: Browse Route
+
+    The routing scheme for a cluster browse type in IIIF is as follows:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]/[NAME OF BROWSE].json
+    #+end_example
+
+    An actual example of such a URL route would be:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade/1930s.json
+    #+end_example
+
+    All the browse type routes you set up in IIIF should look like that.
+
+*** IIIF: Object Manifest Route
+
+    The main source of information on a digital collection object in IIIF is the
+    manifest.  Object manifests on our IIIF server are not split up by
+    collection; they are accessed only by their ARK identifier.
+
+    The hostname, as always, is =iiif-collection.lib.uchicago.edu=.  The route
+    for viewing an object manifest is:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/object/[ARK IDENTIFIER].json
+    #+end_example
+
+    So, for instance, the URL for the IIIF manifest for our [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2qd0bb4kk01/][Brighton Park]] map is
+    as follows:
+
+    #+begin_example
+      https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json
+    #+end_example
+
+*** Create IIIF Manifests and Browses
+
+    When you're done, the IIIF server should be serving up browses and manifests
+    for your collection at those routes.  For more information on setting that
+    up, please get in touch with [[https://www.lib.uchicago.edu/about/directory/staff/john-jung/][John Jung]].
+
+** Create Wagtail Admin Panel
+
+   The third major step in setting your new digital collections page up is to
+   populate the relevant Wagtail admin panels for it.  Perhaps the collection
+   you're working on already has a page in Wagtail---if so, its =Collection= tab
+   will be empty, so all you'll have to do is populate it.  If the collection
+   you're working on doesn't already have a page in Wagtail, you'll need to
+   create it and populate both the =Content= and =Collection= tabs.
+
+   The purpose of the Wagtail admin panels is to provide for you to enter all
+   the information that's specific to the collection you're adding.  This
+   information will go into the Wagtail database, and it will generate the
+   entire collection site from the information you provided.  That is, it will
+   automatically generate list and cluster browses (and, eventually, also facets
+   and searches), the landing page for the collection, and object pages for all
+   objects in the collection.  From Wagtail's point of view, all of that is one
+   single 'page'.  
+
+   To get to the Wagtail admin interface, scroll to the bottom of any webpage on
+   the [[https://www.lib.uchicago.edu][main library website]] and click on the link that says =Staff Login=.  This
+   will take you to a Shibboleth login page, which will accept your =cnetid= and
+   cnet password.  Once you're logged into the admin interface, click on the
+   following series of =>= in the main menu, on the left of the screen:
+
+   #+begin_example
+     Pages > The University of Chicago Library > Collections & Exhibits > Collections
+   #+end_example
+
+   If the Wagtail page for your new collection doesn't yet exist, click on
+   =Collections=.  This will take you to a list of all our collection pages.  To
+   create a new page for your collection, click on =+ ADD CHILD PAGE= under the
+   title =Collections=, in between the =VIEW LIVE= and =MORE= buttons.
+
+   If the Wagtail page for your collection already exists---this will probably
+   be the case for the majority of collections we decide to onboard, at least in
+   the initial stages---continue clicking through the series of =>= in the menu
+   until you get to the name of your collection:
+
+   #+begin_example
+     Collections > [NAME OF YOUR COLLECTION]
+   #+end_example
+
+   Next, you can begin populating the =Collection= tab.  The =Content= tab
+   contains basic information about the collection, which is mainly used for the
+   landing page, and for the 
+
+** The Once Over
+
+* Reference
+
+This section is to-be-written.
+
+** Routing Scheme
+
+** Wagtail Admin Panel
+
+** IIIF Manifests
+
+** IIIF Browses
+
+*** List Browses
+
+*** Cluster Browses
+
+** Landing Page
+
+** Intermediate Pages
+
+*** Cluster Browses
+
+*** List Browses
+
+*** Searches & Facets
+
+** Object Page
+
+*** Citation Service 
+
+**** Turtle Data
+
+**** Social Media Links
+
+**** LUNA/BTAA links
+
+**** Physical Object
+
+*** Metadata fields
+
+**** Additional Fields: Permanent URL and Parent Collection
+
+*** Universal Viewer
+
