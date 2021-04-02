@@ -15,19 +15,19 @@
   which is the main library website you see when you go to
   =www.lib.uchicago.edu=.
 
-  The 'guide' section is intended as a quick walkthrough to get you going
-  bringing a new digital collection on board.  The 'reference' section provides
-  a more comprehensive explanation of the various parts of our digital
-  collections framework, and is intended to be read on an as-needed basis rather
-  than linearly, i.e. if you are wondering how a specific feature works, you can
-  look up the section describing that feature.
+  The [[guide-section][Guide]] section is intended as a quick walkthrough to get you going bringing
+  a new digital collection on board.  The [[reference-section][Reference]] section provides a more
+  comprehensive explanation of the various parts of our digital collections
+  framework, and is intended to be read on an as-needed basis rather than
+  linearly, i.e. if you are wondering how a specific feature works, you can look
+  up the section describing that feature.
 
 * Prerequisites
 
   These instructions assume that you are a UChicago DLDC developer working on
   our =library_website= app, the source for which is located [[https://github.com/uchicago-library/library_website][here]].
 
-* Guide
+* Guide <<guide-section>>
 
   Suppose that, as a DLDC staff member, you are in possession of a digital
   colleciton that you would like to create a collection page for.  The purpose
@@ -245,15 +245,104 @@
      Collections > [NAME OF YOUR COLLECTION]
    #+end_example
 
-   Next, you can begin populating the =Collection= tab.  The =Content= tab
-   contains basic information about the collection, which is mainly used for the
-   landing page, and for the 
+   Next, you can begin populating the *Collection* tab.  The *Content* tab
+   contains basic information about the collection, which is mainly used to
+   provide the content for the collection's landing page and sidebar.  The
+   *Collection* tab contains the information that will be used to automatically
+   create all the list browses, cluster browses, and object pages (and,
+   eventually, also facets and searches).
 
+   Next, we'll run through all the sections of the *Collection* tab, as of
+   April 2021.
+
+*** Highlighted Records
+
+    This field in the panel should contain the URL to the browse that will be
+    used to display a preview of the first five items in the collection on the
+    landing page.  It's like an abbreviated browse that lets the user jump right
+    into browsing the collection.
+
+    Currently, we are just using the list browse for this feature; our Wagtail
+    model/view automatically truncates it to just show the first five.  So for
+    the time being, this should be a link to the IIIF list browse for the
+    collection you're working on.
+
+*** Citation Configuration
+
+    The digital collections object page has a menu called 'Cite This', which
+    appears below the viewer for the object.  Inside the viewer is a live
+    preview of what a citation for the relevant object would look like, and the
+    user can toggle between Chicago, APA, and MLA citation styles.  The way we
+    construct these citations is fairly complicated and will be described in
+    detail in the [[reference-section][Reference]] section of this document.
+
+    This should contain the configuration file for the citation service.  The
+    configuration file is in =INI= format.  You shouldn't have too much trouble
+    getting started with it, because it is auto-populated by default with a
+    minimal reasonable standard configuration.  However, you will have to edit
+    it if you want to customize which Mark Logic metadata fields appear in the
+    citations for the objects in your new collection.  The configuration file is
+    in =INI= format; for full information on how to edit it, please see the
+    [[citation-section][Citation Service]] section under [[reference-section][Reference]].
+
+*** Searches
+    
+    When this feature is fleshed out, we'll use this section to enumerate what
+    types of searches the collection will offer.  For instance, maybe we want to
+    allow the user to search a collection by author, or by date.
+
+    This feature is not implemented as of April 2021---so this section of the
+    admin panel is essentially a placeholder.
+
+*** List Browses
+
+    A list browse is a listing of every object in a collection, paginated in
+    increments of 25.  What makes different list browses different is the order
+    in which they sort the collection items.  So for example, a date list browse
+    might sort the items in ascending order by the date they were released, and
+    a title list browse might sort the items in ascending alphabetical order of
+    their titles.  But both browses will contain all the items in the
+    collection.
+
+    Once you have determined which list browses you would like to make available
+    in your new collection, press the =+ ADD LIST BROWSES= button to make a list
+    browse object, for each of the browses you are planning to offer.
+
+    Currently, we are only using two of the fields in our list browse objects:
+    *Label* and *Link text override*.  *Label* should be a capitalized version
+    of the name of the list browse in IIIF.  For instance, if the date list
+    browse for a collection is called 'date' in IIIF, then the list browse
+    object you create in the Wagtail admin interface should have =Date= for a
+    label.
+
+    *Link text override* tells Wagtail how to display the browse when it links
+    to it.  For example, the date list browse for the [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/][Social Scientists Map
+    Chicago]] collection is called 'date' in IIIF---Wagtail needs to know that to
+    pull the information about the list browse from IIIF---but the browse
+    displays to the reader as 'All Maps by Date'.  *Link text override* is an
+    optional field, so if you leave it blank, then the browse will display under
+    a capitalized version of its IIIF name.
+
+*** Cluster Browses
+
+    As of April 2021, cluster browses have a different structure from list
+    browses.  List browses go 'one level deep', because they only correspond to
+    different ways of sorting all items in an entire collection.  However,
+    cluster browses break the items in a collection up into subcategories, and
+    each collection potentially has different ways we'll want to break it up
+    into subcategories.
+
+    A cluster browse type is a way of breaking a collection up into
+    subcategories.  A cluster browse is the name we give each of those
+    subcategories.  So for instance, the Social Scientists Map Chicago
+    collection has a 'subject' cluster browse type and a 'decade' cluster browse
+    type.  
+    
 ** The Once Over
 
-* Reference
+* Reference <<reference-section>>
 
-This section is to-be-written.
+  This section is to-be-written.
 
 ** Routing Scheme
 
@@ -279,7 +368,7 @@ This section is to-be-written.
 
 ** Object Page
 
-*** Citation Service 
+*** Citation Service <<citation-section>>
 
 **** Turtle Data
 
