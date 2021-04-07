@@ -27,7 +27,7 @@
   These instructions assume that you are a UChicago DLDC developer working on
   our =library_website= app, the source for which is located [[https://github.com/uchicago-library/library_website][here]].
 
-* Guide <<guide-section>>
+* Guide
 
   Suppose that, as a DLDC staff member, you are in possession of a digital
   colleciton that you would like to create a collection page for.  The purpose
@@ -285,7 +285,7 @@
     in =INI= format; for full information on how to edit it, please see the
     [[citation-section][Citation Service]] section under [[reference-section][Reference]].
 
-*** Searches <<searches-section>>
+*** Searches
     
     When this feature is fleshed out, we'll use this section to enumerate what
     types of searches the collection will offer.  For instance, maybe we want to
@@ -294,7 +294,7 @@
     This feature is not implemented as of April 2021---so this section of the
     admin panel is essentially a placeholder.
 
-*** List Browses <<list-browses-section>>
+*** List Browses
 
     A list browse is a listing of every object in a collection, paginated in
     increments of 25.  What makes different list browses different is the order
@@ -433,7 +433,7 @@
      - this should contain a preview of the object, in a player/viewer
      - followed by a list of metadata fields for the object below
 
-* Reference <<reference-section>>
+* Reference
 
   This section is to-be-written.
 
@@ -461,7 +461,7 @@
 
 ** Object Page
 
-*** Citation Service <<citation-section>>
+*** Citation Service
 
 **** Turtle Data
 
