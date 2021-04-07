@@ -32,8 +32,7 @@
   The purpose of this guide is to outline the steps necessary to onboard a new
   digital collection. Suppose that, as a DLDC staff member, you are in
   possession of a digital collection that you would like to create a collection
-  page for. Imagine that you have just been asked to onboard a new
-  collection. You will need to go through the following steps:
+  page for. You will need to go through the following steps:
 
   + load all the collection data onto our Mark Logic server
   + load the relevant collection data onto our IIIF and Loris servers, where
