@@ -31,16 +31,15 @@
 
   Suppose that, as a DLDC staff member, you are in possession of a digital
   colleciton that you would like to create a collection page for.  The purpose
-  of this guide is to outline the steps necessary to 'onboard' a new digital
+  of this guide is to outline the steps necessary to onboard a new digital
   collection.
 
-  So that we have an example to work with, imagine that you have just been asked
-  to add a collection of back issues of the classic web comic, /Doctor Fun/, to
-  the collection.  You will need to go through the following steps:
+  Imagine that you have just been asked to onboard a new collection. You will
+  need to go through the following steps:
 
-  + load all the collection data (i.e. each comic) onto our Mark Logic server
-  + load the relevant collection data onto our IIIF and Loris servers (i.e. a
-    hi-res image of each comic, along with basic metadata)
+  + load all the collection data onto our Mark Logic server
+  + load the relevant collection data onto our IIIF and Loris servers, where
+    applicable
   + populate the 'collection' panel in the Wagtail admin interface for that
     collection page
   + give the models and templates for the collection page in Wagtail a once-over
@@ -49,10 +48,10 @@
 ** Mark Logic Preparation
 
    The first thing to do is populate our Mark Logic database with the collection
-   objects (back issues of /Doctor Fun/, in this case), along with all the
-   metadata we have for each object.  Metadata for each object would include
-   information such as: who created it, when was it created, who is the
-   publisher, what geographic regions does it cover (if applicable), etc.
+   objects, along with all the metadata we have for each object.  Metadata for
+   each object would include information such as: who created it, when was it
+   created, who is the publisher, what geographic regions does it cover (if
+   applicable), etc.
 
    [[https://www.marklogic.com/][Mark Logic]] is a NoSQL database with key-value lookup and RDF graph
    capabilities.  We are using our Mark Logic database as a 'source of truth'
