@@ -65,12 +65,12 @@
    The purpose of the IIIF server is to:
 
    + provide the information the page uses to create its browse listings
-   + provide a URL the Universal Viewer app can use to live-display a collection
+   + provide a URL the [[https://universalviewer.io/][Universal Viewer]] app can use to live-display a collection
      object in the collection page
 
    The IIIF server provides this information in the form of JSON objects,
    following the [[https://iiif.io/api/][IIIF specification]].  The IIIF browses provide groupings of
-   collections objects under categories, and provide a link to the IIIF manifest
+   collection objects under categories, and provide a link to the IIIF manifest
    for each object.
 
    If you are tasked with onboarding a new digital collection, please contact
@@ -84,19 +84,20 @@
     can be thought of as a universal 'primary key' for looking the object up in
     any database that lists it.  ARK identifiers are similar to [[https://www.doi.org/][DOI]]-s, which you
     may have come across while doing scholarly research.  However, one
-    disadvantage to using a DOI as the primary identifier for our object is that
-    DOI resolution is proprietary, which means that every time you want to look
-    an object up by DOI, you need to use the CrossRef website.  We would prefer
-    to be able to look objects in our collection up without being beholden to a
-    third-party lookup service and whatever baggage comes along with it, in
-    terms of performance, service outage, and compatibility-breaking upgrades
+    disadvantage to using a DOI as the primary identifier for our objects is
+    that DOI resolution is proprietary, which means that every time you want to
+    look an object up by DOI, you need to use the CrossRef website.  We would
+    prefer to be able to look objects in our collection up without being
+    beholden to a third-party lookup service and whatever baggage comes along
+    with it, in terms of performance, service outage, and compatibility-breaking
+    upgrades.
 
     Simplifying somewhat, our ARK identifiers have two parts.  The prefix is
     always =ark:/61001/=.  =61001= is the Name Assigning Authority Number for
     the University of Chicago.  The second part is called the [[https://n2t.net/e/noid.html][NOID]], and it
     consists of an alphanumeric hash that uniquely identifies the object.  (I
-    know what you're thinking; please keep your early 80s arcade game puns to
-    yourself.)
+    know what you're thinking, but please keep your early 80s arcade game puns
+    to yourself.)
 
     For exmaple, the ARK identifier for our [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/][Lawndale Community]] map is:
 
@@ -120,11 +121,7 @@
 
     This permanent URL will take you to the webpage for that collection object,
     in perpetuity.  For more information on how our ARK resolver works, please
-    see the offical documentation here:
-
-    #+begin_example
-      https://dldc.lib.uchicago.edu/local/ldr/ark.html
-    #+end_example
+    see [[https://dldc.lib.uchicago.edu/local/ldr/ark.html][the offical documentation]].
 
 *** Routing Scheme
 
@@ -171,7 +168,7 @@
       https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade/1930s.json
     #+end_example
 
-    All the browse type routes you set up in IIIF should look like that.
+    All the browse routes you set up in IIIF should look like that.
 
 *** IIIF: Object Manifest Route
 
@@ -193,6 +190,8 @@
       https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json
     #+end_example
 
+    All the object manifest routes you set up in IIIF should look like that.
+
 *** Create IIIF Manifests and Browses
 
     When you're done, the IIIF server should be serving up browses and manifests
@@ -208,14 +207,14 @@
    you're working on doesn't already have a page in Wagtail, you'll need to
    create it and populate both the =Content= and =Collection= tabs.
 
-   The purpose of the Wagtail admin panels is to provide for you to enter all
-   the information that's specific to the collection you're adding.  This
-   information will go into the Wagtail database, and it will generate the
-   entire collection site from the information you provided.  That is, it will
-   automatically generate list and cluster browses (and, eventually, also facets
-   and searches), the landing page for the collection, and object pages for all
-   objects in the collection.  From Wagtail's point of view, all of that is one
-   single 'page'.  
+   The purpose of the Wagtail admin panels is to provide a graphical web
+   interface that you can use to quickly enter all the information that's
+   specific to the collection you're adding.  This information will go into the
+   Wagtail database, and it will generate the entire collection site from the
+   information you provided.  That is, it will automatically generate list and
+   cluster browses (and, eventually, also facets and searches), the landing page
+   for the collection, and object pages for all objects in the collection.  From
+   Wagtail's point of view, all of that is one single 'page'.
 
    To get to the Wagtail admin interface, scroll to the bottom of any webpage on
    the [[https://www.lib.uchicago.edu][main library website]] and click on the link that says =Staff Login=.  This
@@ -412,8 +411,8 @@
 
 ** The Once Over
 
-   One last thing worth doing before launch is taking a look at what the site
-   looks like, and see whether you want to customize anything for your new
+   One last thing worth doing before launch is: take a look at what the site
+   looks like and see whether you want to customize anything for your new
    collection.  Any further customizations beyond what can be controlled from
    the Wagtail admin panel should be thought of as new features, to be
    implemented at the Django level in our source code.
@@ -428,6 +427,9 @@
    + an object page for each object in the collection
      - this should contain a preview of the object, in a player/viewer
      - followed by a list of metadata fields for the object below
+
+   Note any additional features you would like your collection page to have that
+   it doesn't, and now you're ready to start development!
 
 * Reference
 
