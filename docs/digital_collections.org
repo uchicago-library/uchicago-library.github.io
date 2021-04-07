@@ -285,7 +285,7 @@
     in =INI= format; for full information on how to edit it, please see the
     [[citation-section][Citation Service]] section under [[reference-section][Reference]].
 
-*** Searches
+*** Searches <<searches-section>>
     
     When this feature is fleshed out, we'll use this section to enumerate what
     types of searches the collection will offer.  For instance, maybe we want to
@@ -294,7 +294,7 @@
     This feature is not implemented as of April 2021---so this section of the
     admin panel is essentially a placeholder.
 
-*** List Browses
+*** List Browses <<list-browses-section>>
 
     A list browse is a listing of every object in a collection, paginated in
     increments of 25.  What makes different list browses different is the order
@@ -336,9 +336,102 @@
     subcategories.  A cluster browse is the name we give each of those
     subcategories.  So for instance, the Social Scientists Map Chicago
     collection has a 'subject' cluster browse type and a 'decade' cluster browse
-    type.  
+    type.  Under the 'subject' cluster browse fall a bunch of subject-specific
+    browses, such as 'commerce' and 'ethnic groups'.  Then there will be some
+    number of maps that call under each of those subject-specific browses.
+
+    The thing to remember about creating a 'cluster browse' object in the
+    Wagtail admin panel is that these should be /cluster browse types/, not the
+    browses themselves.  In other words, they should be things like 'subject' or
+    'decade' and not things like 'commerce' or 'ethnic groups.
+
+    Cluster browse types also have a link text override that works the same way
+    as the link text override in [[list-browses-section][list browses]].  Also similarly to list browse
+    objects, cluster browse objects are only currently (i.e. as of April 2021)
+    using the *Label* and *Link text override* fields.
+
+*** Facets
+
+    When this feature is fleshed out, we'll use this section to enumerate what
+    types of facets the collection will let the user filter by.  
+
+    This feature is not implemented as of April 2021---so this section of the
+    admin panel is a placeholder, just like [[searches-section][searches]] are---for now.
+
+*** Object Metadata
+
+    This is a section of the Wagtail *Collection* panel that's worth giving a
+    little thought to, because it controls how metadata fields are displayed in
+    the object page for your new collection.  The object page will display
+    without it, but it will display the unexpurgated list of every metadata
+    field it pulls from the Mark Logic record for that object.
+
+    The purpose of populating this part of the Wagtail admin panel is to tell
+    Wagtail which metadata fields, among all the metadata fields it pulls from
+    the Mark Logic record for the object, to actually display in the object
+    page.  The order of the fields matters---so if the order of the fields in
+    the Wagtail admin interface is 'Title, Description, Creator', then the
+    object page will display Title, Description, and Creator metadata fields in
+    that order.  Any fields you enter into the Wagtail admin interface but which
+    are not present in the Mark Logic record for the collection object will
+    simply not show up in the page.
+
+    Within each 'object metadata' object there are four fields: *Edm field
+    label*, *Hotlinked*, *Multiple values*, and *Link target*.  *Hotlinked*,
+    *Multiple values*, and *Link target* are currently under development (as of
+    April 2021) and not being used in production.  
+
+    This means only the field you need to populate for the time being is *Edm
+    field label*.  The name of the field should:
+
+    + be the Europeana field name we have decided on in general
+    + have its first letter capitalized
+
+    If you have any questions about how what the name of a given metadata field
+    is, please get in touch with [[https://www.lib.uchicago.edu/about/directory/staff/david-bietila/][David Bietila]] and [[https://www.lib.uchicago.edu/about/directory/staff/thomas-dousa/][Thomas Dousa]], who are in
+    charge of our scheme for determining how metadata fields get named when a
+    new collection is loaded into our Mark Logic database.
     
+*** Link to External Service
+
+    This is where you decide whether the new collection you're onboarding will
+    feature links to other object pages on third-party websites on its own
+    object pages.  These links appear in the sidebar on the object page.
+
+    The two external services we are currently linking to in our digital
+    collection pages are [[https://luna.lib.uchicago.edu][LUNA]] and [[https://btaa.org][Big Ten Academic Alliance]].
+
+    Each external service link object in the Wagtail admin interface has two
+    fields: *Service* and *Identifier*.  *Service* should contain the name of
+    the service, as you would like it to appear in the link text on the object
+    page.  *Identifier* should contain the base URL for the collection within
+    the service we're linking to.  For instance, if the collection you are
+    onboarding is /Social Scientists Map Chicago/, the *Identifier* section of
+    the BTAA external service link object in that collection should be whatever
+    BTAA has selected to be the URL for the /Social Scientists Map Chicago/
+    collection on their website.
+
+    That should cover everything you need to add to the *Collection* tab in the
+    Wagtail admin panel for your new collection.
+
 ** The Once Over
+
+   One last thing worth doing before launch is taking a look at what the site
+   looks like, and see whether you want to customize anything for your new
+   collection.  Any further customizations beyond what can be controlled from
+   the Wagtail admin panel should be thought of as new features, to be
+   implemented at the Django level in our source code.
+
+   Anyway, when you first take a look at your new collection page, you should
+   see the following:
+
+   + a landing page for the collection
+     - this should contain a 'preview browse', showing the first 5-10 items in
+       the collection at the bottom of the page
+   + cluster and/or list browses to get you to the objects in the collection
+   + an object page for each object in the collection
+     - this should contain a preview of the object, in a player/viewer
+     - followed by a list of metadata fields for the object below
 
 * Reference <<reference-section>>
 
