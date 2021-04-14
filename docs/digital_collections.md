@@ -133,7 +133,7 @@ https://www.lib.uchicago.edu/ark:/61001/b2s05v615c5v
 This permanent URL will take you to the webpage for that collection
 object, in perpetuity.  For more information on how our ARK resolver
 works, please see [the official
-documentatin](https://dldc.lib.uchicago.edu/local/ldr/ark.html).
+documentation](https://dldc.lib.uchicago.edu/local/ldr/ark.html).
 
 ### Routing Scheme
 
@@ -156,54 +156,56 @@ Media Archive', then the slugified name should be
 The routing scheme for a cluster browse type in IIIF is as follows:
 
 ```
-  https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE].json
+https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE].json
 ```
 
 An actual example of such a URL route would be:
 
 ```
-  https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade.json
+https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade.json
 ```
 
 All the browse type routes you set up in IIIF should look like that.
 
-<!-- *** IIIF: Browse Route -->
+### IIIF: Browse Route
 
-<!--     The routing scheme for a cluster browse type in IIIF is as follows: -->
+The routing scheme for a cluster browse type in IIIF is as follows:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]/[NAME OF BROWSE].json -->
-<!--     #+end_example -->
+```
+https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]/[NAME OF BROWSE].json
+```
 
-<!--     An actual example of such a URL route would be: -->
+An actual example of such a URL route would be:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade/1930s.json -->
-<!--     #+end_example -->
+```
+https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade/1930s.json
+```
 
-<!--     All the browse routes you set up in IIIF should look like that. -->
+All the browse routes you set up in IIIF should look like that.
 
-<!-- *** IIIF: Object Manifest Route -->
+### IIIF: Object Manifest Route
 
-<!--     The main source of information on a digital collection object in IIIF is the -->
-<!--     manifest.  Object manifests on our IIIF server are not split up by -->
-<!--     collection; they are accessed only by their ARK identifier. -->
+The main source of information on a digital collection object in IIIF is the
+manifest.  Object manifests on our IIIF server are not split up by
+collection; they are accessed only by their ARK identifier.
 
-<!--     The hostname, as always, is =iiif-collection.lib.uchicago.edu=.  The route -->
-<!--     for viewing an object manifest is: -->
+The hostname, as always, is `iiif-collection.lib.uchicago.edu`.  The route
+for viewing an object manifest is:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/object/[ARK IDENTIFIER].json -->
-<!--     #+end_example -->
+```
+https://iiif-collection.lib.uchicago.edu/object/[ARK IDENTIFIER].json
+```
 
-<!--     So, for instance, the URL for the IIIF manifest for our [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2qd0bb4kk01/][Brighton Park]] map is -->
-<!--     as follows: -->
+So, for instance, the URL for the IIIF manifest for our [Brighton
+Park](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2qd0bb4kk01/)
+map is as follows:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json -->
-<!--     #+end_example -->
+```
+  https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json
+```
 
-<!--     All the object manifest routes you set up in IIIF should look like that. -->
+All the object manifest routes you set up in IIIF should look like
+that.
 
 <!-- *** Create IIIF Manifests and Browses -->
 
