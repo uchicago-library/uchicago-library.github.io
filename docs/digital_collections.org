@@ -433,6 +433,8 @@
 
 * Reference
 
+  #+TOC: headlines 1 local
+
   [ INSERT GENERAL DESCRIPTION OF REFERENCE SECTION HERE ]
 
 ** Routing Scheme
