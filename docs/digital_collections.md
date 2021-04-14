@@ -7,7 +7,7 @@ created in different ways using different frameworks by different
 people.  The purpose of the framework outlined here is to provide a
 way to fold all those digital collections websites into a single,
 centralized web app---our Wagtail site, which is the main library
-website you see when you go to =www.lib.uchicago.edu=.
+website you see when you go to www.lib.uchicago.edu.
 
 The [Guide](#guide) section is intended as a quick walkthrough to get
 you going bringing a new digital collection on board.  The
@@ -20,7 +20,7 @@ up the section describing that feature.
 # Prerequisites
 
 These instructions assume that you are a UChicago DLDC developer
-working on our =library_website= app, the source for which is located
+working on our `library_website` app, the source for which is located
 [here](https://github.com/uchicago-library/library_website).
 
 # Guide
@@ -107,61 +107,65 @@ you're thinking, but please keep your early 80s arcade game puns to
 yourself.)
 
 For exmaple, the ARK identifier for our [Lawndale
-community](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/)map
-is:
+community](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/)
+map is:
 
 ```
-  ark:/61001/b2s05v615c5v
+ark:/61001/b2s05v615c5v
 ```
 
-<!-- To look an object up by ARK, you should use the University of Chicago -->
-<!-- Library's ARK resolver API, located at: -->
+To look an object up by ARK, you should use the University of Chicago
+Library's ARK resolver API, located at:
 
-<!-- #+begin_example -->
-<!--   https://www.lib.uchicago.edu/ark:/61001/ -->
-<!-- #+end_example -->
+```
+https://www.lib.uchicago.edu/ark:/61001/
+```
 
-<!-- To look the [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/][Lawndale Community]] map up in our ARK resolver using its ARK, -->
-<!-- simply append the NOID to the above URL: -->
+To look the [Lawndale
+Community](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/)
+map up in our ARK resolver using its ARK, simply append the NOID to
+the above URL:
 
-<!-- #+begin_example -->
-<!--   https://www.lib.uchicago.edu/ark:/61001/b2s05v615c5v -->
-<!-- #+end_example -->
+```
+https://www.lib.uchicago.edu/ark:/61001/b2s05v615c5v
+```
 
-<!-- This permanent URL will take you to the webpage for that collection object, -->
-<!-- in perpetuity.  For more information on how our ARK resolver works, please -->
-<!-- see [[https://dldc.lib.uchicago.edu/local/ldr/ark.html][the offical documentation]]. -->
+This permanent URL will take you to the webpage for that collection
+object, in perpetuity.  For more information on how our ARK resolver
+works, please see [the official
+documentatin](https://dldc.lib.uchicago.edu/local/ldr/ark.html).
 
-<!-- *** Routing Scheme -->
+### Routing Scheme
 
-<!--     We use the hostname =iiif-collection.lib.uchicago.edu= in production and the -->
-<!--     hostname =iiif-collection-dev.lib.uchicago.edu= for development.  The -->
-<!--     workflow is to test upgrades/changes to the way the IIIF data are formatted -->
-<!--     on the development server, then move them over to the production server once -->
-<!--     we're convinced they work.  In the examples that follow, we will presume the -->
-<!--     production hostname. -->
+We use the hostname `iiif-collection.lib.uchicago.edu` in production
+and the hostname `iiif-collection-dev.lib.uchicago.edu` for
+development.  The workflow is to test upgrades/changes to the way the
+IIIF data are formatted on the development server, then move them over
+to the production server once we're convinced they work.  In the
+examples that follow, we will presume the production hostname.
 
-<!--     We use a 'slugified' version of the collection name as the root path for a -->
-<!--     collection's browses in IIIF.  'Slugified' means that all capital letters -->
-<!--     are lowercased and all space characters are changed to hyphens.  For -->
-<!--     instance, if the name of your collection is 'Digital Media Archive', then -->
-<!--     the slugified name should be =digital-media-archive=. -->
+We use a 'slugified' version of the collection name as the root path
+for a collection's browses in IIIF.  'Slugified' means that all
+capital letters are lowercased and all space characters are changed to
+hyphens.  For instance, if the name of your collection is 'Digital
+Media Archive', then the slugified name should be
+`digital-media-archive`.
 
-<!-- *** IIIF: Browse Type Route -->
+### IIIF: Browse Type Route
 
-<!--     The routing scheme for a cluster browse type in IIIF is as follows: -->
+The routing scheme for a cluster browse type in IIIF is as follows:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE].json -->
-<!--     #+end_example -->
+```
+  https://iiif-collection.lib.uchicago.edu/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE].json
+```
 
-<!--     An actual example of such a URL route would be: -->
+An actual example of such a URL route would be:
 
-<!--     #+begin_example -->
-<!--       https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade.json -->
-<!--     #+end_example -->
+```
+  https://iiif-collection.lib.uchicago.edu/social-scientists-map-chicago/cluster-browse/decade.json
+```
 
-<!--     All the browse type routes you set up in IIIF should look like that. -->
+All the browse type routes you set up in IIIF should look like that.
 
 <!-- *** IIIF: Browse Route -->
 
@@ -357,7 +361,7 @@ is:
 <!-- *** Facets -->
 
 <!--     When this feature is fleshed out, we'll use this section to enumerate what -->
-<!--     types of facets the collection will let the user filter by.   -->
+<!--     types of facets the collection will let the user filter by. -->
 
 <!--     This feature is not implemented as of April 2021---so this section of the -->
 <!--     admin panel is a placeholder, just like [[*Searches][searches]] are---for now. -->
@@ -383,7 +387,7 @@ is:
 <!--     Within each 'object metadata' object there are four fields: *Edm field -->
 <!--     label*, *Hotlinked*, *Multiple values*, and *Link target*.  *Hotlinked*, -->
 <!--     *Multiple values*, and *Link target* are currently under development (as of -->
-<!--     April 2021) and not being used in production.   -->
+<!--     April 2021) and not being used in production. -->
 
 <!--     This means only the field you need to populate for the time being is *Edm -->
 <!--     field label*.  The name of the field should: -->
