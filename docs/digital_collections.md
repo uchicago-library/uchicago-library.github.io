@@ -21,7 +21,7 @@ up the section describing that feature.
 
 These instructions assume that you are a UChicago DLDC developer
 working on our =library_website= app, the source for which is located
-[https://github.com/uchicago-library/library_website](here).
+[here](https://github.com/uchicago-library/library_website).
 
 # Guide
 
@@ -46,7 +46,7 @@ object.  Metadata for each object would include information such as:
 who created it, when was it created, who is the publisher, what
 geographic regions does it cover (if applicable), etc.
 
-[https://www.marklogic.com/](Mark Logic) is a NoSQL database with
+[Mark Logic](https://www.marklogic.com/) is a NoSQL database with
 key-value lookup and RDF graph capabilities.  We are using our Mark
 Logic database as a 'source of truth' for most of our digital
 collections, with one or two exceptions where that is not feasible.
@@ -54,11 +54,11 @@ The Mark Logic record for any given object should contain all the
 information that we have about it (and are planning to use).
 
 If you would like to add a new digital collection to our Mark Logic
-database, please contact
-[https://www.lib.uchicago.edu/about/directory/staff/charles-blair/](Charles
-Blair) and
-[https://www.lib.uchicago.edu/about/directory/staff/john-jung/](John
-Jung)] for assistance.
+database, please contact [Charles
+Blair](https://www.lib.uchicago.edu/about/directory/staff/charles-blair/)
+and [John
+Jung](https://www.lib.uchicago.edu/about/directory/staff/john-jung/) for
+assistance.
 
 ## IIIF Preparation
 
@@ -66,29 +66,29 @@ The second step for onboarding a new collection is to set our IIIF server up.
 The purpose of the IIIF server is to:
 
 * provide the information the page uses to create its browse listings
-* provide a URL the [https://universalviewer.io/](Universal Viewer)
+* provide a URL the [Universal Viewer](https://universalviewer.io/)
   app can use to live-display a collection object in the collection
   page
 
-The IIIF server provides this information in the form of JSON
-objects, following the [https://iiif.io/api/](IIIF specification).
-The IIIF browses provide groupings of collection objects under
-categories, and provide a link to the IIIF manifest for each object.
+The IIIF server provides this information in the form of JSON objects,
+following the [IIIF Specification](https://iiif.io/api/).  The IIIF
+browses provide groupings of collection objects under categories, and
+provide a link to the IIIF manifest for each object.
 
 If you are tasked with onboarding a new digital collection, please
-contact
-[https://www.lib.uchicago.edu/about/directory/staff/john-jung/](John
-Jung) for assistance.  The remaining parts of this section will
-outline how the IIIF server should behave, once you are done with
-that part of the process.
+contact [John
+Jung](https://www.lib.uchicago.edu/about/directory/staff/john-jung/)
+for assistance.  The remaining parts of this section will outline how
+the IIIF server should behave, once you are done with that part of the
+process.
 
 ### ARK Identifiers
 
-Every object in our digital collections is assigned an
-[https://n2t.net/e/ark_ids.html](ARK identifier).  This can be thought
-of as a universal 'primary key' for looking the object up in any
-database that lists it.  ARK identifiers are similar to
-[https://www.doi.org/](DOI)-s, which you may have come across while
+Every object in our digital collections is assigned an [ARK
+identifier](https://n2t.net/e/ark_ids.html).  This can be thought of
+as a universal 'primary key' for looking the object up in any database
+that lists it.  ARK identifiers are similar to
+[DOI](https://www.doi.org/)-s, which you may have come across while
 doing scholarly research.  However, one disadvantage to using a DOI as
 the primary identifier for our objects is that DOI resolution is
 proprietary, which means that every time you want to look an object up
@@ -101,14 +101,14 @@ upgrades.
 Simplifying somewhat, our ARK identifiers have two parts.  The prefix
 is always `ark:/61001/`.  `61001` is the Name Assigning Authority
 Number for the University of Chicago.  The second part is called the
-[https://n2t.net/e/noid.html](NOID), and it consists of an
+[NOID](https://n2t.net/e/noid.html), and it consists of an
 alphanumeric hash that uniquely identifies the object.  (I know what
 you're thinking, but please keep your early 80s arcade game puns to
 yourself.)
 
-For exmaple, the ARK identifier for our
-[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/](Lawndale
-Community) map is:
+For exmaple, the ARK identifier for our [Lawndale
+community](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2s05v615c5v/)map
+is:
 
 ```
   ark:/61001/b2s05v615c5v
