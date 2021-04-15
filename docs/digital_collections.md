@@ -382,42 +382,48 @@ When this feature is fleshed out, we'll use this section to enumerate
 what types of facets the collection will let the user filter by.
 
 This feature is not implemented as of April 2021---so this section of
-the admin panel is a placeholder, just like [Searches](#searches)
+the admin panel is a placeholder, just like [searches](#searches)
 are---for now.
 
-<!-- *** Object Metadata -->
+### Object Metadata
 
-<!--     This is a section of the Wagtail *Collection* panel that's worth giving a -->
-<!--     little thought to, because it controls how metadata fields are displayed in -->
-<!--     the object page for your new collection.  The object page will display -->
-<!--     without it, but it will display the unexpurgated list of every metadata -->
-<!--     field it pulls from the Mark Logic record for that object. -->
+This is a section of the Wagtail __Collection__ panel that's worth
+giving a little thought to, because it controls how metadata fields
+are displayed in the object page for your new collection.  The object
+page will display without it, but it will display the unexpurgated
+list of every metadata field it pulls from the Mark Logic record for
+that object.
 
-<!--     The purpose of populating this part of the Wagtail admin panel is to tell -->
-<!--     Wagtail which metadata fields, among all the metadata fields it pulls from -->
-<!--     the Mark Logic record for the object, to actually display in the object -->
-<!--     page.  The order of the fields matters---so if the order of the fields in -->
-<!--     the Wagtail admin interface is 'Title, Description, Creator', then the -->
-<!--     object page will display Title, Description, and Creator metadata fields in -->
-<!--     that order.  Any fields you enter into the Wagtail admin interface but which -->
-<!--     are not present in the Mark Logic record for the collection object will -->
-<!--     simply not show up in the page. -->
+The purpose of populating this part of the Wagtail admin panel is to
+tell Wagtail which metadata fields, among all the metadata fields it
+pulls from the Mark Logic record for the object, to actually display
+in the object page.  The order of the fields matters---so if the order
+of the fields in the Wagtail admin interface is 'Title, Description,
+Creator', then the object page will display Title, Description, and
+Creator metadata fields in that order.  Any fields you enter into the
+Wagtail admin interface but which are not present in the Mark Logic
+record for the collection object will simply not show up in the page.
 
-<!--     Within each 'object metadata' object there are four fields: *Edm field -->
-<!--     label*, *Hotlinked*, *Multiple values*, and *Link target*.  *Hotlinked*, -->
-<!--     *Multiple values*, and *Link target* are currently under development (as of -->
-<!--     April 2021) and not being used in production. -->
+Within each 'object metadata' object there are four fields: __Edm
+field label__, __Hotlinked__, __Multiple values__, and __Link
+target__.  __Hotlinked__, __Multiple values__, and __Link target__ are
+currently under development (as of April 2021) and not being used in
+production.
 
-<!--     This means only the field you need to populate for the time being is *Edm -->
-<!--     field label*.  The name of the field should: -->
+This means only the field you need to populate for the time being is
+__Edm field label__.  The name of the field should:
 
-<!--     + be the Europeana field name we have decided on in general -->
-<!--     + have its first letter capitalized -->
+* be the Europeana field name we have decided on in general
+* have its first letter capitalized
 
-<!--     If you have any questions about how what the name of a given metadata field -->
-<!--     is, please get in touch with [[https://www.lib.uchicago.edu/about/directory/staff/david-bietila/][David Bietila]] and [[https://www.lib.uchicago.edu/about/directory/staff/thomas-dousa/][Thomas Dousa]], who are in -->
-<!--     charge of our scheme for determining how metadata fields get named when a -->
-<!--     new collection is loaded into our Mark Logic database. -->
+If you have any questions about how what the name of a given metadata
+field is, please get in touch with [David
+Bietila](https://www.lib.uchicago.edu/about/directory/staff/david-bietila/)
+[Thomas
+Dousa](https://www.lib.uchicago.edu/about/directory/staff/thomas-dousa/),
+who are in charge of our scheme for determining how metadata fields
+get named when a new collection is loaded into our Mark Logic
+database.
     
 <!-- *** Link to External Service -->
 
