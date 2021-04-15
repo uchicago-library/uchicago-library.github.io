@@ -301,9 +301,8 @@ default with a minimal reasonable standard configuration.  However,
 you will have to edit it if you want to customize which Mark Logic
 metadata fields appear in the citations for the objects in your new
 collection.  The configuration file is in `INI` format; for full
-information on how to edit it, please see the
-[#citation-service](Citation Service) section under
-[#reference](Reference).
+information on how to edit it, please see the [Citation
+Service](#citation-service) section under [Reference](#reference).
 
 ### Searches
     
@@ -315,61 +314,67 @@ date.
 This feature is not implemented as of April 2021---so this section of
 the admin panel is essentially a placeholder.
 
-<!-- *** List Browses -->
+### List Browses
 
-<!--     A list browse is a listing of every object in a collection, paginated in -->
-<!--     increments of 25.  What makes different list browses different is the order -->
-<!--     in which they sort the collection items.  So for example, a date list browse -->
-<!--     might sort the items in ascending order by the date they were released, and -->
-<!--     a title list browse might sort the items in ascending alphabetical order of -->
-<!--     their titles.  But both browses will contain all the items in the -->
-<!--     collection. -->
+A list browse is a listing of every object in a collection, paginated
+in increments of 25.  What makes different list browses different is
+the order in which they sort the collection items.  So for example, a
+date list browse might sort the items in ascending order by the date
+they were released, and a title list browse might sort the items in
+ascending alphabetical order of their titles.  But both browses will
+contain all the items in the collection.
 
-<!--     Once you have determined which list browses you would like to make available -->
-<!--     in your new collection, press the =+ ADD LIST BROWSES= button to make a list -->
-<!--     browse object, for each of the browses you are planning to offer. -->
+Once you have determined which list browses you would like to make
+available in your new collection, press the `+ ADD LIST BROWSES`
+button to make a list browse object, for each of the browses you are
+planning to offer.
 
-<!--     Currently, we are only using two of the fields in our list browse objects: -->
-<!--     *Label* and *Link text override*.  *Label* should be a capitalized version -->
-<!--     of the name of the list browse in IIIF.  For instance, if the date list -->
-<!--     browse for a collection is called 'date' in IIIF, then the list browse -->
-<!--     object you create in the Wagtail admin interface should have =Date= for a -->
-<!--     label. -->
+Currently, we are only using two of the fields in our list browse
+objects: __Label__ and __Link text override__.  _Label_ should be a
+capitalized version of the name of the list browse in IIIF.  For
+instance, if the date list browse for a collection is called 'date' in
+IIIF, then the list browse object you create in the Wagtail admin
+interface should have =Date= for a label.
 
-<!--     *Link text override* tells Wagtail how to display the browse when it links -->
-<!--     to it.  For example, the date list browse for the [[https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/][Social Scientists Map -->
-<!--     Chicago]] collection is called 'date' in IIIF---Wagtail needs to know that to -->
-<!--     pull the information about the list browse from IIIF---but the browse -->
-<!--     displays to the reader as 'All Maps by Date'.  *Link text override* is an -->
-<!--     optional field, so if you leave it blank, then the browse will display under -->
-<!--     a capitalized version of its IIIF name. -->
+__Link text override__ tells Wagtail how to display the browse when it
+links to it.  For example, the date list browse for the [Social
+Scientists Map
+Chicago](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/)
+collection is called 'date' in IIIF---Wagtail needs to know that to
+pull the information about the list browse from IIIF---but the browse
+displays to the reader as 'All Maps by Date'.  __Link text override__
+is an optional field, so if you leave it blank, then the browse will
+display under a capitalized version of its IIIF name.
 
-<!-- *** Cluster Browses -->
+### Cluster Browses
 
-<!--     As of April 2021, cluster browses have a different structure from list -->
-<!--     browses.  List browses go 'one level deep', because they only correspond to -->
-<!--     different ways of sorting all items in an entire collection.  However, -->
-<!--     cluster browses break the items in a collection up into subcategories, and -->
-<!--     each collection potentially has different ways we'll want to break it up -->
-<!--     into subcategories. -->
+As of April 2021, cluster browses have a different structure from list
+browses.  List browses go 'one level deep', because they only
+correspond to different ways of sorting all items in an entire
+collection.  However, cluster browses break the items in a collection
+up into subcategories, and each collection potentially has different
+ways we'll want to break it up into subcategories.
 
-<!--     A cluster browse type is a way of breaking a collection up into -->
-<!--     subcategories.  A cluster browse is the name we give each of those -->
-<!--     subcategories.  So for instance, the Social Scientists Map Chicago -->
-<!--     collection has a 'subject' cluster browse type and a 'decade' cluster browse -->
-<!--     type.  Under the 'subject' cluster browse fall a bunch of subject-specific -->
-<!--     browses, such as 'commerce' and 'ethnic groups'.  Then there will be some -->
-<!--     number of maps that call under each of those subject-specific browses. -->
+A cluster browse type is a way of breaking a collection up into
+subcategories.  A cluster browse is the name we give each of those
+subcategories.  So for instance, the [Social Scientists Map
+Chicago](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/)
+collection has a 'subject' cluster browse type and a 'decade' cluster
+browse type.  Under the 'subject' cluster browse fall a bunch of
+subject-specific browses, such as 'commerce' and 'ethnic groups'.
+Then there will be some number of maps that call under each of those
+subject-specific browses.
 
-<!--     The thing to remember about creating a 'cluster browse' object in the -->
-<!--     Wagtail admin panel is that these should be /cluster browse types/, not the -->
-<!--     browses themselves.  In other words, they should be things like 'subject' or -->
-<!--     'decade' and not things like 'commerce' or 'ethnic groups. -->
+The thing to remember about creating a 'cluster browse' object in the
+Wagtail admin panel is that these should be /cluster browse types/, not the
+browses themselves.  In other words, they should be things like 'subject' or
+'decade' and not things like 'commerce' or 'ethnic groups.
 
-<!--     Cluster browse types also have a link text override that works the same way -->
-<!--     as the link text override in [[*List Browses][list browses]]. Also similarly to list browse -->
-<!--     objects, cluster browse objects are only currently (i.e. as of April 2021) -->
-<!--     using the *Label* and *Link text override* fields. -->
+Cluster browse types also have a link text override that works the
+same way as the link text override in [list
+browses](#list-browses). Also similarly to list browse objects,
+cluster browse objects are only currently (i.e. as of April 2021)
+using the __Label__ and __Link text override__ fields.
 
 <!-- *** Facets -->
 
