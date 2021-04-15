@@ -201,7 +201,7 @@ Park](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chic
 map is as follows:
 
 ```
-  https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json
+https://iiif-collection.lib.uchicago.edu/object/ark:/61001/b2qd0bb4kk01.json
 ```
 
 All the object manifest routes you set up in IIIF should look like
@@ -480,6 +480,41 @@ have that it doesn't, and now you're ready to start development!
 This section is intended to provide further background information on the
 workings of our Digital Collections framework.
 
+## Overview
+
+As of April 2021, each digital collections page has three components:
+
+* a landing page with collection highlights
+* browse listings
+* object pages
+
+Let's give an overview of how each of these components works.
+
+### Landing Page
+
+The landing page for a collection displays an image and blurb
+describing the collection, with collection highlights underneath.  It
+also features a sidebar containing:
+
+* links to browses
+* the location in the library where one can view the collection, where
+  applicable
+* the subject specialist for the collection
+* links to related content
+* links to other collections
+
+Everything on this list except for the browses is pulled from the
+Wagtail database for the collection page---specifically, the _Content_
+panel in the Wagtail admin interface.  Every digital collection has
+that information in it, regardless of whether it's been onboarded yet
+onto our new framework.
+
+Links to the browses are obtained in the following way.  First,
+Wagtail checks whether it has any list or cluster browses for this
+collection in its database.  If it does, then it automatically
+generates links to those browses using the routing schema described in
+the [Guide](#iiif:-routing-scheme).
+
 ## Wagtail: Routing Scheme
 
 The routing scheme within Wagtail is meant to mirror the routing
@@ -532,12 +567,12 @@ _Social Scientists Map Chicago_ page is:
 https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/cluster-browse/subject/ethnic-groups
 ```
 
-*** Wagtail: Object Page Route
+### Wagtail: Object Page Route
 
 The routing scheme for an object page in Wagtail is:
 
 ```
-  https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/[OBJECT NOID]
+https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/[OBJECT NOID]
 ```
 
 For example, the NOID of the 'Metropolitan Region of Chicago' map in
@@ -545,7 +580,7 @@ _Social Scientists Map Chicago_ is `b2k86bv2x025`.  Therefore, you can
 view the object page for that map at the following URL:
 
 ```
-  https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2k86bv2x025
+https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2k86bv2x025
 ```
     
 ## Wagtail Admin Panel
