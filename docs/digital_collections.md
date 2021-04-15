@@ -135,7 +135,7 @@ object, in perpetuity.  For more information on how our ARK resolver
 works, please see [the official
 documentation](https://dldc.lib.uchicago.edu/local/ldr/ark.html).
 
-### Routing Scheme
+### IIIF: Routing Scheme
 
 We use the hostname `iiif-collection.lib.uchicago.edu` in production
 and the hostname `iiif-collection-dev.lib.uchicago.edu` for
@@ -207,63 +207,69 @@ map is as follows:
 All the object manifest routes you set up in IIIF should look like
 that.
 
-<!-- *** Create IIIF Manifests and Browses -->
+### Create IIIF Manifests and Browses
 
-<!--     When you're done, the IIIF server should be serving up browses and manifests -->
-<!--     for your collection at those routes.  For more information on setting that -->
-<!--     up, please get in touch with [[https://www.lib.uchicago.edu/about/directory/staff/john-jung/][John Jung]]. -->
+When you're done, the IIIF server should be serving up browses and
+manifests for your collection at those routes.  For more information
+on setting that up, please get in touch with [John
+Jung](https://www.lib.uchicago.edu/about/directory/staff/john-jung/).
 
-<!-- ** Create Wagtail Admin Panel -->
+## Create Wagtail Admin Panel
 
-<!--    The third major step in setting your new digital collections page up is to -->
-<!--    populate the relevant Wagtail admin panels for it.  Perhaps the collection -->
-<!--    you're working on already has a page in Wagtail---if so, its =Collection= tab -->
-<!--    will be empty, so all you'll have to do is populate it.  If the collection -->
-<!--    you're working on doesn't already have a page in Wagtail, you'll need to -->
-<!--    create it and populate both the =Content= and =Collection= tabs. -->
+The third major step in setting your new digital collections page up
+is to populate the relevant Wagtail admin panels for it.  Perhaps the
+collection you're working on already has a page in Wagtail---if so,
+its *Collection* tab will be empty, so all you'll have to do is
+populate it.  If the collection you're working on doesn't already have
+a page in Wagtail, you'll need to create it and populate both the
+*Content* and *Collection* tabs.
 
-<!--    The purpose of the Wagtail admin panels is to provide a graphical web -->
-<!--    interface that you can use to quickly enter all the information that's -->
-<!--    specific to the collection you're adding.  This information will go into the -->
-<!--    Wagtail database, and it will generate the entire collection site from the -->
-<!--    information you provided.  That is, it will automatically generate list and -->
-<!--    cluster browses (and, eventually, also facets and searches), the landing page -->
-<!--    for the collection, and object pages for all objects in the collection.  From -->
-<!--    Wagtail's point of view, all of that is one single 'page'. -->
+The purpose of the Wagtail admin panels is to provide a graphical web
+interface that you can use to quickly enter all the information that's
+specific to the collection you're adding.  This information will go
+into the Wagtail database, and it will generate the entire collection
+site from the information you provided.  That is, it will
+automatically generate list and cluster browses (and, eventually, also
+facets and searches), the landing page for the collection, and object
+pages for all objects in the collection.  From Wagtail's point of
+view, all of that is one single 'page'.
 
-<!--    To get to the Wagtail admin interface, scroll to the bottom of any webpage on -->
-<!--    the [[https://www.lib.uchicago.edu][main library website]] and click on the link that says =Staff Login=.  This -->
-<!--    will take you to a Shibboleth login page, which will accept your =cnetid= and -->
-<!--    cnet password.  Once you're logged into the admin interface, click on the -->
-<!--    following series of =>= in the main menu, on the left of the screen: -->
+To get to the Wagtail admin interface, scroll to the bottom of any
+webpage on the [main library website](https://www.lib.uchicago.edu)
+and click on the link that says *Staff Login*.  This will take you to
+a Shibboleth login page, which will accept your =cnetid= and cnet
+password.  Once you're logged into the admin interface, click on the
+following series of `>` in the main menu, on the left of the screen:
 
-<!--    #+begin_example -->
-<!--      Pages > The University of Chicago Library > Collections & Exhibits > Collections -->
-<!--    #+end_example -->
+```
+  Pages > The University of Chicago Library > Collections & Exhibits > Collections
+```
 
-<!--    If the Wagtail page for your new collection doesn't yet exist, click on -->
-<!--    =Collections=.  This will take you to a list of all our collection pages.  To -->
-<!--    create a new page for your collection, click on =+ ADD CHILD PAGE= under the -->
-<!--    title =Collections=, in between the =VIEW LIVE= and =MORE= buttons. -->
+If the Wagtail page for your new collection doesn't yet exist, click
+on `Collections`.  This will take you to a list of all our collection
+pages.  To create a new page for your collection, click on `+ ADD
+CHILD PAGE` under the title `Collections`, in between the `VIEW LIVE`
+and `MORE` buttons.
 
-<!--    If the Wagtail page for your collection already exists---this will probably -->
-<!--    be the case for the majority of collections we decide to onboard, at least in -->
-<!--    the initial stages---continue clicking through the series of =>= in the menu -->
-<!--    until you get to the name of your collection: -->
+If the Wagtail page for your collection already exists---this will
+probably be the case for the majority of collections we decide to
+onboard, at least in the initial stages---continue clicking through
+the series of `>` in the menu until you get to the name of your
+collection:
 
-<!--    #+begin_example -->
-<!--      Collections > [NAME OF YOUR COLLECTION] -->
-<!--    #+end_example -->
+```
+  Collections > [NAME OF YOUR COLLECTION]
+```
 
-<!--    Next, you can begin populating the *Collection* tab.  The *Content* tab -->
-<!--    contains basic information about the collection, which is mainly used to -->
-<!--    provide the content for the collection's landing page and sidebar.  The -->
-<!--    *Collection* tab contains the information that will be used to automatically -->
-<!--    create all the list browses, cluster browses, and object pages (and, -->
-<!--    eventually, also facets and searches). -->
+Next, you can begin populating the *Collection* tab.  The *Content*
+tab contains basic information about the collection, which is mainly
+used to provide the content for the collection's landing page and
+sidebar.  The *Collection* tab contains the information that will be
+used to automatically create all the list browses, cluster browses,
+and object pages (and, eventually, also facets and searches).
 
-<!--    Next, we'll run through all the sections of the *Collection* tab, as of -->
-<!--    April 2021. -->
+Next, we'll run through all the sections of the *Collection* tab, as
+of April 2021.
 
 <!-- *** Highlighted Records -->
 
