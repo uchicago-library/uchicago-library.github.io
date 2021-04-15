@@ -419,7 +419,7 @@ __Edm field label__.  The name of the field should:
 If you have any questions about how what the name of a given metadata
 field is, please get in touch with [David
 Bietila](https://www.lib.uchicago.edu/about/directory/staff/david-bietila/)
-[Thomas
+and/or [Thomas
 Dousa](https://www.lib.uchicago.edu/about/directory/staff/thomas-dousa/),
 who are in charge of our scheme for determining how metadata fields
 get named when a new collection is loaded into our Mark Logic
@@ -477,87 +477,81 @@ have that it doesn't, and now you're ready to start development!
 
 # Reference
 
-<!--   This section is intended to provide further background information on the -->
-<!--   workings of our Digital Collections framework. -->
+This section is intended to provide further background information on the
+workings of our Digital Collections framework.
 
+## Wagtail: Routing Scheme
 
+The routing scheme within Wagtail is meant to mirror the routing
+scheme within IIIF.  This both makes it easier to keep track of the
+routes in our minds and allows us to use the same code to generate the
+links to browses/manifests and user-facing digital collections pages.
 
-<!-- ** Why Mark Logic -->
+The root URL of a digital collection in Wagtail is as follows:
 
+```
+https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION]
+```
+
+The name of the collection should be its 'slugified' name---which is
+to say, it should be the name with all letters made lowercase and all
+spaces changed to hyphens.  For example, the root URL of the _Social
+Scientists Map Chicago_ collection site is:
+
+```
+https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/
+```
+
+### Wagtail: Cluster Browse Type Route
+
+The routing scheme for a cluster browse type in Wagtail is:
+
+```
+https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]
+```
+
+For example, the route to the 'subject' cluster browse in the _Social
+Scientists Map Chicago_ page is:
+
+```
+https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/
+```
    
+### Wagtail: Cluster Browse Route
 
-<!-- ** Wagtail: Routing Scheme -->
+The routing scheme for a cluster browse in Wagtail is:
 
-<!--    The routing scheme within Wagtail is meant to mirror the routing scheme -->
-<!--    within IIIF.  This both makes it easier to keep track of the routes in our -->
-<!--    minds and allows us to use the same code to generate the links to -->
-<!--    browses/manifests and user-facing digital collections pages. -->
+```
+https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]/[NAME OF BROWSE]
+```
 
-<!--    The root URL of a digital collection in Wagtail is as follows: -->
+For example, the route to the 'ethnic groups' cluster browse in the
+_Social Scientists Map Chicago_ page is:
 
-<!--    #+begin_example -->
-<!--      https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION] -->
-<!--    #+end_example -->
+```
+https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/cluster-browse/subject/ethnic-groups
+```
 
-<!--    The name of the collection should be its 'slugified' name---which is to say, -->
-<!--    it should be the name with all letters made lowercase and all spaces changed -->
-<!--    to hyphens.  For example, the root URL of the /Social Scientists Map Chicago/ -->
-<!--    collection site is: -->
+*** Wagtail: Object Page Route
 
-<!--    #+begin_example -->
-<!--      https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/ -->
-<!--    #+end_example -->
+The routing scheme for an object page in Wagtail is:
 
-<!-- *** Wagtail: Cluster Browse Type Route -->
+```
+  https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/[OBJECT NOID]
+```
 
-<!--     The routing scheme for a cluster browse type in Wagtail is: -->
+For example, the NOID of the 'Metropolitan Region of Chicago' map in
+_Social Scientists Map Chicago_ is `b2k86bv2x025`.  Therefore, you can
+view the object page for that map at the following URL:
 
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE] -->
-<!--     #+end_example -->
-
-<!--     For example, the route to the 'subject' cluster browse in the /Social -->
-<!--     Scientists Map Chicago/ page is: -->
-
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/ -->
-<!--     #+end_example -->
-   
-<!-- *** Wagtail: Cluster Browse Route -->
-
-<!--     The routing scheme for a cluster browse in Wagtail is: -->
-
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/[NAME OF COLLECTION]/cluster-browse/[NAME OF BROWSE TYPE]/[NAME OF BROWSE] -->
-<!--     #+end_example -->
-
-<!--     For example, the route to the 'ethnic groups' cluster browse in the /Social -->
-<!--     Scientists Map Chicago/ page is: -->
-
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/cluster-browse/subject/ethnic-groups -->
-<!--     #+end_example -->
-
-<!-- *** Wagtail: Object Page Route -->
-
-<!--     The routing scheme for an object page in Wagtail is: -->
-
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/[OBJECT NOID] -->
-<!--     #+end_example -->
-
-<!--     For example, the NOID of the 'Metropolitan Region of Chicago' map in /Social -->
-<!--     Scientists Map Chicago/ is =b2k86bv2x025=.  Therefore, you can view the -->
-<!--     object page for that map at the following URL: -->
-
-<!--     #+begin_example -->
-<!--       https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2k86bv2x025 -->
-<!--     #+end_example -->
+```
+  https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/object/b2k86bv2x025
+```
     
-<!-- ** Wagtail Admin Panel -->
+## Wagtail Admin Panel
 
-<!--    Please see the [[*Guide][Guide]] for more information on what the different components of -->
-<!--    the Wagtail admin panel are for. -->
+Please see the [Guide](#guide) for more information on what the
+different components of the Wagtail admin panel are for.
 
 <!-- ** IIIF Manifests -->
 
