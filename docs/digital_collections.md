@@ -334,7 +334,7 @@ objects: __Label__ and __Link text override__.  _Label_ should be a
 capitalized version of the name of the list browse in IIIF.  For
 instance, if the date list browse for a collection is called 'date' in
 IIIF, then the list browse object you create in the Wagtail admin
-interface should have =Date= for a label.
+interface should have `Date` for a label.
 
 __Link text override__ tells Wagtail how to display the browse when it
 links to it.  For example, the date list browse for the [Social
@@ -376,13 +376,14 @@ browses](#list-browses). Also similarly to list browse objects,
 cluster browse objects are only currently (i.e. as of April 2021)
 using the __Label__ and __Link text override__ fields.
 
-<!-- *** Facets -->
+### Facets
 
-<!--     When this feature is fleshed out, we'll use this section to enumerate what -->
-<!--     types of facets the collection will let the user filter by. -->
+When this feature is fleshed out, we'll use this section to enumerate
+what types of facets the collection will let the user filter by.
 
-<!--     This feature is not implemented as of April 2021---so this section of the -->
-<!--     admin panel is a placeholder, just like [[*Searches][searches]] are---for now. -->
+This feature is not implemented as of April 2021---so this section of
+the admin panel is a placeholder, just like [Searches](#searches)
+are---for now.
 
 <!-- *** Object Metadata -->
 
