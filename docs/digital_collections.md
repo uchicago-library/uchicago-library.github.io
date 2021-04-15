@@ -482,13 +482,26 @@ workings of our Digital Collections framework.
 
 ## Overview
 
+Our digital collections framework is fairly complicated and involves a
+number of systems:
+
+* the Wagtail site
+* our IIIF server
+* our Loris server
+* our primary and secondary ARK resolvers
+* Universal Viewer, a simple standalone Javascript app
+* the citation REST-ful service
+* the Mark Logic server
+
+## Components
+
 As of April 2021, each digital collections page has three components:
 
 * a landing page with collection highlights
 * browse listings
 * object pages
 
-Let's give an overview of how each of these components works.
+Let's look at how each of these components works.
 
 ### Landing Page
 
@@ -514,6 +527,14 @@ Wagtail checks whether it has any list or cluster browses for this
 collection in its database.  If it does, then it automatically
 generates links to those browses using the routing schema described in
 the [Guide](#iiif-routing-scheme).
+
+To display the collection highlights, it sends a `GET` request to the
+URL in the _Highlighted records_ entry for the collection in the
+Wagtail database.  Typically, this is a link to a list browse.  If it
+gets information for displaying the highlights (images, links, basic
+metadata, etc.), then it displays the first five entries it gets back.
+
+### Browse Listings
 
 ## Wagtail: Routing Scheme
 
