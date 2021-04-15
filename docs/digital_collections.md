@@ -425,49 +425,55 @@ who are in charge of our scheme for determining how metadata fields
 get named when a new collection is loaded into our Mark Logic
 database.
     
-<!-- *** Link to External Service -->
+### Link to External Service
 
-<!--     This is where you decide whether the new collection you're onboarding will -->
-<!--     feature links to other object pages on third-party websites on its own -->
-<!--     object pages.  These links appear in the sidebar on the object page. -->
+This is where you decide whether the new collection you're onboarding
+will feature links to other object pages on third-party websites on
+its own object pages.  These links appear in the sidebar on the object
+page.
 
-<!--     The two external services we are currently linking to in our digital -->
-<!--     collection pages are [[https://luna.lib.uchicago.edu][LUNA]] and [[https://btaa.org][Big Ten Academic Alliance]]. -->
+The two external services we are currently linking to in our digital
+collection pages are [LUNA](https://luna.lib.uchicago.edu) and [Big
+Ten Academic Alliance](https://btaa.org).
 
-<!--     Each external service link object in the Wagtail admin interface has two -->
-<!--     fields: *Service* and *Identifier*.  *Service* should contain the name of -->
-<!--     the service, as you would like it to appear in the link text on the object -->
-<!--     page.  *Identifier* should contain the base URL for the collection within -->
-<!--     the service we're linking to.  For instance, if the collection you are -->
-<!--     onboarding is /Social Scientists Map Chicago/, the *Identifier* section of -->
-<!--     the BTAA external service link object in that collection should be whatever -->
-<!--     BTAA has selected to be the URL for the /Social Scientists Map Chicago/ -->
-<!--     collection on their website. -->
+Each external service link object in the Wagtail admin interface has
+two fields: __Service__ and __Identifier__.  __Service__ should
+contain the name of the service, as you would like it to appear in the
+link text on the object page.  __Identifier__ should contain the base
+URL for the collection within the service we're linking to.  For
+instance, if the collection you are onboarding is [Social Scientists
+Map
+Chicago](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/),
+the __Identifier__ section of the BTAA external service link object in
+that collection should be whatever BTAA has selected to be the URL for
+the [Social Scientists Map
+Chicago](https://www.lib.uchicago.edu/collex/collections/social-scientists-map-chicago/)
+collection on their website.
 
-<!--     That should cover everything you need to add to the *Collection* tab in the -->
-<!--     Wagtail admin panel for your new collection. -->
+That should cover everything you need to add to the __Collection__ tab
+in the Wagtail admin panel for your new collection.
 
-<!-- ** The Once Over -->
+## The Once Over
 
-<!--    One last thing worth doing before launch is: take a look at what the site -->
-<!--    looks like and see whether you want to customize anything for your new -->
-<!--    collection.  Any further customizations beyond what can be controlled from -->
-<!--    the Wagtail admin panel should be thought of as new features, to be -->
-<!--    implemented at the Django level in our source code. -->
+One last thing worth doing before launch is: take a look at what the
+site looks like and see whether you want to customize anything for
+your new collection.  Any further customizations beyond what can be
+controlled from the Wagtail admin panel should be thought of as new
+features, to be implemented at the Django level in our source code.
 
-<!--    Anyway, when you first take a look at your new collection page, you should -->
-<!--    see the following: -->
+Anyway, when you first take a look at your new collection page, you
+should see the following:
 
-<!--    + a landing page for the collection -->
-<!--      - this should contain a 'preview browse', showing the first 5-10 items in -->
-<!--        the collection at the bottom of the page -->
-<!--    + cluster and/or list browses to get you to the objects in the collection -->
-<!--    + an object page for each object in the collection -->
-<!--      - this should contain a preview of the object, in a player/viewer -->
-<!--      - followed by a list of metadata fields for the object below -->
+* a landing page for the collection
+  * this should contain a 'preview browse', showing the first 5-10 items in
+	the collection at the bottom of the page
+* cluster and/or list browses to get you to the objects in the collection
+* an object page for each object in the collection
+  * this should contain a preview of the object, in a player/viewer
+  * followed by a list of metadata fields for the object below
 
-<!--    Note any additional features you would like your collection page to have that -->
-<!--    it doesn't, and now you're ready to start development! -->
+Note any additional features you would like your collection page to
+have that it doesn't, and now you're ready to start development!
 
 # Reference
 
