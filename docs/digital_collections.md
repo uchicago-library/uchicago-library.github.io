@@ -272,44 +272,48 @@ searches).
 Next, we'll run through all the sections of the __Collection__ tab, as
 of April 2021.
 
-<!-- *** Highlighted Records -->
+### Highlighted Records
 
-<!--     This field in the panel should contain the URL to the browse that will be -->
-<!--     used to display a preview of the first five items in the collection on the -->
-<!--     landing page.  It's like an abbreviated browse that lets the user jump right -->
-<!--     into browsing the collection. -->
+This field in the panel should contain the URL to the browse that will
+be used to display a preview of the first five items in the collection
+on the landing page.  It's like an abbreviated browse that lets the
+user jump right into browsing the collection.
 
-<!--     Currently, we are just using the list browse for this feature; our Wagtail -->
-<!--     model/view automatically truncates it to just show the first five.  So for -->
-<!--     the time being, this should be a link to the IIIF list browse for the -->
-<!--     collection you're working on. -->
+Currently, we are just using the list browse for this feature; our
+Wagtail model/view automatically truncates it to just show the first
+five.  So for the time being, this should be a link to the IIIF list
+browse for the collection you're working on.
 
-<!-- *** Citation Configuration -->
+### Citation Configuration
 
-<!--     The digital collections object page has a menu called 'Cite This', which -->
-<!--     appears below the viewer for the object.  Inside the viewer is a live -->
-<!--     preview of what a citation for the relevant object would look like, and the -->
-<!--     user can toggle between Chicago, APA, and MLA citation styles.  The way we -->
-<!--     construct these citations is fairly complicated and will be described in -->
-<!--     detail in the [[*Reference][Reference]] section of this document. -->
+The digital collections object page has a menu called 'Cite This',
+which appears below the viewer for the object.  Inside the viewer is a
+live preview of what a citation for the relevant object would look
+like, and the user can toggle between Chicago, APA, and MLA citation
+styles.  The way we construct these citations is fairly complicated
+and will be described in detail in the [Reference](#reference) section
+of this document.
 
-<!--     This should contain the configuration file for the citation service.  The -->
-<!--     configuration file is in =INI= format.  You shouldn't have too much trouble -->
-<!--     getting started with it, because it is auto-populated by default with a -->
-<!--     minimal reasonable standard configuration.  However, you will have to edit -->
-<!--     it if you want to customize which Mark Logic metadata fields appear in the -->
-<!--     citations for the objects in your new collection.  The configuration file is -->
-<!--     in =INI= format; for full information on how to edit it, please see the -->
-<!--     [[*Citation Service][Citation Service]] section under [[*Reference][Reference]]. -->
+This should contain the configuration file for the citation service.
+The configuration file is in `INI` format.  You shouldn't have too
+much trouble getting started with it, because it is auto-populated by
+default with a minimal reasonable standard configuration.  However,
+you will have to edit it if you want to customize which Mark Logic
+metadata fields appear in the citations for the objects in your new
+collection.  The configuration file is in `INI` format; for full
+information on how to edit it, please see the
+[#citation-service](Citation Service) section under
+[#reference](Reference).
 
-<!-- *** Searches -->
+### Searches
     
-<!--     When this feature is fleshed out, we'll use this section to enumerate what -->
-<!--     types of searches the collection will offer.  For instance, maybe we want to -->
-<!--     allow the user to search a collection by author, or by date. -->
+When this feature is fleshed out, we'll use this section to enumerate
+what types of searches the collection will offer.  For instance, maybe
+we want to allow the user to search a collection by author, or by
+date.
 
-<!--     This feature is not implemented as of April 2021---so this section of the -->
-<!--     admin panel is essentially a placeholder. -->
+This feature is not implemented as of April 2021---so this section of
+the admin panel is essentially a placeholder.
 
 <!-- *** List Browses -->
 
@@ -453,7 +457,7 @@ of April 2021.
 <!--    Note any additional features you would like your collection page to have that -->
 <!--    it doesn't, and now you're ready to start development! -->
 
-<!-- * Reference -->
+# Reference
 
 <!--   This section is intended to provide further background information on the -->
 <!--   workings of our Digital Collections framework. -->
