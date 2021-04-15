@@ -219,10 +219,10 @@ Jung](https://www.lib.uchicago.edu/about/directory/staff/john-jung/).
 The third major step in setting your new digital collections page up
 is to populate the relevant Wagtail admin panels for it.  Perhaps the
 collection you're working on already has a page in Wagtail---if so,
-its *Collection* tab will be empty, so all you'll have to do is
+its __Collection__ tab will be empty, so all you'll have to do is
 populate it.  If the collection you're working on doesn't already have
 a page in Wagtail, you'll need to create it and populate both the
-*Content* and *Collection* tabs.
+__Content__ and __Collection__ tabs.
 
 The purpose of the Wagtail admin panels is to provide a graphical web
 interface that you can use to quickly enter all the information that's
@@ -236,8 +236,8 @@ view, all of that is one single 'page'.
 
 To get to the Wagtail admin interface, scroll to the bottom of any
 webpage on the [main library website](https://www.lib.uchicago.edu)
-and click on the link that says *Staff Login*.  This will take you to
-a Shibboleth login page, which will accept your =cnetid= and cnet
+and click on the link that says __Staff Login__.  This will take you
+to a Shibboleth login page, which will accept your _cnetid_ and cnet
 password.  Once you're logged into the admin interface, click on the
 following series of `>` in the main menu, on the left of the screen:
 
@@ -261,14 +261,15 @@ collection:
   Collections > [NAME OF YOUR COLLECTION]
 ```
 
-Next, you can begin populating the *Collection* tab.  The *Content*
-tab contains basic information about the collection, which is mainly
-used to provide the content for the collection's landing page and
-sidebar.  The *Collection* tab contains the information that will be
-used to automatically create all the list browses, cluster browses,
-and object pages (and, eventually, also facets and searches).
+Next, you can begin populating the __Collection__ tab.  The
+__Content__ tab contains basic information about the collection, which
+is mainly used to provide the content for the collection's landing
+page and sidebar.  The __Collection__ tab contains the information
+that will be used to automatically create all the list browses,
+cluster browses, and object pages (and, eventually, also facets and
+searches).
 
-Next, we'll run through all the sections of the *Collection* tab, as
+Next, we'll run through all the sections of the __Collection__ tab, as
 of April 2021.
 
 <!-- *** Highlighted Records -->
