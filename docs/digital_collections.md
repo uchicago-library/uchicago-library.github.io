@@ -513,7 +513,7 @@ Links to the browses are obtained in the following way.  First,
 Wagtail checks whether it has any list or cluster browses for this
 collection in its database.  If it does, then it automatically
 generates links to those browses using the routing schema described in
-the [Guide](#iiif:-routing-scheme).
+the [Guide](#iiif-routing-scheme).
 
 ## Wagtail: Routing Scheme
 
