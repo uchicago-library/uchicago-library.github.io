@@ -89,7 +89,7 @@ to recipe list' taking the user back to the main listing.
 For example, the table could look like this:
 
 | recipe name            |                         |
-| ____                   | __________              |
+| ----                   | ----                    |
 | [poached eggs](#)      | [delete this recipe](#) |
 | [beef stroganoff](#)   | [delete this recipe](#) |
 | [vegetable biryani](#) | [delete](#)             |
