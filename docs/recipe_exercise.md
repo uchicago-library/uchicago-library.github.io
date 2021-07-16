@@ -26,7 +26,7 @@ If you aren't sure how to get started, our suggestion is:
 
 # A Web Application: `Recipe Tracker`
 
-## Features / User Stories
+## Required Features
 
 ### Overview
 
@@ -85,6 +85,15 @@ message showing which recipe was deleted.  For example, if the recipe
 the user just deleted is called 'Poached Eggs', it should say 'You
 have deleted Poached Eggs' and contain a link beneath it saying 'back
 to recipe list' taking the user back to the main listing.
+
+For example, the table could look like this:
+
+| recipe name            |                         |
+| ____                   | __________              |
+| [poached eggs](#)      | [delete this recipe](#) |
+| [beef stroganoff](#)   | [delete this recipe](#) |
+| [vegetable biryani](#) | [delete](#)             |
+	
 
 ### Routes
 
