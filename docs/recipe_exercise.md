@@ -50,6 +50,7 @@ information:
 * a list of ingredients, e.g. "eggs, pepper and butter"
 * a list of directions, e.g. "mix eggs into a bowl, then pour the
   mixture onto a skillet, then fry for 15 minutes"
+* a publication date
 
 We leave it to you, the developer, to find the best way to encode this
 data in terms of what Python and Django make available.  If you aren't
@@ -92,7 +93,7 @@ For example, the table could look like this:
 | ----                   | ----                    |
 | [poached eggs](#)      | [delete this recipe](#) |
 | [beef stroganoff](#)   | [delete this recipe](#) |
-| [vegetable biryani](#) | [delete](#)             |
+| [vegetable biryani](#) | [delete this recipe](#) |
 	
 
 ### Routes
