@@ -110,3 +110,6 @@ One way you could set it up is like this:
   identifier is `4`
 * `/recipes/4/delete` is a route you use to delete the recipe whose
   primary identifier is `4`
+  
+You can add more routes as needed; never a bad thing.  You can treat
+the above list as a possible starting point.
