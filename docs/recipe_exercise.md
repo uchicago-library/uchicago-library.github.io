@@ -17,7 +17,7 @@ If you aren't sure how to get started, our suggestion is:
   * what will the user see / be able to do when they log in and look
     at it?
 * make the most minimal possible version of what you described on the
-  whiteboard---like, literally as simple as making one page with one
+  whiteboard&mdash;like, literally as simple as making one page with one
   button that does one thing
 * then, step by step, add one feature at a time to that minimal
   working sketch until the app has all the features you originally
@@ -90,7 +90,7 @@ to recipe list' taking the user back to the main listing.
 
 We'll leave it to you to think about how to set up the routes, so take
 this part mainly as a suggestion.  If you can think of a better way of
-getting to the above user interface, by all means---pursue that
+getting to the above user interface, by all means&mdash;pursue that
 design!
 
 One way you could set it up is like this:
