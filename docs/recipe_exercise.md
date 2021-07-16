@@ -33,14 +33,15 @@ If you aren't sure how to get started, our suggestion is:
 At a high level, `Recipe Tracker` should let the user do the following:
 
 * browse the full set of recipes that are in the app
-* delete a recipe from the app'
+* delete a recipe from the app
 * enter a new recipe into the app
 * edit a recipe that is in the app
 
-To get started, we recommend focusing on the first two of these
-features.  The next two can be added once the first two fully work.
+The initial version of this spec will only describe the first two
+features.  Once those are ready, we'll add a further section to the
+spec explaining how the second two will work.
 
-### Routes
+### Data Model
 
 A recipe should be a bundle of data containing the following
 information:
@@ -61,3 +62,41 @@ to associate each question with a list of choices (i.e. answers).  You
 can use that as a model for how to create something in the Django
 database that looks like "entity, one of whose attributes is a list of
 other entities".
+
+### User Interface
+
+The user should be able to go to the root URL for the project (when
+you're developing locally, that'll be `localhost:8000/`) and see:
+
+* some sort of welcome message (e.g. 'Welcome to Recipe Tracker!')
+* a two-column table displaying, for every recipe in the app:
+  * a link that shows the name of the recipe
+  * a link that says 'delete this recipe'
+
+When the user clicks on the name of the recipe, that should take them
+to a page displaying all the information about the recipe.  That page
+should show the name of the recipe, a list of the ingredients, and a
+list of directions, and end with a link saying "back to recipe list"
+that takes the user back to the main list.
+
+When the user clicks on 'delete this recipe', that should delete the
+recipe from the app.  Then it should take the user to a page with a
+message showing which recipe was deleted.  For example, if the recipe
+the user just deleted is called 'Poached Eggs', it should say 'You
+have deleted Poached Eggs' and contain a link beneath it saying 'back
+to recipe list' taking the user back to the main listing.
+
+### Routes
+
+We'll leave it to you to think about how to set up the routes, so take
+this part mainly as a suggestion.  If you can think of a better way of
+getting to the above user interface, by all means---pursue that
+design!
+
+One way you could set it up is like this:
+
+* `/` is the main listing of all recipes
+* `/recipes/4` is the listing displaying the recipe whose primary
+  identifier is `4`
+* `/recipes/4/delete` is a route you use to delete the recipe whose
+  primary identifier is `4`
