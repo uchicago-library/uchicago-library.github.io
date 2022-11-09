@@ -2,17 +2,17 @@
 
 ## TODOs
 
-[ ] version control `dibs-0.6.1/settings.ini`
-[ ] version control the entire `dibsiiif` project
-[ ] abstract config over our logging vs. Slack logging
-[ ] abstract config over "upload to S3" vs. host files locally
-[ ] create logging PR
-[ ] create "upload vs. don't" PR
-[ ] set up `cron` job to run `dibsiiif`
-[ ] set up samba share for document delivery to access `unprocessed`
-[ ] create a production instance of `dibs`
-[ ] have our web program directory enter an actual book into the app
-[ ] have our document delivery services librarian try to enter a book into the app
+- [ ] version control `dibs-0.6.1/settings.ini`
+- [ ] version control the entire `dibsiiif` project
+- [ ] abstract config over our logging vs. Slack logging
+- [ ] abstract config over "upload to S3" vs. host files locally
+- [ ] create logging PR
+- [ ] create "upload vs. don't" PR
+- [ ] set up `cron` job to run `dibsiiif`
+- [ ] set up samba share for document delivery to access `unprocessed`
+- [ ] create a production instance of `dibs`
+- [ ] have our web program directory enter an actual book into the app
+- [ ] have our document delivery services librarian try to enter a book into the app
 
 # Potential problems
 
