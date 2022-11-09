@@ -1,11 +1,37 @@
-# What is DIBS?
+# Checklist for getting to production
+
+## TODOs
+
+[ ] version control `dibs-0.6.1/settings.ini`
+[ ] version control the entire `dibsiiif` project
+[ ] abstract config over our logging vs. Slack logging
+[ ] abstract config over "upload to S3" vs. host files locally
+[ ] create logging PR
+[ ] create "upload vs. don't" PR
+[ ] set up `cron` job to run `dibsiiif`
+[ ] set up samba share for document delivery to access `unprocessed`
+[ ] create a production instance of `dibs`
+[ ] have our web program directory enter an actual book into the app
+[ ] have our document delivery services librarian try to enter a book into the app
+
+# Potential problems
+
+- `iiifify.sh` says, in a comment, that it should be run once per minute.
+  - What if it takes longer than a minute to finish?
+- Say `dibsiiif` runs in cron once per minute.
+  - What if someone from document delivery is in the middle of copying
+    a directory full of TIFFs over when it runs?
+
+# General Reference
+
+## What is DIBS?
 
 DIBS is an open-source [controlled digital
 lending](https://en.wikipedia.org/wiki/Controlled_digital_lending) web
 application.  The project originates from
 [Caltech](https://caltechlibrary.github.io/dibs/).
 
-## Background
+### Background
 
 A number of open-source controlled digital lending applications sprung
 up during the 2020 pandemic, due to a need for continuing to have
@@ -21,7 +47,7 @@ switch to DIBS, in large part due to the fact that the lead developer
 of G-CDL is no longer actively developing the project.  The tech stack
 used by DIBS is also much closer to what we use at UChicago.
 
-## Timeline
+### Timeline
 
 As of October 2022, we are hoping to deploy DIBS for testing by
 December 2022 in time to begin using it for electronic course reserves
@@ -30,7 +56,7 @@ are fairly complex, so this document is an attempt to get the process
 down in writing, so that we don't have to figure it all out again the
 next time we install it.
 
-# Components of DIBS
+## Components of DIBS
 
 DIBS has a number of moving parts.  To start, it consists of two
 separate applications:
@@ -57,3 +83,4 @@ DIBS web app expects them, without the DIBS web app making any of
 those paths available as URL routes.  If it were to make those paths
 available as URL routes, the copyrighted material would effectively be
 viewable by anyone for any amount of time.
+
