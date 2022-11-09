@@ -13,16 +13,26 @@
 - [ ] create a production instance of `dibs`
 - [ ] have our web program directory enter an actual book into the app
 - [ ] have our document delivery services librarian try to enter a book into the app
+- [ ] change splash page from Caltech stuff to UChicago stuff
+- [ ] set up UChicago email address contact
+- [ ] set up UChicago help page
 - [ ] set up stateless production deploy insfrastructure
 
 # Potential Problems
 
-- `iiifify.sh` says, in a comment, that it should be run once per minute.
-  - What if it takes longer than a minute to finish converting a big
-    book to pyramid TIFFs?
-- Say `dibsiiif` runs in cron once per minute.
-  - What if someone from document delivery is in the middle of copying
-    a directory full of TIFFs over when it runs?
+- ~~`iiifify.sh` says, in a comment, that it should be run once per
+  minute.~~
+  - ~~What if it takes longer than a minute to finish converting a big
+    book to pyramid TIFFs?~~
+		- Answer: no problem: it won't run again until there's a new
+          `XXX-initiated` file in `status/files`.
+- ~~Say `dibsiiif` runs in cron once per minute.~~
+  - ~~What if someone from document delivery is in the middle of
+    copying a directory full of TIFFs over when it runs?~~
+		- Answer: no problem: the document delivery people would have
+          to hit the `Process` button while they're still in the
+          middle of scanning, and the DIBS documentation tells them
+          not to do that.
 
 # General Reference
 
