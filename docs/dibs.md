@@ -18,7 +18,8 @@
 # Potential Problems
 
 - `iiifify.sh` says, in a comment, that it should be run once per minute.
-  - What if it takes longer than a minute to finish?
+  - What if it takes longer than a minute to finish converting a big
+    book to pyramid TIFFs?
 - Say `dibsiiif` runs in cron once per minute.
   - What if someone from document delivery is in the middle of copying
     a directory full of TIFFs over when it runs?
@@ -88,4 +89,24 @@ viewable by anyone for any amount of time.
 
 ## How DIBS works
 
-DIBS uses IIIF to display the pages of each scanned book.
+### Displaying Each Book
+
+DIBS uses IIIF to display the pages of each scanned book.  With IIIF,
+it isn't as simple as a book consisting of a single-file PDF, or
+anything like that.  Rather, a single book exists as:
+
+- [pyramid
+  TIFFs](https://www.loc.gov/preservation/digital/formats/fdd/fdd000237.shtml)
+  in a directory named after the book's barcode, which are served up
+  by the IIIF image server
+- a IIIF manifest, which is a piece of JSON with a specific structure
+  that contains:
+  - basic metadata for the book
+  - URLs to the images for each page of the book, served up by the
+    image server
+	
+"Pyramid TIFF" is just a term for a TIFF that has been converted to
+the exact format that a IIIF image server expects.
+
+### Restricting Access
+
