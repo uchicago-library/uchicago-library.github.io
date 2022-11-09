@@ -4,8 +4,8 @@
 
 - [ ] version control `dibs-0.6.1/settings.ini`
 - [ ] version control the entire `dibsiiif` project
-- [ ] abstract config over our logging vs. Slack logging
-- [ ] abstract config over "upload to S3" vs. host files locally
+- [ ] abstract `dibsiiif` config over our logging vs. Slack logging
+- [ ] abstract `dibsiiif` config over "upload to S3" vs. host files locally
 - [ ] create logging PR
 - [ ] create "upload vs. don't" PR
 - [ ] set up `cron` job to run `dibsiiif`
@@ -13,8 +13,9 @@
 - [ ] create a production instance of `dibs`
 - [ ] have our web program directory enter an actual book into the app
 - [ ] have our document delivery services librarian try to enter a book into the app
+- [ ] set up stateless production deploy insfrastructure
 
-# Potential problems
+# Potential Problems
 
 - `iiifify.sh` says, in a comment, that it should be run once per minute.
   - What if it takes longer than a minute to finish?
@@ -45,7 +46,8 @@ and Angular-based application that uses Google Drive to manage access
 to copyrighted materials.  As of 2022, however, we are looking to
 switch to DIBS, in large part due to the fact that the lead developer
 of G-CDL is no longer actively developing the project.  The tech stack
-used by DIBS is also much closer to what we use at UChicago.
+used by DIBS is also much closer to what we use at the UChicago
+library.
 
 ### Timeline
 
@@ -84,3 +86,6 @@ those paths available as URL routes.  If it were to make those paths
 available as URL routes, the copyrighted material would effectively be
 viewable by anyone for any amount of time.
 
+## How DIBS works
+
+DIBS uses IIIF to display the pages of each scanned book.
