@@ -95,8 +95,7 @@ DIBS uses IIIF to display the pages of each scanned book.  With IIIF,
 it isn't as simple as a book consisting of a single-file PDF, or
 anything like that.  Rather, a single book exists as:
 
-- [pyramid
-  TIFFs](https://www.loc.gov/preservation/digital/formats/fdd/fdd000237.shtml)
+- [pyramid TIFFs](https://www.loc.gov/preservation/digital/formats/fdd/fdd000237.shtml)
   in a directory named after the book's barcode, which are served up
   by the IIIF image server
 - a IIIF manifest, which is a piece of JSON with a specific structure
@@ -106,7 +105,17 @@ anything like that.  Rather, a single book exists as:
     image server
 	
 "Pyramid TIFF" is just a term for a TIFF that has been converted to
-the exact format that a IIIF image server expects.
+the exact format that the IIIF image server expects.
+
+[Universal Viewer](https://universalviewer.io/) is a Javascript
+application that will take the URL to a IIIF manifest as an input, and
+create a feature-rich in-browser document viewer that displays the
+book corresponding to the that manifest.  There are other IIIF
+document viewers as well, such as
+[Mirador](https://projectmirador.org/), but Universal Viewer is the
+one that DIBS uses.
 
 ### Restricting Access
 
+DIBS uses the following trick to give the app itself full access to
+all the books, but to restrict access to users.
