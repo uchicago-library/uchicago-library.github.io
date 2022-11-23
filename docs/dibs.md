@@ -10,7 +10,7 @@
 - [ ] create "upload vs. don't" PR
 - [x] set up `cron` job to run `dibsiiif`
 - [x] set up samba share for document delivery to access `unprocessed`
-- [x] add Document Delivery team as admins in `dibs-test.lib`
+- [x] add Document Delivery team as admins on `dibs-test.lib.uchicago.edu`
 - [ ] create a production instance of `dibs`
 - [ ] have our web program director enter an actual book into the app
 - [ ] have our document delivery services librarian try to enter a book into the app
