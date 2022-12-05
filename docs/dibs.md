@@ -4,8 +4,8 @@
 
 - [x] version control `dibs-0.6.1/settings.ini`
 - [x] version control the entire `dibsiiif` project
-- [ ] abstract `dibsiiif` config over our logging vs. Slack logging
-- [ ] abstract `dibsiiif` config over "upload to S3" vs. host files locally
+- [x] abstract `dibsiiif` config over our logging vs. Slack logging
+- [x] abstract `dibsiiif` config over "upload to S3" vs. host files locally
 - [ ] create logging PR
 - [ ] create "upload vs. don't" PR
 - [x] set up `cron` job to run `dibsiiif`
@@ -14,10 +14,13 @@
 - [ ] create a production instance of `dibs`
 - [ ] have our web program director enter an actual book into the app
 - [ ] have our document delivery services librarian try to enter a book into the app
-- [ ] change splash page from Caltech stuff to UChicago stuff
+- [x] change splash page from Caltech stuff to UChicago stuff
 - [ ] set up UChicago email address contact
 - [ ] set up UChicago help page
 - [ ] set up stateless production deploy insfrastructure
+- [ ] set up Bugzilla category for DIBS
+- [ ] troubleshoot 404 page not displaying
+- [ ] configure `cron` to run `dibsiiif` in the virtualenv
 
 # General Reference
 
