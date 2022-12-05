@@ -20,6 +20,7 @@
 - [ ] set up stateless production deploy insfrastructure
 - [ ] set up Bugzilla category for DIBS
 - [ ] troubleshoot 404 page not displaying
+- [ ] configure production server to use `reserves@lib.uchicago.edu` email address
 - [ ] configure `cron` to run `dibsiiif` in the virtualenv
 
 # General Reference
@@ -63,7 +64,7 @@ DIBS has a number of moving parts.  To start, it consists of two
 separate applications:
 
 - the DIBS web app
-- `dibsiiif` a utility to format scanned images for display in a IIIF
+- `dibsiiif`, a utility to format scanned images for display in a IIIF
   viewer
   
 Jointly, these two applications also require the following
@@ -116,7 +117,10 @@ one that DIBS uses.
 ### Restricting Access
 
 DIBS uses the following trick to give the app itself full access to
-all the books, but to restrict access to users.
+all the books, but to restrict access to users.  The application knows
+the paths to the manifests and the image files on disk.  But the
+publicly viewable links to the
+
 
 # Potential Problems
 
