@@ -20,7 +20,7 @@
 - [ ] set up stateless production deploy insfrastructure
 - [ ] set up Bugzilla category for DIBS
 - [ ] troubleshoot 404 page not displaying
-- [ ] configure production server to use `reserves@lib.uchicago.edu` email address
+- [ ] configure production server to use `ereserves@lib.uchicago.edu` email address
 - [ ] configure `cron` to run `dibsiiif` in the virtualenv
 
 # General Reference
@@ -114,12 +114,90 @@ document viewers as well, such as
 [Mirador](https://projectmirador.org/), but Universal Viewer is the
 one that DIBS uses.
 
+The IIIF manifests contain all metadata for each book, as well as URLs
+to the images to be served up.
+
 ### Restricting Access
 
 DIBS uses the following trick to give the app itself full access to
 all the books, but to restrict access to users.  The application knows
-the paths to the manifests and the image files on disk.  But the
-publicly viewable links to the
+the paths to the manifests and the image files on disk, but the URL
+routes it exposes are not the actual paths on disk to the manifests or
+image files.  The manifests and image files are located on an NFS
+mount that is shared between the `dibs`, `dibsiiif`, and the IIIF
+image server, but which is neither open to the WAN nor to most of the
+library's local network.
+
+Universal Viewer won't make the information about which IIIF image
+server URLs it is sending HTTP requests to available through the
+browser.  Our system administrators can determine that information by
+examining the Apache logs on that machine, but of course that
+information is not open to the public.  So the data are pretty
+protected.
+
+## Installation
+
+The first step is to set up all the software on [the list
+above](#components-of-dibs) on your production servers.  Currently, we
+are using three servers:
+
+- one to run IIPImage
+- one to run `dibs` and `dibsiiif`
+- one for NFS shares
+
+The first is `crimson`, the second is `marble`, and the third is
+`voldemort`.  `crimson` and `marble` both have the same NFS fileshare
+mounted at `/data/local`.  The fileshare contains:
+
+- the TIFF scans that have yet to be processed (`unprocessed/scans`)
+- the manifests for the books (`manifest`)
+- copies of the TIFF scans that have already been processed (`processed/scans`)
+- all processed TIFFs (`processed/iiif/1`)
+- thumbnails for each book (`thumbnails`)
+- status files that coordinate information between `dibsiiif` and
+  `dibs`
+
+Next, we'll walk through how to install each of the components of
+DIBS:
+
+### `dibsiiif`
+
+`dibsiiif` can be installed by pulling the latest code down from
+GitHub:
+
+https://github.com/caltechlibrary/dibsiiif
+
+In our case, we work with a fork of that repository, to be able to
+hack on our customizations and submit the periodic pull request to the
+main project at Caltech:
+
+https://github.com/uchicago-library/dibsiiif
+
+`dibsiiif` expects a Python virtual environment.  No specific Python
+version requirement is stated on the `dibsiiif` GitHub page, but we
+have been using Python 3.9 with no issues.
+
+To create the virtual environment on your DIBS server:
+
+```
+$ python -m venv /path/to/virtual/environment
+```
+
+To install Python dependencies:
+
+```
+$ cd path/to/project/root
+$ pip install -r requirements.txt
+```
+#### Configuration
+
+Next, it will be necessary to create a config file.  The config file
+for `dibsiiif` is called `settings.ini` and you can use the example
+template to get started with it:
+
+```
+$ cp settings-example.ini settings.ini
+```
 
 
 # Potential Problems
