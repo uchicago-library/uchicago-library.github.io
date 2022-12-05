@@ -2,7 +2,7 @@
 
 ## TODOs
 
-- [x] version control `dibs-0.6.1/settings.ini`
+- [x] version control the entire `dibs` project
 - [x] version control the entire `dibsiiif` project
 - [x] abstract `dibsiiif` config over our logging vs. Slack logging
 - [x] abstract `dibsiiif` config over "upload to S3" vs. host files locally
