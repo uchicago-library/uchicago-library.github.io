@@ -6,22 +6,34 @@
 - [x] version control the entire `dibsiiif` project
 - [x] abstract `dibsiiif` config over our logging vs. Slack logging
 - [x] abstract `dibsiiif` config over "upload to S3" vs. host files locally
-- [ ] create logging PR
-- [ ] create "upload vs. don't" PR
 - [x] set up `cron` job to run `dibsiiif`
+- [x] configure `cron` to run `dibsiiif` in the virtualenv
 - [x] set up samba share for document delivery to access `unprocessed`
 - [x] add Document Delivery team as admins on `dibs-test.lib.uchicago.edu`
 - [ ] create a production instance of `dibs`
 - [ ] have our web program director enter an actual book into the app
 - [ ] have our document delivery services librarian try to enter a book into the app
 - [x] change splash page from Caltech stuff to UChicago stuff
-- [ ] set up UChicago email address contact
+- [x] set up UChicago email address contact
 - [ ] set up UChicago help page
 - [ ] set up stateless production deploy insfrastructure
 - [ ] set up Bugzilla category for DIBS
+- [x] configure production server to use `ereserves@lib.uchicago.edu` email address
+- [ ] figure out whether we want an anonymous feedback form
+
+## `dibs` PRs
+
 - [ ] troubleshoot 404 page not displaying
-- [ ] configure production server to use `ereserves@lib.uchicago.edu` email address
-- [ ] configure `cron` to run `dibsiiif` in the virtualenv
+- [ ] fix internal server error when it can't connect to FOLIO
+- [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
+
+
+### `dibsiiif` PRs
+
+- [ ] make logging backend configurable
+- [ ] make use of Amazon S3 configurable
+- [ ] make IIIF image server configurable (extensions)
+- [ ] bump commonpy to version 1.3.10 in `requirements.txt`
 
 # General Reference
 
@@ -197,6 +209,18 @@ template to get started with it:
 
 ```
 $ cp settings-example.ini settings.ini
+```
+
+### `dibs`
+
+#### Setting up email
+
+We have our constants in `settings.ini` configured like so:
+
+```
+MAIL_HOST   = hedwig.lib.uchicago.edu
+MAIL_PORT   = 25
+MAIL_SENDER = ereserves@lib.uchicago.edu
 ```
 
 
