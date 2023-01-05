@@ -25,8 +25,14 @@
 
 - [ ] troubleshoot 404 page not displaying
 - [ ] fix internal server error when it can't connect to FOLIO
+- [ ] fix internal server error when the year of the item is null in FOLIO
 - [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
-
+- [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
+- [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
+- [ ] there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
+- [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
+- [ ] delete button, please, please, please
+- [ ] grey out "Process" button if the directory named after the barcode doesn't exist in `dibs_dropoff`
 
 ### `dibsiiif` PRs
 
@@ -34,6 +40,10 @@
 - [ ] make use of Amazon S3 configurable
 - [ ] make IIIF image server configurable (extensions)
 - [ ] bump commonpy to version 1.3.10 in `requirements.txt`
+- [ ] require the *-initiated file to exist before checking that the *-processing file exists
+- [ ] rename *-initiated to *-processing, rather than create a new *-processing file and erase the *-initiated file
+- [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
+- [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
 
 # General Reference
 
