@@ -2,6 +2,9 @@
 
 ## TODOs
 
+- [ ] set up UChicago help page
+- [ ] set up Bugzilla category for DIBS
+- [ ] figure out whether we want an anonymous feedback form
 - [x] version control the entire `dibs` project
 - [x] version control the entire `dibsiiif` project
 - [x] abstract `dibsiiif` config over our logging vs. Slack logging
@@ -10,16 +13,14 @@
 - [x] configure `cron` to run `dibsiiif` in the virtualenv
 - [x] set up samba share for document delivery to access `unprocessed`
 - [x] add Document Delivery team as admins on `dibs-test.lib.uchicago.edu`
-- [ ] create a production instance of `dibs`
-- [ ] have our web program director enter an actual book into the app
-- [ ] have our document delivery services librarian try to enter a book into the app
+- [x] create a production instance of `dibs`
+- [x] have our web program director enter an actual book into the app
+- [x] have our document delivery services librarian try to enter a book into the app
 - [x] change splash page from Caltech stuff to UChicago stuff
 - [x] set up UChicago email address contact
-- [ ] set up UChicago help page
-- [ ] set up stateless production deploy insfrastructure
-- [ ] set up Bugzilla category for DIBS
+- [x] set up stateless production deploy insfrastructure
 - [x] configure production server to use `ereserves@lib.uchicago.edu` email address
-- [ ] figure out whether we want an anonymous feedback form
+
 
 ## `dibs` PRs
 
