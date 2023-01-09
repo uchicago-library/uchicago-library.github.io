@@ -43,9 +43,9 @@
 - [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
 - [ ] fix barcode sort, which is currently broken
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
-- [ ] determine what is going on with the stats
+- [ ] :hourglass: determine what is going on with the stats
 - [ ] :hourglass: investigate more efficient workflow for loading new items in
-- [ ] enable OCR via IIIF
+- [ ] :hourglass: enable OCR via IIIF
 
 ### `dibsiiif` PRs
 
