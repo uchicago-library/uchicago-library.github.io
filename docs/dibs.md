@@ -34,6 +34,7 @@
 - [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
 - [ ] fix barcode sort, which is currently broken
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
+- [ ] make author/title/year/publisher fields optional
 - [ ] :pray: don't refresh the page when you click a checkbox
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
 - [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
