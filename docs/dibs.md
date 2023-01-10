@@ -42,6 +42,7 @@
 - [ ] :hourglass: determine what is going on with the stats
 - [ ] :hourglass: investigate more efficient workflow for loading new items in
 - [ ] :hourglass: enable OCR via IIIF
+- [ ] :pray: :hourglass: get DIBS to figure out how to refresh the FOLIO token
 - [ ] :pray: :hourglass: delete button, please, please, please
 - [ ] :pray: :hourglass: search items by any of the fields in the listing
 - [ ] :pray: :hourglass: add volume information for multi-volume items to the listing 
