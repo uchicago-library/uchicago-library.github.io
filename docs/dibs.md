@@ -30,22 +30,21 @@
 - [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
 - [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
-- [ ] there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
+- [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
-- [ ] delete button, please, please, please
-- [ ] grey out "Process" button if the directory named after the barcode doesn't exist in `dibs_dropoff` 
+- [ ] fix barcode sort, which is currently broken
+- [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] :pray: don't refresh the page when you click a checkbox
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
-- [ ] :pray: :hourglass: search items by any of the fields in the listing
-- [ ] :pray: :hourglass: add volume information for multi-volume items to the listing 
+- [ ] :hourglass: delete button, please, please, please
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
 - [ ] :hourglass: sort items in descending order of how recently they were added by default in the item listing
 - [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
-- [ ] fix barcode sort, which is currently broken
-- [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] :hourglass: determine what is going on with the stats
 - [ ] :hourglass: investigate more efficient workflow for loading new items in
 - [ ] :hourglass: enable OCR via IIIF
+- [ ] :pray: :hourglass: search items by any of the fields in the listing
+- [ ] :pray: :hourglass: add volume information for multi-volume items to the listing 
 
 ### `dibsiiif` PRs
 
