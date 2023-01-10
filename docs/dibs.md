@@ -28,6 +28,7 @@
 - [ ] fix internal server error when it can't connect to FOLIO
 - [ ] fix internal server error when the year of the item is null in FOLIO
 - [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
+- [ ] fix barcode-typecast-to-integers bug
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
 - [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
 - [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
