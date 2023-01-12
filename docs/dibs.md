@@ -60,6 +60,31 @@
 - [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
 - [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
 
+## Notes on TODOs
+
+### Checkbox issue:
+- checking a checkbox jumps you back to the top of the page because
+  triggers an ht.ml form action that does a post request back to
+  `/list/ready`
+- possible fixes:
+  - easiest: put target links in each item in the listing, then do
+	post request back to `/list/ready#target_link`
+	- this will reload the page, but bop you back over to where the
+	  item is
+ - harder but probably better:
+   - make them actual checkboxes in a single form, rather than making
+	 each one a separate form with an action
+	 - how much of a hassle this is will depend on the reason they
+	   decided to make the checkboxes forms rather than actual
+	   checkboxes
+
+### Hiding the Process button
+
+- see line 78 of `dibs/templates/list.tpl`, where there's conditional
+  logic in Python governing the behavior of the icons in the listing
+- the Python code embedded in the template can check the filesystem
+  for stuff
+
 # General Reference
 
 ## What is DIBS?
