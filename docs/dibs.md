@@ -158,6 +158,11 @@
 - one PR to `pokapi`
 - then another to `dibs`
   
+### Sorting Issues
+
+- DIBS does sorting of the item list using bootstrap, which has jQuery
+  code that looks for certain HTML attributes on certain DOM elements
+
 # General Reference
 
 ## What is DIBS?
