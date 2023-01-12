@@ -26,7 +26,6 @@
 
 - [ ] troubleshoot 404 page not displaying
 - [ ] fix internal server error when it can't connect to FOLIO
-- [ ] fix internal server error when the year of the item is null in FOLIO
 - [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
 - [ ] fix barcode-typecast-to-integers bug
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
@@ -48,6 +47,11 @@
 - [ ] :pray: :hourglass: delete button, please, please, please
 - [ ] :pray: :hourglass: search items by any of the fields in the listing
 - [ ] :pray: :hourglass: add volume information for multi-volume items to the listing 
+
+### `pokapi` PRs
+
+- [ ] make author/title/year/publisher optional
+- [ ] grab volume information
 
 ### `dibsiiif` PRs
 
