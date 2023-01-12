@@ -60,9 +60,10 @@
 - [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
 - [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
 
-## Notes on TODOs
+## Notes toward accomplishing the TODOs
 
 ### Checkbox issue:
+
 - checking a checkbox jumps you back to the top of the page because
   triggers an ht.ml form action that does a post request back to
   `/list/ready`
@@ -84,7 +85,28 @@
   logic in Python governing the behavior of the icons in the listing
 - the Python code embedded in the template can check the filesystem
   for stuff
+- so we could probably add a conditional branch to this to have it
+  check the filesystem
 
+### Getting Volume Info
+
+- this will likely involve a PR to the `pokapi` project
+- in the source for `pokapi`, line 169 of `pokapi/folio.py`, lies the
+  code where the author and title info is pulled out of the JSON
+  response from FOLIO
+- probably all we'd have to do here within `pokapi` is get it to put
+  volume info in the response
+- this can most likely be grabbed from the `enumeration` field in the
+  response from the Okapi API
+- then we need to modify `dibs` at the same time, so that it can grab
+  that info out of the FOLIO response and put it in the table
+  
+### Making Author/Title/Year/Publisher Optional
+
+- in all likelihood, this is a similar workflow to getting volume info
+- one PR to `pokapi`
+- then another to `dibs`
+  
 # General Reference
 
 ## What is DIBS?
