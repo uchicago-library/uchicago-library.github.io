@@ -21,6 +21,52 @@
 - [x] set up stateless production deploy insfrastructure
 - [x] configure production server to use `ereserves@lib.uchicago.edu` email address
 
+# Fixes
+
+## `dibs` fixes
+
+- [ ] troubleshoot 404 page not displaying
+- [ ] fix internal server error when it can't connect to FOLIO
+- [x] turn off email confirmation
+- [x] fix barcode-typecast-to-integers bug
+- [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
+- [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
+- [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
+- [x] fix barcode sort
+- [ ] fix checkbox/process button sort
+- [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
+- [ ] make author/title/year/publisher fields optional
+- [ ] :pray: don't refresh the page when you click a checkbox
+- [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
+- [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
+- [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
+- [ ] :hourglass: sort items in descending order of how recently they were added by default in the item listing
+- [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
+- [ ] :hourglass: determine what is going on with the stats
+- [ ] :hourglass: investigate more efficient workflow for loading new items in
+- [ ] :hourglass: enable OCR via IIIF
+- [ ] :pray: :hourglass: get DIBS to figure out how to refresh the FOLIO token
+- [ ] :pray: :hourglass: delete button, please, please, please
+- [ ] :pray: :hourglass: search items by any of the fields in the listing
+- [ ] :pray: :hourglass: add volume information for multi-volume items to the listing 
+
+### `pokapi` fixes
+
+- [ ] make author/title/year/publisher optional
+- [ ] grab volume information
+
+### `dibsiiif` fixes
+
+- [ ] make logging backend configurable
+- [ ] make use of Amazon S3 configurable
+- [ ] make IIIF image server configurable (extensions)
+- [ ] bump commonpy to version 1.3.10 in `requirements.txt`
+- [ ] require the *-initiated file to exist before checking that the *-processing file exists
+- [ ] rename *-initiated to *-processing, rather than create a new *-processing file and erase the *-initiated file
+- [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
+- [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
+
+# PRs
 
 ## `dibs` PRs
 
@@ -31,7 +77,8 @@
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
 - [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
 - [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
-- [ ] fix barcode sort, which is currently broken
+- [ ] fix barcode sort
+- [ ] fix checkbox/process button sort
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
 - [ ] :pray: don't refresh the page when you click a checkbox
