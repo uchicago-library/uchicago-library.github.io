@@ -72,6 +72,7 @@
 
 - [ ] troubleshoot 404 page not displaying
 - [ ] fix internal server error when it can't connect to FOLIO
+- [ ] boolean toggle in configuration indicating whether you want an email confirmation
 - [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
 - [ ] fix barcode-typecast-to-integers bug
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
