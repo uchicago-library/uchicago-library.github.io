@@ -1,6 +1,6 @@
-# Checklist for getting to production
+# Master TODO Checklist
 
-## TODOs
+## Installation Rough Edges
 
 - [ ] set up UChicago help page
 - [ ] set up Bugzilla category for DIBS
