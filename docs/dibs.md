@@ -33,14 +33,14 @@
 - [x] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
 - [ ] hide the Process button if a directory with the right barcode doesn't exist in `dibs/unprocessed/scans` (maybe gray it out)
 - [x] fix barcode sort
-- [ ] fix checkbox/process button sort
+- [x] fix checkbox/process button sort
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
-- [ ] :pray: don't refresh the page when you click a checkbox
+- [x] :pray: don't refresh the page when you click a checkbox
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
-- [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
+- [x] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
-- [ ] :hourglass: sort items in descending order of how recently they were added by default in the item listing
+- [ ] :hourglass: add "date added" field to DB and listing
 - [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
 - [ ] :hourglass: determine what is going on with the stats
 - [ ] :hourglass: investigate more efficient workflow for loading new items in
@@ -86,7 +86,7 @@
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
 - [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
-- [ ] :hourglass: sort items in descending order of how recently they were added by default in the item listing
+- [ ] :hourglass: add "date added" field to DB and listing
 - [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
 - [ ] :hourglass: determine what is going on with the stats
 - [ ] :hourglass: investigate more efficient workflow for loading new items in
