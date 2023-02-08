@@ -37,6 +37,7 @@
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
 - [x] :pray: don't refresh the page when you click a checkbox
+- [ ] :pray: give user the ability to delete the *-problem file within DIBS
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
 - [x] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
@@ -63,6 +64,7 @@
 - [ ] bump commonpy to version 1.3.10 in `requirements.txt`
 - [ ] require the *-initiated file to exist before checking that the *-processing file exists
 - [ ] rename *-initiated to *-processing, rather than create a new *-processing file and erase the *-initiated file
+- [ ] `dibsiiif` should delete the *-processing file when it creates the *-problem file
 - [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
 - [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
 
@@ -83,6 +85,7 @@
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
 - [ ] :pray: don't refresh the page when you click a checkbox
+- [ ] :pray: give user the ability to delete the *-problem file within DIBS
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
 - [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
@@ -109,6 +112,7 @@
 - [ ] bump commonpy to version 1.3.10 in `requirements.txt`
 - [ ] require the *-initiated file to exist before checking that the *-processing file exists
 - [ ] rename *-initiated to *-processing, rather than create a new *-processing file and erase the *-initiated file
+- [ ] `dibsiiif` should delete the *-processing file when it creates the *-problem file
 - [ ] capture stderr and write it to log output on all system calls (so as to capture the VIPS and any other OS-level errors)
 - [ ] modify iiifify.sh to process one *-initiated file at a time (the oldest)
 
