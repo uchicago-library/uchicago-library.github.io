@@ -40,7 +40,7 @@
 - [ ] :pray: give user the ability to delete the *-problem file within DIBS
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
 - [x] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
-- [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
+- [x] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
 - [ ] :hourglass: add "date added" field to DB and listing
 - [ ] :hourglass: have DIBS auto-detect what files are in `dibs_dropoff` on the server
 - [ ] :hourglass: determine what is going on with the stats
