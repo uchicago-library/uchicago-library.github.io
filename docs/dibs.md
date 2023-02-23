@@ -37,8 +37,11 @@
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
 - [x] :pray: don't refresh the page when you click a checkbox
+- [x] :pray: display in-page alert rather than redirecting when you hit Process button
 - [ ] :pray: give user the ability to delete the *-problem file within DIBS
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
+- [x] :pray: replace red exclamation mark with "Try Again" button that deletes *-problem and *-processing, then does a Process
+- [x] :pray: put "Add & Process" button in add-an-item page, greyed out if the barcode isn't present in the drop-off directory
 - [x] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [x] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
 - [ ] :hourglass: add "date added" field to DB and listing
@@ -75,8 +78,7 @@
 
 - [ ] troubleshoot 404 page not displaying
 - [ ] fix internal server error when it can't connect to FOLIO
-- [ ] boolean toggle in configuration indicating whether you want an email confirmation
-- [ ] fix confirmation email bug: it crashes when it sees a Unicode accent
+- [ ] turn off email confirmation
 - [ ] fix barcode-typecast-to-integers bug
 - [ ] fix `people-manager` to check whether user exists before creating it, and introduce a key constraint in the database
 - [ ] remove numeric restriction on barcodes to allow for ones that start with A (for analyze series)
@@ -86,8 +88,11 @@
 - [ ] if there is a field missing, have the error message say that rather than "Problem with XXX barcode in FOLIO"
 - [ ] make author/title/year/publisher fields optional
 - [ ] :pray: don't refresh the page when you click a checkbox
+- [ ] :pray: display in-page alert rather than redirecting when you hit Process button
 - [ ] :pray: give user the ability to delete the *-problem file within DIBS
 - [ ] :pray: replicate "add new item" and "manage item list" at the top of the item listing page
+- [ ] :pray: replace red exclamation mark with "Try Again" button that deletes *-problem and *-processing, then does a Process
+- [ ] :pray: put "Add & Process" button in add-an-item page, greyed out if the barcode isn't present in the drop-off directory
 - [ ] :hourglass: there should be a way to display the contents of the *-problem file (perhaps on hover over the red exclamation mark)
 - [ ] :hourglass: optimize add-then-process workflow, maybe with an alert that says the title of the item you just added, plus a Process button for it
 - [ ] :hourglass: add "date added" field to DB and listing
