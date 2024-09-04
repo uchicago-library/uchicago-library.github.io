@@ -1,3 +1,5 @@
+Note: https://dldc.lib.uchicago.edu/ redirects to index.html above. Edit the latter to effect changes in the former.
+
 # Checklists & Documentation
 ## Developer: GitHub Tickets & Pull Requests
 ### Once the developer choses a ticket to resolve:
