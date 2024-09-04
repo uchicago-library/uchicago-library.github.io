@@ -2,7 +2,7 @@ Note: https://dldc.lib.uchicago.edu/ redirects to index.html above. Edit the lat
 
 # Checklists & Documentation
 ## Developer: GitHub Tickets & Pull Requests
-### Once the developer choses a ticket to resolve:
+### Once the developer chooses a ticket to resolve:
 1. Name your code branch to match the ticket.
     * For example, an issue titled `Flux Capacitor Bug #180` would have a branch named `180-Flux-Capacitor-Bug`.
 2. Create the pull request that corresponds with an issue.
